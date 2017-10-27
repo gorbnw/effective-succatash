@@ -18,7 +18,7 @@ end
 40.times do
   user_info = {
     username: Faker::Lovecraft.words(2, false).join,
-    email: "ham@ham.ham",
+    email: Faker::Internet.email,
     password: "hamham"
   }
   User.create(user_info)
