@@ -1,2 +1,18 @@
-<h1> <%= @business.name %> </h1>
-<%= render partial: 'details', locals: {business: @business} %>
+
+  <h1 class=business-name> <%= @business.name %> </h1>
+
+  <div class="business-overview">
+    <div class="business-overview-left">
+      Testimonial summary
+    </div>
+    <div class="business-overview-right">
+      <div class="business-photo">
+        <%= image_tag "placehold.gif" %>
+      </div>
+      <%= render partial: 'details', locals: {business: @business} %>
+    </div>
+
+    <div class="testimonial-list">
+      Testimonial list goes here
+    </div>
+  </div>
