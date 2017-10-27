@@ -37,8 +37,6 @@ ul {
   font-size: 300%;
 }
 
-
-
 .business-overview {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -69,6 +67,26 @@ ul {
 .testimonial-summary {
   display: inline-block;
   padding: 10px;
-  border: 2px solid;
-  border-radius: 10px;
+  text-align: center;
+  width: 95%;
+  height: 90%;
+}
+
+.count {
+  line-height: 150%;
+}
+
+.testimonial-container {
+  height: 50%;
+  border-radius: 20px;
+}
+
+.praise {
+  background-color: #e6ffe6;
+  border: 1px solid green;
+  margin-bottom: 5px;
+}
+.criticism {
+  background-color: #ffc6b3;
+  border: 1px solid red;
 }
