@@ -1,0 +1,9 @@
+<div>
+  <% if testimonial.anonymous %>
+    <p>Anonymous</p>
+  <% else %>
+    <p> <%= testimonial.user.username %> </p>
+  <% end %>
+  <p>Tags: Bad time, unfriendly people (placeholder)</p>
+  <p class="testimonial-text"> <%= testimonial.description %> </p>
+</div>
