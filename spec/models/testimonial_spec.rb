@@ -7,7 +7,6 @@ describe Testimonial, type: :model do
     positive: true
   )}
   describe "validations" do
-
     it 'is not valid without a discription' do
       testimonial_sample.description = ""
       expect(testimonial_sample).to_not be_valid
@@ -22,6 +21,5 @@ describe Testimonial, type: :model do
       testimonial_sample.positive = nil
       expect(testimonial_sample).to_not be_valid
     end
-
   end
 end
