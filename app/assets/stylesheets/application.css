@@ -17,7 +17,7 @@
  :root {
    --green-yellow: #A2AD59;
    --border-color: #DCF763;
-   --black: #323C42;
+   --text: #3A454C;
    --moss: #DDEDD5;
    --silver: #848C8E;
  }
@@ -32,6 +32,6 @@ body {
 .container {
   width: 60%;
   margin: 0 auto;
-  color: var(--black);
+  color: var(--text);
   border: solid var(--border-color) 2px;
 }
