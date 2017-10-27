@@ -14,11 +14,24 @@
  *= require_self
  */
 
+ :root {
+   --green-yellow: #A2AD59;
+   --border-color: #DCF763;
+   --black: #323C42;
+   --moss: #DDEDD5;
+   --silver: #848C8E;
+ }
+
 html {
   width: 100%;
 }
 
 body {
+}
+
+.container {
   width: 60%;
   margin: 0 auto;
+  color: var(--black);
+  border: solid var(--border-color) 2px;
 }
