@@ -26,10 +26,29 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # Used with Devise - this is ok for Development, check devise_info.txt for Production setup
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
 
-  config.action_mailer.perform_caching = false
+####
+####  USE THE BELOW CONFIG.ACTION_MAILERS FOR PRODUCTION
+####
+
+
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.default_url_options = { host: ENV['MAIL_HOST'] }
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   user_name:      ENV['SENDMAIL_USERNAME'],
+  #   password:       ENV['SENDMAIL_PASSWORD'],
+  #   domain:         ENV['MAIL_HOST'],
+  #   address:       'smtp.gmail.com',
+  #   port:          '587',
+  #   authentication: :plain,
+  #   enable_starttls_auto: true
+  # }
+
+  # config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
