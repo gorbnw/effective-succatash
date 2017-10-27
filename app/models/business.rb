@@ -1,4 +1,5 @@
 class Business < ApplicationRecord
+  validates :name, :phone, :address, presence: true
   has_many :testimonials
 
   def count_praise
