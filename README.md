@@ -23,4 +23,4 @@
 
 ## Schema
 
-![Schema Design]('./public/schema.png')
+![Schema Design](/public/schema.png)
