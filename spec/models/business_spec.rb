@@ -22,13 +22,13 @@ RSpec.describe Business, type: :model do
     it 'counts positive praise for a given business' do
       business.testimonials << [testimonial, testimonial2]
       business.save!
-      expect(business.count_praise).to eq 1
+      expect(business.count_praise).to eq "1 user gave praise!"
     end
 
     it 'counts negative praise for a given business' do
       business.testimonials << [testimonial, testimonial2]
       business.save!
-      expect(business.count_criticism).to eq 1
+      expect(business.count_criticism).to eq "1 user left criticism"
     end
 
     it 'returns "No praise for this business yet" when no positive praise exists' do

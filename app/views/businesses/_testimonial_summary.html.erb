@@ -1,0 +1,15 @@
+
+
+<ul class="testimonial-summary">
+
+  <li><%= @business.count_praise %> </li>
+  <% if @business.count_praise == "No praise for this business yet"%>
+    <li>Be the first to leave a review</li>
+  <% end %>
+
+  <li><%= @business.count_criticism %> </li>
+  <% if @business.count_criticism == "No criticism for this business yet" %>
+    <li>Be the first to leave a review</li>
+  <% end %>
+
+</ul>

@@ -1,2 +1,3 @@
 <h1> <%= @business.name %> </h1>
+<%= render partial: 'testimonial_summary', locals: {business: @business} %>
 <%= render partial: 'details', locals: {business: @business} %>
