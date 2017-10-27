@@ -1,0 +1,30 @@
+<div>
+  <%= form_for testimonial do |f| %>
+    <div class="testimonial-header">
+      <%= f.label "Share Your Experience: " %>
+    </div>
+    <div class="testimonial-text-box">
+      <%= f.text_field :description %>
+    </div>
+    <div class="experience-tag">
+      <%= f.label "Tag Your Experience: " %>
+      <%= f.collection_select :tags, Tag.all, :id, :description %>
+    </div>
+    <div class="experience-tag">
+      <%= f.label "How was your experience: " %>
+    <div class="experience-selections">
+      <%= f.radio_button :positive, :checked => false  %>
+      <%= f.label "I felt unsafe" %>
+      <%= f.radio_button :positive, :checked => true %>
+      <%= f.label "I felt safe" %>
+    </div>
+    </div>
+    <div class="anonymous-field">
+      <%= f.label "Check to publish anonymously: " %>
+      <%= f.check_box :anonymous %>
+    </div>
+    <div class="submit-button">
+      <%= f.submit 'Share Testimonial' %>
+    </div>
+  <% end %>
+</div>

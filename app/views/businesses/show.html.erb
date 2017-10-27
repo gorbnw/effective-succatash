@@ -11,8 +11,8 @@
       </div>
       <%= render partial: 'details', locals: {business: @business} %>
     </div>
-
     <div class="testimonial-list">
-      Testimonial list goes here
+      <%= render partial: 'testimonials/new', locals: { testimonial: @testimonial } %>
+      <!-- Testimonial list goes here -->
     </div>
   </div>
