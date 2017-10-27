@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe Testimonial, type: :model do
   let!(:business){FactoryBot.create(:business)}
-  let!(:testimonial){FactoryBot.create(:testimonial)}
+  let!(:testimonial){FactoryBot.create(:testimonial, :positive)}
   let!(:user){FactoryBot.create(:user)}
   let!(:tag1){FactoryBot.create(:tag, :tag1)}
   let!(:tag2){FactoryBot.create(:tag, :tag2)}
@@ -22,6 +22,4 @@ describe Testimonial, type: :model do
     it {is_expected.to belong_to(:business)}
   end
 
-  describe '#count_praise' do
-  end
 end
