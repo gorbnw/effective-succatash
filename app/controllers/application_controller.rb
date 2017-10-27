@@ -12,5 +12,4 @@ class ApplicationController < ActionController::Base
     businesses_path
   end
 
-
 end
