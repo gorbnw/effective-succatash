@@ -26,5 +26,6 @@
     <div class="submit-button">
       <%= f.submit 'Share Testimonial' %>
     </div>
+    <input type="hidden" value="<%= @business.id %>" name="testimonial[business_id]" />
   <% end %>
 </div>
