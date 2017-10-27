@@ -12,5 +12,4 @@ Rails.application.routes.draw do
     root to: "devise/registrations#new"
   end
 
-
 end
