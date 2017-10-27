@@ -2,6 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Business index
+
+.business-list-div {
+  margin: 0 auto;
+}
+
+.business-header {
+  text-align: center;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.phone {
+  font-style: italic;
+  margin-right: 0.5rem;
+}
+
 .detail {
   font-size: 80%;
 }

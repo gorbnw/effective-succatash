@@ -14,4 +14,34 @@ RSpec.describe Business, type: :model do
     end
   end
 
+  describe "validations" do
+    let!(:business){FactoryBot.create(:business)}
+    it "is valid with a name" do
+      expect(business.valid?).to eq true
+    end
+
+    it "is invalid without a name" do
+      business.name = nil
+      expect(business.valid?).to eq false
+    end
+
+    it "is valid with a phone" do
+      expect(business.valid?).to eq true
+    end
+
+    it "is invalid without a phone" do
+      business.phone = nil
+      expect(business.valid?).to eq false
+    end
+
+    it "is valid with a address" do
+      expect(business.valid?).to eq true
+    end
+
+    it "is invalid without a address" do
+      business.address = nil
+      expect(business.valid?).to eq false
+    end
+  end
+
 end
