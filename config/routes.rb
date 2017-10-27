@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :businesses, only: [:show]
+
+  resources :businesses, only: [:index, :show]
 
   devise_for :users, controllers: {
     sessions: 'users/sessions',

@@ -1,0 +1,15 @@
+<div class="search-area">
+  <!-- search area -->
+  <h3>** Eventual Search Bar Area **</h3>
+</div>
+
+<div class="business-list-div">
+  <h2 class="business-header">Businesses</h2>
+  <ul class="business-list">
+    <% @businesses.each do |business| %>
+      <li class="business">
+        <p><span class="name"><%= link_to business.name, business_path(business) %></span><span class="phone"><%= business.phone %></span><%= business.address %></p>
+      </li>
+    <% end %>
+  </ul>
+</div>

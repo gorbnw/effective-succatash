@@ -2,6 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Business index
+
+.business-list-div {
+  margin: 0 auto;
+}
+
+.business-header {
+  text-align: center;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.phone {
+  font-style: italic;
+  margin-right: 0.5rem;
+}
+
 .detail {
   font-size: 80%;
 }
@@ -12,9 +33,35 @@ ul {
   margin: 0;
 }
 
+.business-name {
+  font-size: 300%;
+}
+
+
+
+.business-overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.business-photo {
+  border: grey 1px dotted;
+
+}
+
+.business-photo img {
+  margin: auto;
+  display: block;
+
+}
+
 .business-details {
-  display: inline-block;
   padding: 10px;
-  border: 2px solid;
-  border-radius: 10px;
+  border: grey 1px dotted;
+}
+
+.business-overview-left{
+  padding: 10px;
+  border: grey 1px dotted;
+
 }
