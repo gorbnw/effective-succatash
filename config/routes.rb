@@ -7,10 +7,9 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
 
-  #devise setup for root folder (for building authentication by Jamie)
+  # devise setup for root folder (for building authentication by Jamie)
   devise_scope :user do
     root to: "devise/registrations#new"
   end
-
 
 end
