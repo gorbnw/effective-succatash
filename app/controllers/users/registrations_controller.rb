@@ -1,8 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-  # before_action :configure_sign_up_params, only: [:create]
   before_action :configure_account_update_params, only: [:update]
   before_action :configure_sign_up_params, if: :devise_controller?
-  # before_filter :update_sanitized_params, if: :devise_controller?
 
   # GET /resource/sign_up
   def new
@@ -12,6 +10,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
+    redirect_to '/businesses/1'
   end
 
   # GET /resource/edit
@@ -51,9 +50,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # The path used after sign up.
-  def after_sign_up_path_for(resource)
-    super(resource)
-  end
+  # def after_sign_up_path_for(resource)
+  #   redirect_to '/businesses/1'
+  #   # super(resource)
+  # end
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)
