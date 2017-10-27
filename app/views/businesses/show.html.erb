@@ -1,8 +1,8 @@
 
-  <h1 class=business-name> <%= @business.name %> </h1>
 
   <div class="business-overview">
     <div class="business-overview-left">
+      <h1 class=business-name> <%= @business.name %> </h1>
       Testimonial summary
     </div>
     <div class="business-overview-right">
@@ -12,7 +12,8 @@
       <%= render partial: 'details', locals: {business: @business} %>
     </div>
 
-    <div class="testimonial-list">
-      Testimonial list goes here
-    </div>
+  </div>
+
+  <div class="testimonial-list">
+    Testimonial list goes here
   </div>

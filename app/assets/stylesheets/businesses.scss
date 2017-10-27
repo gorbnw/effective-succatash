@@ -34,18 +34,23 @@ ul {
 }
 
 .business-name {
+  margin: 0;
   font-size: 300%;
+  text-decoration: underline;
+  text-decoration-color: var(--border-color);
 }
 
 
 
 .business-overview {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  border-bottom: solid var(--border-color) 2px;
+
+
 }
 
 .business-photo {
-  border: grey 1px dotted;
 
 }
 
@@ -57,11 +62,14 @@ ul {
 
 .business-details {
   padding: 10px;
-  border: grey 1px dotted;
 }
 
 .business-overview-left{
+
   padding: 10px;
-  border: grey 1px dotted;
+}
+
+.business-overview-right{
+  padding: 10px;
 
 }
