@@ -23,4 +23,4 @@
 
 ## Schema
 
-![alt text]('/public/schema.png' "Schema Design")
+![Schema Design]('./public/schema.png')
