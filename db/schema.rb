@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171027040525) do
-=======
-ActiveRecord::Schema.define(version: 20171027002620) do
->>>>>>> cfb549accbe19f8890bad7c1f6a844c9d61fcc5d
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,7 +49,6 @@ ActiveRecord::Schema.define(version: 20171027002620) do
   end
 
   create_table "users", force: :cascade do |t|
-<<<<<<< HEAD
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "username", default: "", null: false
@@ -69,13 +64,6 @@ ActiveRecord::Schema.define(version: 20171027002620) do
     t.inet "last_sign_in_ip"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-=======
-    t.string "email"
-    t.string "username"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
->>>>>>> cfb549accbe19f8890bad7c1f6a844c9d61fcc5d
   end
 
   create_table "votes", force: :cascade do |t|
