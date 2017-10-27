@@ -14,4 +14,30 @@ RSpec.describe Business, type: :model do
     end
   end
 
+  describe "#count_praise" do
+    let!(:business){FactoryBot.create(:business)}
+    let!(:testimonial){FactoryBot.create(:testimonial, :positive)}
+    let!(:testimonial2){FactoryBot.create(:testimonial, :negative)}
+
+    it 'counts positive praise for a given business' do
+      business.testimonials << [testimonial, testimonial2]
+      business.save!
+      expect(business.count_praise).to eq 1
+    end
+
+    it 'counts negative praise for a given business' do
+      business.testimonials << [testimonial, testimonial2]
+      business.save!
+      expect(business.count_criticism).to eq 1
+    end
+
+    it 'returns "No praise for this business yet" when no positive praise exists' do
+      expect(business.count_praise).to eq "No praise for this business yet"
+    end
+
+    it 'returns "No citicism for this business yet" when no negative praise exists' do
+      expect(business.count_criticism).to eq "No criticism for this business yet"
+    end
+  end
+
 end

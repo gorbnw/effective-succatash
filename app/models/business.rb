@@ -2,11 +2,16 @@ class Business < ApplicationRecord
   has_many :testimonials
 
   def count_praise
-    self.testimonials.where(positive: true).count
+    count = self.testimonials.where(positive: true).count
+    return count if count > 0
+    "No praise for this business yet"
+
   end
 
   def count_criticism
-    self.testimonials.where(positive: false).count
+    count = self.testimonials.where(positive: true).count
+    return count if count > 0
+    "No criticism for this business yet"
   end
 
 end
