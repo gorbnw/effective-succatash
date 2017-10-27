@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :businesses, only: [:show]
+  resources :businesses, only: [:index, :show]
   resources :testimonials, only: [:create]
 end
