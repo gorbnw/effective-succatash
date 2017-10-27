@@ -20,3 +20,7 @@
 * As a user, I can view business pages while logged out
 * As a user, I can leave multiple testimonials on the same business page
 * As a user, I can view a business' page with business details
+
+## Schema
+
+![alt text]('/public/schema.png' "Schema Design")
