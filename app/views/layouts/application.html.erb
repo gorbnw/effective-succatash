@@ -9,8 +9,23 @@
   </head>
 
   <body>
+    <header>
+      <% if user_signed_in? %>
+        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+      <% else %>
+        <%= link_to 'Sign Up', new_user_registration_path %>
+        <%= link_to 'Log In', new_user_session_path %>
+      <% end %>
+    </header>
+
     <div class="container">
-      <%= yield %>
+
+    <%= yield %>
+
     </div>
+
+    <!-- Devise uses this for flash and notice alerts -->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
   </body>
 </html>
