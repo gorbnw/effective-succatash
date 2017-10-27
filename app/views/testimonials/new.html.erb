@@ -1,0 +1,10 @@
+<div>
+  <%= form_for @testimonial do |f| %>
+    <%= render "shared/errors", object: %>
+    <%= f.label "Share your experience: " %>
+    <%= f.text_field :description %>
+    
+
+
+  <% end %>
+</div>
