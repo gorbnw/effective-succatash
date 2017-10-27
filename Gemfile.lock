@@ -70,6 +70,11 @@ GEM
     factory_bot_rails (4.8.2)
       factory_bot (~> 4.8.2)
       railties (>= 3.0.0)
+    factory_girl (4.9.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.9.0)
+      factory_girl (~> 4.9.0)
+      railties (>= 3.0.0)
     faker (1.8.4)
       i18n (~> 0.5)
     ffi (1.9.18)
@@ -165,7 +170,7 @@ GEM
       rspec-support (~> 3.7.0)
     rspec-support (3.7.0)
     ruby_dep (1.5.0)
-    sass (3.5.2)
+    sass (3.5.3)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -223,6 +228,7 @@ DEPENDENCIES
   database_cleaner
   devise
   factory_bot_rails
+  factory_girl_rails
   faker
   jbuilder (~> 2.5)
   jquery
@@ -243,7 +249,11 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
+<<<<<<< HEAD
    ruby 2.3.1p112
+=======
+   ruby 2.3.3p222
+>>>>>>> cfb549accbe19f8890bad7c1f6a844c9d61fcc5d
 
 BUNDLED WITH
-   1.16.0.pre.2
+   1.16.0.pre.3
