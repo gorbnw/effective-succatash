@@ -1,6 +1,8 @@
 <div class="testimonial">
-  <div class="vote-count"><p><%= testimonial.votes.count %></p></div>
-  <%= render partial: "testimonials/vote", locals: {testimonial: testimonial} %>
+  <div class="vote-container">
+    <%= render partial: "testimonials/vote", locals: {testimonial: testimonial} %>
+    <div><p class="vote-count"><%= testimonial.votes.count %></p></div>
+  </div>
   <p class="testimonial-header">
   <% if testimonial.anonymous %>
     Anonymous
