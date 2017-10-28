@@ -11,8 +11,18 @@
       </div>
       <%= render partial: 'details', locals: {business: @business} %>
     </div>
-    <div class="testimonial-list">
+    
+    <div class="testimonial-form">
       <%= render partial: 'testimonials/new', locals: { testimonial: @testimonial, business: @business } %>
-      <!-- Testimonial list goes here -->
     </div>
+    
+    <div class="testimonial-list">
+    <% if @testimonials.empty? %>
+      No one has written a testimonial yet
+    <% else %>
+      <% @testimonials.each do |testimonial| %>
+        <%= render partial: 'testimonial', locals: {testimonial: testimonial } %>
+      <% end %>
+    <% end %>
+  </div>
   </div>
