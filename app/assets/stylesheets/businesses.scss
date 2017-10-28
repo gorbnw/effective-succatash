@@ -6,6 +6,7 @@
 
 .business-list-div {
   margin: 0 auto;
+  padding: 10px;
 }
 
 .business-header {
@@ -77,7 +78,7 @@ ul {
   padding: 10px;
   text-align: center;
   width: 95%;
-  height: 90%;
+  height: 45%;
 }
 
 .count {
@@ -86,15 +87,14 @@ ul {
 
 .testimonial-container {
   height: 50%;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 .praise {
-  background-color: #e6ffe6;
-  border: 1px solid green;
+  border: 2px solid var(--positive);
   margin-bottom: 5px;
 }
 .criticism {
-  background-color: #ffc6b3;
-  border: 1px solid red;
+  // background-color: var(--negative);
+  border: 2px solid var(--negative);
 }

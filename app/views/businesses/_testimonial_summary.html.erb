@@ -2,18 +2,18 @@
 
 <ul class="testimonial-summary">
 
-<div class="testimonial-container praise">
-  <li class="count"><%= @business.count_praise %> </li>
-  <% if @business.count_praise == "No praise for this business yet"%>
-  <li>Be the first to leave a review</li>
-  <% end %>
-</div>
+  <div class="testimonial-container praise">
+    <li class="count"><%= @business.count_praise %> </li>
+    <% if @business.count_praise == "No praise for this business yet"%>
+    <li>Be the first to leave a review</li>
+    <% end %>
+  </div>
 
-<div class="testimonial-container criticism">
-  <li class="count"><%= @business.count_criticism %> </li>
-  <% if @business.count_criticism == "No criticism for this business yet" %>
-  <li>Be the first to leave a review</li>
-  <% end %>
-</div>
+  <div class="testimonial-container criticism">
+    <li class="count"><%= @business.count_criticism %> </li>
+    <% if @business.count_criticism == "No criticism for this business yet" %>
+    <li>Be the first to leave a review</li>
+    <% end %>
+  </div>
 
 </ul>
