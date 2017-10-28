@@ -1,15 +1,16 @@
 <div class="testimonial">
-  <div class="vote-container">
-    <%= render partial: "testimonials/vote", locals: {testimonial: testimonial} %>
-    <div><p class="vote-count"><%= testimonial.votes.count %></p></div>
-  </div>
-  <p class="testimonial-header">
+  <div class="testimonial-header">
+    <div class="vote-container">
+      <%= render partial: "testimonials/vote", locals: {testimonial: testimonial} %>
+      <span class="vote-count"><%= testimonial.votes.count %></span>
+    </div>
   <% if testimonial.anonymous %>
     Anonymous
   <% else %>
     <%= testimonial.user.username %>
   <% end %>
-  </p>
+</div>
+  
   <p>
     <% testimonial.tags.each do |tag| %>
       <span class="tag"> <%= tag.description %> </span> &nbsp;

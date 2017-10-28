@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-tags = ['Unhelpful Staff', 'Wheel-chair accessibile', 'Gender-neutral bathrooms', 'Harrassment']
+tags = ['Unhelpful Staff', 'Wheel-chair accessible', 'Gender-neutral bathrooms', 'Harrassment']
 
 tags.each do |tag|
   Tag.create(description: tag)

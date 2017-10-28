@@ -3,6 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+  float: right;
 }
 
 .form-button {
@@ -10,11 +11,11 @@
   border-radius: 5px;
   padding: 0.3rem;
   margin-right: 0.5rem;
-  background-color: var(--silver)
+  background-color: var(--light-text)
 }
 
 .form-button:hover {
-  background-color: var(--moss)
+  background-color: var(--negative)
 }
 
 .vote-count {
