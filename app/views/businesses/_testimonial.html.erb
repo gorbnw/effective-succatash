@@ -7,7 +7,11 @@
   <% end %>
   </p>
   <!-- placeholder for tags -->
-  <p><span class="tag">Bad time</span> <span class="tag">Unfriendly folks</span></p>
+  <p>
+    <% testimonial.tags.each do |tag| %>
+      <span class="tag"> <%= tag.description %> </span> &nbsp;
+    <% end %>
+  </p>
   <p><%= testimonial.created_at.strftime("Posted %m/%d/%Y") %> </p>
   <p class="testimonial-text"> <%= testimonial.description %> </p>
 </div>

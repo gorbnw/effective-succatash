@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+tags = ['Unhelpful Staff', 'Wheel-chair accessibile', 'Gender-neutral bathrooms', 'Harrassment']
+
+tags.each do |tag|
+  Tag.create(description: tag)
+end
+
 20.times do
   business_info = {
     name: Faker::Space.constellation,
@@ -30,6 +36,8 @@ end
     positive: Faker::Boolean.boolean(0.5),
     description: Faker::Lorem.paragraph(2, true, 6)
   )
+  2.times { t.tags << Tag.all.sample }
+
   User.all.sample.testimonials << t
   Business.all.sample.testimonials << t
 end
