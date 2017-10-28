@@ -11,4 +11,21 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery3
+//= require jquery_ujs
 //= require_tree .
+
+$(document).ready(() => {
+
+  $(".reg-container input").on('focus', (e) => {
+    let label = $(e.target).closest(".field").find('label');
+    $(label).addClass('labelshift');
+  })
+
+  $(".reg-container input").on('focusout', (e) => {
+    let label = $(e.target).closest(".field").find('label');
+      if ($(e.target).val() === "") {
+      $(label).removeClass('labelshift');
+    }
+  })
+})
