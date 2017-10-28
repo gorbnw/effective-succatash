@@ -1,0 +1,4 @@
+<%= form_for @vote, url: votes_path, :html => {:class => "vote-form"} do |f| %>
+  <%= f.hidden_field :testimonial_id, :value => testimonial.id %>
+  <%= f.submit "I hear you", class: 'form-button' %>
+<% end %>

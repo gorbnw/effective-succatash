@@ -1,4 +1,8 @@
 <div class="testimonial">
+  <div class="vote-container">
+    <%= render partial: "testimonials/vote", locals: {testimonial: testimonial} %>
+    <div><p class="vote-count"><%= testimonial.votes.count %></p></div>
+  </div>
   <p class="testimonial-header">
   <% if testimonial.anonymous %>
     Anonymous
@@ -14,4 +18,5 @@
   </p>
   <p><%= testimonial.created_at.strftime("Posted %m/%d/%Y") %> </p>
   <p class="testimonial-text"> <%= testimonial.description %> </p>
+
 </div>

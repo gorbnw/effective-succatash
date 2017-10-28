@@ -1,0 +1,22 @@
+.vote-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.form-button {
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem;
+  margin-right: 0.5rem;
+  background-color: var(--silver)
+}
+
+.form-button:hover {
+  background-color: var(--moss)
+}
+
+.vote-count {
+
+}
