@@ -1,0 +1,21 @@
+.testimonial {
+  padding: 10px;
+}
+
+.testimonial-list .testimonial {
+  border-bottom: 2px solid var(--border-color);
+}
+.testimonial-list .testimonial:last-of-type {
+  border-bottom: none;
+}
+
+p.testimonial-header {
+  font-weight: bold;
+}
+
+.testimonial .tag {
+  color: var(--border-color);
+  background-color: var(--text);
+  border: 2px solid var(--text);
+  border-radius: 5px;
+}
