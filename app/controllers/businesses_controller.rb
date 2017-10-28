@@ -7,5 +7,7 @@ class BusinessesController < ApplicationController
     @business = Business.find(params[:id])
     @testimonial = Testimonial.new
     @testimonials = @business.testimonials
+    @vote = Vote.new
+
   end
 end

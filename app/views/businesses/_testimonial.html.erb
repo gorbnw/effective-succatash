@@ -1,4 +1,8 @@
 <div class="testimonial">
+  <div class="vote-container">
+    <%= render partial: "testimonials/vote", locals: {testimonial: testimonial} %>
+    <div><p class="vote-count"><%= testimonial.votes.count %></p></div>
+  </div>
   <p class="testimonial-header">
   <% if testimonial.anonymous %>
     Anonymous
@@ -7,7 +11,12 @@
   <% end %>
   </p>
   <!-- placeholder for tags -->
-  <p><span class="tag">Bad time</span> <span class="tag">Unfriendly folks</span></p>
+  <p>
+    <% testimonial.tags.each do |tag| %>
+      <span class="tag"> <%= tag.description %> </span> &nbsp;
+    <% end %>
+  </p>
   <p><%= testimonial.created_at.strftime("Posted %m/%d/%Y") %> </p>
   <p class="testimonial-text"> <%= testimonial.description %> </p>
+
 </div>
