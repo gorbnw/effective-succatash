@@ -12,7 +12,7 @@ describe TestimonialsController, type: :controller do
   end
 
   let!(:tag) { Tag.create!(description: "Tag") }
-  
+
   it 'posts to the testimonials' do
     post :create, params: { testimonial: { description: "The bouncers here are rad!", positive: true, anonymous: false, business_id: business.id, tags: tag.id } }
     redirect_to route_to(:controller => :businesses, :action => :show)
@@ -20,5 +20,10 @@ describe TestimonialsController, type: :controller do
 
   it 'creates a new testimonial after posting' do
     expect{ post :create, params: { testimonial: { description: "The bouncers here are rad!", positive: true, anonymous: false, business_id: business.id, tags: tag.id } } }.to change{ Testimonial.all.length }.by(1)
+  end
+
+  it 'creates an association between tags and the testimonial after posting' do
+    post :create, params: { testimonial: { description: "The bouncers here are rad!", positive: true, anonymous: false, business_id: business.id, tags: tag.id } }
+    expect(Testimonial.last.tags).to include(tag)
   end
 end
