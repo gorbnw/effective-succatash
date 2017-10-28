@@ -9,7 +9,7 @@
   border-bottom: none;
 }
 
-p.testimonial-header {
+.testimonial-header {
   font-weight: bold;
 }
 
@@ -18,4 +18,10 @@ p.testimonial-header {
   background-color: var(--text);
   border: 2px solid var(--text);
   border-radius: 5px;
+}
+
+.testimonial-form {
+  padding: 10px;
+  border-bottom: 2px solid var(--border-color);
+
 }
