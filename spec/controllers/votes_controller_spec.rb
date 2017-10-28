@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe VotesController, type: :controller do
   let(:user) { FactoryBot.create(:user)}
   let(:business) { FactoryBot.create(:business)}
-  let(:testimonial) { FactoryBot.build(:testimonial)}
+  let(:testimonial) { FactoryBot.build(:testimonial, :positive)}
 
   before do
     sign_in :user, create(:user)

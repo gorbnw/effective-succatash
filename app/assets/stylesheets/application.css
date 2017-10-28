@@ -15,11 +15,14 @@
  */
 
  :root {
-   --green-yellow: #A2AD59;
-   --border-color: #DCF763;
-   --text: #3A454C;
-   --moss: #DDEDD5;
-   --silver: #848C8E;
+   --border-color: #89BBC1;
+   --text: #0D1B2A;
+   --offwhite: #FCFCFC;
+   --negative: #D999B9;
+   --positive: #DCDBA8;
+   --light-text: #89BBC1;
+   --link: #89BBC1;
+
  }
 
 html {
@@ -27,11 +30,21 @@ html {
 }
 
 body {
+  background-color: var(--text);
 }
 
 .container {
   width: 60%;
   margin: 0 auto;
   color: var(--text);
-  border: solid var(--border-color) 2px;
+  /*border: solid var(--border-color) 2px;*/
+  background-color: white;
+  border-radius: 10px;
+}
+
+a {
+  color: var(--link);
+}
+a:hover {
+  color: var(--positive);
 }

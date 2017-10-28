@@ -1,10 +1,9 @@
 
-
-  <div class="business-overview">
-    <div class="business-overview-left">
-      <h1 class=business-name> <%= @business.name %> </h1>
-      Testimonial summary
-    </div>
+<div class="business-overview">
+  <div class="business-overview-left">
+    <h1 class="business-name"> <%= @business.name %> </h1>
+    <%= render partial: 'testimonial_summary', locals: {business: @business} %>
+  </div>
     <div class="business-overview-right">
       <div class="business-photo">
         <%= image_tag "placehold.gif" %>
@@ -13,16 +12,16 @@
     </div>
   </div>
 
-  <div class="testimonial-form">
-    <%= render partial: 'testimonials/new', locals: { testimonial: @testimonial, business: @business } %>
-  </div>
+    <div class="testimonial-form">
+      <%= render partial: 'testimonials/new', locals: { testimonial: @testimonial, business: @business } %>
+    </div>
 
-  <div class="testimonial-list">
-    <% if @testimonials.empty? %>
-    No one has written a testimonial yet
-    <% else %>
-    <% @testimonials.each do |testimonial| %>
-    <%= render partial: 'testimonial', locals: {testimonial: testimonial } %>
-    <% end %>
-    <% end %>
-  </div>
+    <div class="testimonial-list">
+      <% if @testimonials.empty? %>
+        No one has written a testimonial yet
+      <% else %>
+        <% @testimonials.each do |testimonial| %>
+          <%= render partial: 'testimonial', locals: {testimonial: testimonial } %>
+          <% end %>
+      <% end %>
+    </div>

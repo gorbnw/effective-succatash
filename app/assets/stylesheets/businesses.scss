@@ -6,6 +6,7 @@
 
 .business-list-div {
   margin: 0 auto;
+  padding: 10px;
 }
 
 .business-header {
@@ -40,8 +41,6 @@ ul {
   text-decoration-color: var(--border-color);
 }
 
-
-
 .business-overview {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -72,4 +71,30 @@ ul {
 .business-overview-right{
   padding: 10px;
 
+}
+
+.testimonial-summary {
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  width: 95%;
+  height: 45%;
+}
+
+.count {
+  line-height: 150%;
+}
+
+.testimonial-container {
+  height: 50%;
+  border-radius: 15px;
+}
+
+.praise {
+  border: 2px solid var(--positive);
+  margin-bottom: 5px;
+}
+.criticism {
+  // background-color: var(--negative);
+  border: 2px solid var(--negative);
 }
