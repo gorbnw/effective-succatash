@@ -8,10 +8,6 @@ class Testimonial < ApplicationRecord
   belongs_to :user
   belongs_to :business
 
-  # def tags_list
-  #   self.tags
-  # end
-
   def count
   end
 end
