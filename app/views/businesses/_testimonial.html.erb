@@ -6,4 +6,5 @@
   <% end %>
   <p>Tags: Bad time, unfriendly people (placeholder)</p>
   <p class="testimonial-text"> <%= testimonial.description %> </p>
+  <%= render partial: "testimonials/vote", locals: {testimonial: testimonial} %>
 </div>
