@@ -12,7 +12,7 @@ RSpec.describe BusinessesController, type: :controller do
       expect(assigns[:businesses]).to eq Business.all
     end
   end
-  
+
   describe 'businesses#show' do
     let!(:business){FactoryBot.create(:business)}
     before(:each) { get :show, params: {id: business.id} }
