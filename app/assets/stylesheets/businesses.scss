@@ -40,8 +40,6 @@ ul {
   text-decoration-color: var(--border-color);
 }
 
-
-
 .business-overview {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -72,4 +70,31 @@ ul {
 .business-overview-right{
   padding: 10px;
 
+}
+
+.testimonial-summary {
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  width: 95%;
+  height: 90%;
+}
+
+.count {
+  line-height: 150%;
+}
+
+.testimonial-container {
+  height: 50%;
+  border-radius: 20px;
+}
+
+.praise {
+  background-color: #e6ffe6;
+  border: 1px solid green;
+  margin-bottom: 5px;
+}
+.criticism {
+  background-color: #ffc6b3;
+  border: 1px solid red;
 }

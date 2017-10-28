@@ -14,34 +14,59 @@ RSpec.describe Business, type: :model do
     end
   end
 
-  describe "validations" do
+  describe "#count_praise" do
     let!(:business){FactoryBot.create(:business)}
-    it "is valid with a name" do
-      expect(business.valid?).to eq true
+    let!(:testimonial){FactoryBot.create(:testimonial, :positive)}
+    let!(:testimonial2){FactoryBot.create(:testimonial, :negative)}
+
+      it 'counts positive praise for a given business' do
+        business.testimonials << [testimonial, testimonial2]
+        business.save!
+        expect(business.count_praise).to eq "1 user gave praise!"
+      end
+
+      it 'counts negative praise for a given business' do
+        business.testimonials << [testimonial, testimonial2]
+        business.save!
+        expect(business.count_criticism).to eq "1 user left criticism"
+      end
+
+      it 'returns "No praise for this business yet" when no positive praise exists' do
+        expect(business.count_praise).to eq "No praise for this business yet"
+      end
+
+      it 'returns "No citicism for this business yet" when no negative praise exists' do
+        expect(business.count_criticism).to eq "No criticism for this business yet"
+      end
     end
 
-    it "is invalid without a name" do
-      business.name = nil
-      expect(business.valid?).to eq false
-    end
+    describe "validations" do
+      let!(:business){FactoryBot.create(:business)}
+      it "is valid with a name" do
+        expect(business.valid?).to eq true
+      end
 
-    it "is valid with a phone" do
-      expect(business.valid?).to eq true
-    end
+      it "is invalid without a name" do
+        business.name = nil
+        expect(business.valid?).to eq false
+      end
 
-    it "is invalid without a phone" do
-      business.phone = nil
-      expect(business.valid?).to eq false
-    end
+      it "is valid with a phone" do
+        expect(business.valid?).to eq true
+      end
 
-    it "is valid with a address" do
-      expect(business.valid?).to eq true
-    end
+      it "is invalid without a phone" do
+        business.phone = nil
+        expect(business.valid?).to eq false
+      end
 
-    it "is invalid without a address" do
-      business.address = nil
-      expect(business.valid?).to eq false
-    end
-  end
+      it "is valid with a address" do
+        expect(business.valid?).to eq true
+      end
 
+      it "is invalid without a address" do
+        business.address = nil
+        expect(business.valid?).to eq false
+      end
+    end
 end
