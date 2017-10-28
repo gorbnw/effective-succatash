@@ -7,10 +7,29 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 20.times do
-  info = {
+  business_info = {
     name: Faker::Space.constellation,
     phone: "206-867-5309",
     address: Faker::Address.street_address
   }
-  Business.create(info)
+  Business.create(business_info)
+end
+
+40.times do
+  user_info = {
+    username: Faker::Lovecraft.words(2, false).join,
+    email: Faker::Internet.email,
+    password: "hamham"
+  }
+  User.create(user_info)
+end
+
+120.times do
+  t = Testimonial.create(
+    anonymous: Faker::Boolean.boolean(0.4),
+    positive: Faker::Boolean.boolean(0.5),
+    description: Faker::Lorem.paragraph(2, true, 6)
+  )
+  User.all.sample.testimonials << t
+  Business.all.sample.testimonials << t
 end

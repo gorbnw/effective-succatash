@@ -5,6 +5,7 @@ class BusinessesController < ApplicationController
 
   def show
     @business = Business.find(params[:id])
-
+    @testimonial = Testimonial.new
+    @testimonials = @business.testimonials
   end
 end
