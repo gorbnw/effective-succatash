@@ -1,8 +1,14 @@
 class TestimonialsController < ApplicationController
   def create
-    testimonial = Testimonial.create(testimonial_params)
+    @testimonial = Testimonial.new(testimonial_params)
     @business = Business.find(testimonial_params[:business_id])
-    redirect_to business_path(@business)
+    @testimonials = @business.testimonials
+    if @testimonial.save
+      redirect_to business_path(@business)
+    else
+      render '/businesses/show'
+    end
+
   end
 
   private
