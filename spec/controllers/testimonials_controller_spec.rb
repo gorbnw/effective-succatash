@@ -1,16 +1,13 @@
 require 'rails_helper'
 
 describe TestimonialsController, type: :controller do
-  before(:each) do
-    get :create
-  end
-
-  it 'renders the partial' do
-    redirect_to url_for(:controller => :businesses, :action => :show)
-    response.should render_template(:partial => 'new')
-  end
-
-  it 'assigns a testimonial object' do
-    expect(assigns[:testimonial]).to be_a Testimonial
+  let!(:business) { Business.create!(
+      name: "The Happy Place",
+      phone: "206-555-5555",
+      address: "123 Broadway St"
+    ) }
+  it 'posts to the testimonials' do
+    post :create, params: { testimonial: { description: "The bouncers here are rad!", positive: true, anonymous: false, business_id: business.id } }
+    redirect_to route_to(:controller => :businesses, :action => :show)
   end
 end
