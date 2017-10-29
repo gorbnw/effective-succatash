@@ -4,11 +4,22 @@ $(document).ready(() => {
   $('.vote-form').on('submit', (e) => {
     e.preventDefault();
     // may not be event delegated - keep an eye out
-    console.log("connected")
+
     const url = $(e.target).closest('.vote-form').attr('action')
-    console.log(url)
+
     const data = $(e.target).closest('.vote-form').find('.testimonial-id').val();
-    console.log(data)
-  })
+
+    const request = $.ajax({
+      method: 'POST',
+      url: url,
+      data: { vote: {testimonial_id: data} }
+    }).done((response) => {
+      $(e.target).closest('.vote-container').find('.vote-count').text(response);
+    }).fail(() => {
+      alert("Oops, Something went wrong, please try again!");
+    }).always(() => {
+      console.log('Click Registered');
+    })
+  }) // End Ajax of vote count button.
 
 });
