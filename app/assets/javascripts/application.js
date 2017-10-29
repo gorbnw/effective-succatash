@@ -34,7 +34,7 @@ $(document).ready(() => {
 
   $(".reg-container .checkbox").change((e) => {
     let label = $(e.target).closest(".field").find('label');
-    $(label).toggleClass('bold');
+    $(label).toggleClass('check-bold').css('color', '#0F1926');
   })
 
   $(".form-button").on('click', (e, clickCounter) => {

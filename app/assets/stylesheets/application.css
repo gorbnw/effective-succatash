@@ -66,7 +66,7 @@ a:hover {
 
 .reg-container {
   width: 200px;
-  padding: 20px 0;
+  padding: 20px;
   margin: 0 auto;
   font-size: 1em;
 }
@@ -80,7 +80,7 @@ a:hover {
   display: inline-block;
 }
 
-.reg-container input,
+.reg-container .input,
 .reg-container label {
   box-sizing: border-box;
   display: block;
@@ -88,10 +88,11 @@ a:hover {
 }
 
 .reg-container label {
-  transform: translate(10px, 25px);
+  transform: translate(8px, 30px);
+  color: grey;
 }
 
-.reg-container input {
+.reg-container .input {
     font-size: 1em;
     padding: 5px 5px;
     margin-bottom: 10px;
@@ -110,11 +111,10 @@ a:hover {
 
 .reg-container input[type=checkbox] {
       display: inline-block;
-      width: 20%;
+      width: 20px;
       float: left;
       padding: 0;
-      margin: 10px;
-      border: 1px solid red;
+      margin: 10px 10px 10px 0px;
 }
 
 .labelshift {
@@ -122,7 +122,7 @@ a:hover {
   animation: labelshift .5s forwards;
 }
 
-.bold {
+.check-bold {
   font-weight: bold;
 }
 
