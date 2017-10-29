@@ -10,6 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require normalize-rails
  *= require_tree .
  *= require_self
  */
@@ -43,7 +44,6 @@ body {
   width: 60%;
   margin: 0 auto;
   color: var(--text);
-  /*border: solid var(--border-color) 2px;*/
   background-color: white;
   border-radius: 10px;
 }
@@ -82,7 +82,6 @@ a:hover {
   box-sizing: border-box;
   display: block;
   width: 100%;
-  /*border: 1px solid red;*/
 }
 
 .reg-container label {
