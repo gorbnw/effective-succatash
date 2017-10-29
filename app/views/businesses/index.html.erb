@@ -1,6 +1,12 @@
 <div class="search-area">
   <!-- search area -->
   <h3>** Eventual Search Bar Area **</h3>
+
+  <%= form_tag search_businesses_path, method: :get, class: "search-bar" do %>
+    <%= text_field_tag 'search[term]' %>
+    <%= text_field_tag 'search[location]' %>
+    <%= submit_tag 'search' %>
+  <% end %>
 </div>
 
 <div class="business-list-div">
@@ -8,7 +14,7 @@
   <ul class="business-list">
     <% @businesses.each do |business| %>
       <li class="business">
-        <p><span class="name"><%= link_to business.name, business_path(business) %></span><span class="phone"><%= business.phone %></span><%= business.address %></p>
+        <p><span class="name"><%= link_to business["name"], "/businesses/show/#{business['id']}" %></span><span class="phone"><%= business["display_phone"] %></span><%= business["location"]["display_address"].join(" ") %></p>
       </li>
     <% end %>
   </ul>

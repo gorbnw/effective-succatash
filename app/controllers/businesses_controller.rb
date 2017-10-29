@@ -1,4 +1,4 @@
-require 'oauth2'
+require_relative "../models/yelphelper"
 
 class BusinessesController < ApplicationController
   def index
@@ -6,8 +6,9 @@ class BusinessesController < ApplicationController
   end
 
   def search
-    p YelpHelper.search_business(params)
-    render json: Yelp.client.search('San Francisco', {term: 'restaurants'})
+    hash = {"term" => params[:search][:term], "location" => params[:search][:location]}
+    p @businesses = Business.search_business(hash)
+    render "businesses/index"
   end
 
   def show
