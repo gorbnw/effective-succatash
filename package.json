@@ -1,5 +1,7 @@
 {
   "name": "effective-succatash",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "sweetalert": "^2.0.8"
+  }
 }

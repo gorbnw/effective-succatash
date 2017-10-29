@@ -13,6 +13,7 @@
 //= require rails-ujs
 //= require jquery3
 //= require jquery_ujs
+//= require sweetalert
 //= require_tree .
 
 $(document).ready(() => {
@@ -32,6 +33,11 @@ $(document).ready(() => {
   $(".reg-container .checkbox").change((e) => {
     let label = $(e.target).closest(".field").find('label');
     $(label).toggleClass('bold');
+  })
+
+  $(".form-button").on('click', (e) => {
+    e.preventDefault();
+    swal("Please Consider Speaking Out!", "Show your solidarity by also sharing your experience; please consider adding a testimonial.");
   })
 
 })

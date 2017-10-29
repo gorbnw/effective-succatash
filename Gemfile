@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery'
 gem 'jquery-rails'
 gem 'normalize-rails'
+gem 'sweetalert-rails'
 
 # Use devise for authentication
 gem 'devise'
