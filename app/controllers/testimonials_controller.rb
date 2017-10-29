@@ -5,12 +5,16 @@ class TestimonialsController < ApplicationController
     @business = Business.find(testimonial_params[:business_id])
     @testimonials = @business.testimonials
     @vote = Vote.new
-    if @testimonial.save
+    if (@testimonial.valid? && tag_params[:tags] != "")
+      @testimonial.save
       @testimonial.tags << Tag.find(tag_params[:tags])
       redirect_to business_path(@business)
     else
+      @testimonial.valid?
+      @testimonial.errors.add(:base, "Please select a tag")
       render '/businesses/show'
     end
+
 
   end
 

@@ -1,6 +1,6 @@
 <div class="errors">
   <ul>
-    <% obj.errors.full_messages.each do |error| %>
+    <% obj.errors.each do |attr, error| %>
     <li> <%= error %> </li>
     <% end %>
   </ul>

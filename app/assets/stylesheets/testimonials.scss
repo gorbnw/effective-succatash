@@ -37,6 +37,10 @@
   border-bottom: 2px solid var(--border-color);
   background-color: var(--light-text);
   border-radius: 4px;
+  .errors {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
 .field {
@@ -48,7 +52,6 @@
 .testimonial-form-header {
   font-size: 1.3rem;
   text-align: center;
-  margin-bottom: 0.7rem;
 }
 
 .new_testimonial {
@@ -62,6 +65,11 @@
   label {
     margin-right: 0.4rem;
   }
+}
+
+.experience-selections {
+  display: flex;
+  flex-direction: row;
 }
 
 .submit-button {

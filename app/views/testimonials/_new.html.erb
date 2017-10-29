@@ -3,6 +3,9 @@
     <div class="testimonial-form-header">
       <%= f.label "Share Your Experience: " %>
     </div>
+    <% if testimonial.errors.any? %>
+      <%= render partial: '/errors', locals: { obj: testimonial } %>
+    <% end %>
     <div class="safe-unsafe-selection field">
       <%= f.label "How did you feel here? " %>
       <div class="experience-selections">
