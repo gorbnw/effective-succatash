@@ -24,7 +24,7 @@
         No one has written a testimonial yet
       <% else %>
         <% @testimonials.each do |testimonial| %>
-          <%= render partial: 'testimonial', locals: {testimonial: testimonial } %>
+          <%= render partial: 'businesses/testimonial', locals: {testimonial: testimonial } %>
           <% end %>
       <% end %>
     </div>
