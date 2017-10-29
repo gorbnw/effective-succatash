@@ -28,9 +28,14 @@ $(document).ready(() => {
       url,
       data
     }).done((response) => {
-      $('.testimonial-list').append(response)
-      // debugger;
+      if(response.errors){
+        $('.errors').html(response.errors)
+      }else{
+        $('.testimonial-list').append(response)
+        $('.new_testimonial')[0].reset()
+      }
     }) // end ajax response
+
   }) //end new testimonial listener
 
 }); //end document ready

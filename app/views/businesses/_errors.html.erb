@@ -1,0 +1,12 @@
+</div class="errors">
+<% if testimonial.errors.any? %>
+  <%= render partial: '/errors', locals: { obj: testimonial } %>
+<% end %>
+<div class="safe-unsafe-selection field">
+  <%= f.label "How did you feel here? " %>
+  <div class="experience-selections">
+    <%= f.radio_button :positive, :checked => true %>
+    <%= f.label "Safe" %>
+    <%= f.radio_button :positive, :checked => false  %>
+    <%= f.label "Unsafe" %>
+  </div>
