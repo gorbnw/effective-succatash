@@ -6,7 +6,7 @@
     <% if testimonial.errors.any? %>
       <%= render partial: '/errors', locals: { obj: testimonial } %>
     <% end %>
-    <div class="safe-unsafe-selection field">
+    <div class="safe-unsafe-selection field testimonial-field">
       <%= f.label "How did you feel here? " %>
       <div class="experience-selections">
         <%= f.radio_button :positive, :checked => true %>
@@ -15,18 +15,18 @@
         <%= f.label "Unsafe" %>
       </div>
     </div>
-    <div class="experience-tag field">
+    <div class="experience-tag field testimonial-field">
       <%= f.label "Tag Your Experience: " %>
       <%= f.collection_select :tags, Tag.all, :id, :description, prompt: "Please select a tag" %>
     </div>
-    <div class="anonymous-field field">
+    <div class="anonymous-field field testimonial-field">
       <%= f.label "Check to publish anonymously: " %>
       <%= f.check_box :anonymous %>
     </div>
-    <div class="testimonial-text-box field">
+    <div class="testimonial-text-box field testimonial-field">
       <%= f.text_area :description, class: "testimonial-box", placeholder: "Describe your experience.." %>
     </div>
-    <div class="submit-button field">
+    <div class="submit-button field testimonial-field">
       <%= f.submit 'Share Testimonial' %>
     </div>
     <input type="hidden" value="<%= @business.id %>" name="testimonial[business_id]" />
