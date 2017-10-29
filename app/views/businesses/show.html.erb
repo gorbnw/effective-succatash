@@ -13,9 +13,6 @@
   </div>
 
     <div class="testimonial-form">
-      <% if @testimonial.errors.any? %>
-        <%= render partial: '/errors', locals: { obj: @testimonial } %>
-      <% end %>
       <%= render partial: 'testimonials/new', locals: { testimonial: @testimonial, business: @business } %>
     </div>
 

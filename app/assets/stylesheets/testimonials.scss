@@ -2,6 +2,10 @@
   padding: 10px;
 }
 
+.testimonial-list {
+  border-top: 2px solid var(--border-color);
+}
+
 .testimonial-list .testimonial {
   border-bottom: 2px solid var(--border-color);
 }
@@ -20,8 +24,65 @@
   border-radius: 5px;
 }
 
+
+// ====== TESTIMONIAL FORM THINGS ======
+
 .testimonial-form {
   padding: 10px;
+  max-width: 450px;
+  min-width: 350px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   border-bottom: 2px solid var(--border-color);
+  background-color: var(--light-text);
+  border-radius: 4px;
+  .errors {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
 
+.field {
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.testimonial-form-header {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.new_testimonial {
+  display: flex;
+  flex-direction: column;
+}
+
+.safe-unsafe-selection {
+  display: flex;
+  flex-direction: row;
+  label {
+    margin-right: 0.4rem;
+  }
+}
+
+.experience-selections {
+  display: flex;
+  flex-direction: row;
+}
+
+.submit-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  input {
+    border: none;
+    background-color: var(--text);
+    color: white;
+    padding: 0.4rem;
+    font-size: 0.6rem;
+    border-radius: 3px;
+    margin-top: 0.3rem;
+  }
 }
