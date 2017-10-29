@@ -1,9 +1,15 @@
 class VotesController < ApplicationController
+
   def create
     @vote = Vote.new(user_id: current_user.id, testimonial_id: params[:vote][:testimonial_id])
     @vote.save!
-    @business = Testimonial.find(params[:vote][:testimonial_id]).business
-    redirect_to business_path(@business)
+    testimonial = Testimonial.find(params[:vote][:testimonial_id])
+    @business = testimonial.business
+    if request.xhr?
+      render :json => testimonial.votes.count.to_json
+    else
+      redirect_to business_path(@business)
+    end
   end
 
   private
