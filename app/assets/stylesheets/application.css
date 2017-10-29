@@ -25,6 +25,10 @@
 
  }
 
+ .errors {
+   color: var(--negative);
+ }
+
 html {
   width: 100%;
 }
