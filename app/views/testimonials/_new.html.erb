@@ -14,7 +14,7 @@
     </div>
     <div class="experience-tag field">
       <%= f.label "Tag Your Experience: " %>
-      <%= f.collection_select :tags, Tag.all, :id, :description %>
+      <%= f.collection_select :tags, Tag.all, :id, :description, prompt: "Please select a tag" %>
     </div>
     <div class="anonymous-field field">
       <%= f.label "Check to publish anonymously: " %>
