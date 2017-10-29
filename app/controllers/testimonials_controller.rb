@@ -19,8 +19,6 @@ class TestimonialsController < ApplicationController
       @testimonial.errors.add(:base, "Please select a tag")
       if request.xhr?
         @errors = @testimonial.errors
-        # errors = @testimonial.errors.messages.map {|attr, error| error }
-        # render :json => {errors: errors.flatten}
         render 'testimonials/_errors_form', layout: false, :status => 422
       else
         render '/businesses/show'
