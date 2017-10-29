@@ -29,7 +29,8 @@
  }
 
  .errors {
-   color: var(--negative);
+   color: red;
+   font-size: 0.8rem;
  }
 
 html {

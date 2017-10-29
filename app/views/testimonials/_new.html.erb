@@ -1,29 +1,32 @@
 <div>
   <%= form_for testimonial do |f| %>
-    <div class="testimonial-header">
+    <div class="testimonial-form-header">
       <%= f.label "Share Your Experience: " %>
     </div>
-    <div class="testimonial-text-box">
-      <%= f.text_field :description %>
+    <% if testimonial.errors.any? %>
+      <%= render partial: '/errors', locals: { obj: testimonial } %>
+    <% end %>
+    <div class="safe-unsafe-selection field">
+      <%= f.label "How did you feel here? " %>
+      <div class="experience-selections">
+        <%= f.radio_button :positive, :checked => true %>
+        <%= f.label "Safe" %>
+        <%= f.radio_button :positive, :checked => false  %>
+        <%= f.label "Unsafe" %>
+      </div>
     </div>
-    <div class="experience-tag">
+    <div class="experience-tag field">
       <%= f.label "Tag Your Experience: " %>
-      <%= f.collection_select :tags, Tag.all, :id, :description %>
+      <%= f.collection_select :tags, Tag.all, :id, :description, prompt: "Please select a tag" %>
     </div>
-    <div class="experience-tag">
-      <%= f.label "How was your experience: " %>
-    <div class="experience-selections">
-      <%= f.radio_button :positive, :checked => false  %>
-      <%= f.label "I felt unsafe" %>
-      <%= f.radio_button :positive, :checked => true %>
-      <%= f.label "I felt safe" %>
-    </div>
-    </div>
-    <div class="anonymous-field">
+    <div class="anonymous-field field">
       <%= f.label "Check to publish anonymously: " %>
       <%= f.check_box :anonymous %>
     </div>
-    <div class="submit-button">
+    <div class="testimonial-text-box field">
+      <%= f.text_area :description, cols: 73, rows: 3, placeholder: "Describe your experience.." %>
+    </div>
+    <div class="submit-button field">
       <%= f.submit 'Share Testimonial' %>
     </div>
     <input type="hidden" value="<%= @business.id %>" name="testimonial[business_id]" />
