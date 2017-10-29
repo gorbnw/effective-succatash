@@ -1,6 +1,12 @@
+require 'oauth2'
+
 class BusinessesController < ApplicationController
   def index
     @businesses = Business.all
+  end
+
+  def search
+    render json: Yelp.client.search('San Francisco', {term: 'restaurants'})
   end
 
   def show

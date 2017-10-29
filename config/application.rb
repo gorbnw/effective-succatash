@@ -19,6 +19,11 @@ Bundler.require(*Rails.groups)
 module EffectiveSuccatash
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+
+    Dotenv::Railtie.load
+
+    HOSTNAME = ENV['HOSTNAME']
+    
     config.load_defaults 5.1
 
     # Settings in config/environments/* take precedence over those specified here.
