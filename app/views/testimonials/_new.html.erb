@@ -27,8 +27,8 @@
       <%= f.text_area :description, class: "testimonial-box", placeholder: "Describe your experience.." %>
     </div>
     <div class="submit-button field">
-      <%= f.submit 'Share Testimonial' %>
+      <%= f.submit 'Share Testimonial', class: 'submit-button' %>
     </div>
-    <input type="hidden" value="<%= @business.id %>" name="testimonial[business_id]" />
+    <input type="hidden" value="<%= @business.id %>" name="testimonial[business_id]", class='business' />
   <% end %>
 </div>
