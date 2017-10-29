@@ -6,6 +6,7 @@ class BusinessesController < ApplicationController
   end
 
   def search
+    p Yelp.client
     render json: Yelp.client.search('San Francisco', {term: 'restaurants'})
   end
 
