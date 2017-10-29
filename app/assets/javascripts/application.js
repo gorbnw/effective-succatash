@@ -18,6 +18,8 @@
 
 $(document).ready(() => {
 
+  // let clickCounter = 0;
+
   $(".reg-container .input").on('focus', (e) => {
     let label = $(e.target).closest(".field").find('label');
     $(label).addClass('labelshift');
@@ -35,9 +37,15 @@ $(document).ready(() => {
     $(label).toggleClass('bold');
   })
 
-  $(".form-button").on('click', (e) => {
-    e.preventDefault();
+  $(".form-button").on('click', (e, clickCounter) => {
+    // console.log(clickCounter)
+    // debugger;
+    // if(clickCounter === 0 || (clickCounter % 5)){
     swal("Please Consider Speaking Out!", "Show your solidarity by also sharing your experience; please consider adding a testimonial.");
+    //   clickCounter += 1;
+    // } else {
+    //   clickCounter += 1;
+    // }
   })
 
 })
