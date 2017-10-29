@@ -3,8 +3,8 @@
 
 $(document).ready(() => {
 
-  $('.new_testimonial').on('submit', (e) => {
-    e.preventDefault();
+  $(document).on("submit", '#new_testimonial', (e) => {
+    // e.preventDefault();
     let anonymous = null;
     const setAnonymous = () => {
       if($(e.target).find('input[name="testimonial[anonymous]"]:checked').val() === "1"){
@@ -28,12 +28,11 @@ $(document).ready(() => {
       url,
       data
     }).done((response) => {
-      if(response.errors){
-        $('.errors').html(response.errors)
-      }else{
-        $('.testimonial-list').append(response)
-        $('.new_testimonial')[0].reset()
-      }
+      $('.testimonial-list').append(response);
+      $('.new_testimonial')[0].reset();
+    }).fail((response) => {
+      console.log(response)
+      $('.errors').html(response.responseText);
     }) // end ajax response
 
   }) //end new testimonial listener

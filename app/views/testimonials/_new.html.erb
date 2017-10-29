@@ -1,12 +1,12 @@
+<% if @testimonial.errors.any? %>
+<%= render partial: '/errors', locals: { obj: @testimonial } %>
+<% end %>
 <div>
   <%= form_for testimonial do |f| %>
     <div class="testimonial-form-header">
       <%= f.label "Share Your Experience: " %>
     </div>
     <div class="errors">
-      <% if @testimonial.errors.any? %>
-        <%= render partial: '/errors', locals: { obj: @testimonial } %>
-      <% end %>
     </div>
     <div class="safe-unsafe-selection field">
       <%= f.label "How did you feel here? " %>
