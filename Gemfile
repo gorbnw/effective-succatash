@@ -11,6 +11,7 @@ gem 'rails', '~> 5.1.4'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 ruby '2.3.3'
+gem 'httparty'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server

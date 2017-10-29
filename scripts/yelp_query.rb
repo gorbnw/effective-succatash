@@ -21,7 +21,7 @@ OptionParser.new do |opts|
 end.parse!
 
 res = Faraday.get("https://api.yelp.com/v3/businesses/search", options) do |req|
-  req.headers["Authorization"] = "Bearer " + ENV["YELP_TOKEN_SECRET"]
+  req.headers["Authorization"] = "Bearer " + ENV["TOKEN_SECRET"]
 end
 
 businesses = JSON.parse(res.body)["businesses"]
