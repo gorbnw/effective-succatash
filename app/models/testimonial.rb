@@ -1,6 +1,6 @@
 class Testimonial < ApplicationRecord
   validates :description, presence: true
-  validates :anonymous, presence: true
+  validates :anonymous, inclusion: { in: [true, false] }
   # cannot validate boolean with presence: true method since adding a
   ## false input would technically fail the validation. use syntax below
   ## to test boolean presence validations
