@@ -25,11 +25,12 @@
    --light-text: #89BBC1;
    --link: #89BBC1;
    --darkblue: #0F1926;
+   --errors: #800000;
 
  }
 
  .errors {
-   color: red;
+   color: var(--errors);
    font-size: 0.8rem;
  }
 
