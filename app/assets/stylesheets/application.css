@@ -10,6 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require normalize-rails
  *= require_tree .
  *= require_self
  */
@@ -17,12 +18,20 @@
  :root {
    --border-color: #89BBC1;
    --text: #0D1B2A;
+   --navblue: #4F6D8E;
    --offwhite: #FCFCFC;
    --negative: #D999B9;
    --positive: #DCDBA8;
    --light-text: #89BBC1;
    --link: #89BBC1;
+   --darkblue: #0F1926;
+   --errors: #800000;
 
+ }
+
+ .errors {
+   color: var(--errors);
+   font-size: 0.8rem;
  }
 
 html {
@@ -37,7 +46,6 @@ body {
   width: 60%;
   margin: 0 auto;
   color: var(--text);
-  /*border: solid var(--border-color) 2px;*/
   background-color: white;
   border-radius: 10px;
 }
@@ -47,4 +55,80 @@ a {
 }
 a:hover {
   color: var(--positive);
+}
+
+
+
+/********************************************/
+/**********Login Logout Styles***************/
+/********************************************/
+
+.reg-container {
+  width: 200px;
+  padding: 20px 0;
+  margin: 0 auto;
+  font-size: 1em;
+}
+
+.reg-container h2 {
+  text-align: center;
+}
+
+.reg-container a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.reg-container input,
+.reg-container label {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+
+.reg-container label {
+  transform: translate(10px, 25px);
+}
+
+.reg-container input {
+    font-size: 1em;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+}
+
+.reg-container .no-shift {
+  margin-bottom: 20px;
+}
+
+.reg-container .no-shift label {
+    transform: translate(0,0);
+    display: inline-block;
+    margin-top: 5px;
+    width: 70%;
+}
+
+.reg-container input[type=checkbox] {
+      display: inline-block;
+      width: 20%;
+      float: left;
+      padding: 0;
+      margin: 10px;
+      border: 1px solid red;
+}
+
+.labelshift {
+  transform: translate(0,0);
+  animation: labelshift .5s forwards;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+@keyframes labelshift {
+  to {
+    transform: translate(0,0);
+    color: var(--darkblue);
+    font-weight: bold;
+  }
 }
