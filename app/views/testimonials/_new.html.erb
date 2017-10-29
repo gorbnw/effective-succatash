@@ -1,21 +1,14 @@
-<% if @testimonial.errors.any? %>
-<%= render partial: '/errors', locals: { obj: @testimonial } %>
-<% end %>
 <div>
   <%= form_for testimonial do |f| %>
     <div class="testimonial-form-header">
       <%= f.label "Share Your Experience: " %>
     </div>
-<<<<<<< HEAD
     <div class="errors">
-    </div>
-    <div class="safe-unsafe-selection field">
-=======
-    <% if testimonial.errors.any? %>
+      <% if testimonial.errors.any? %>
       <%= render partial: '/errors', locals: { obj: testimonial } %>
-    <% end %>
+      <% end %>
+    </div>
     <div class="safe-unsafe-selection field testimonial-field">
->>>>>>> cf881238df1844367dbd33d230c4980842d78916
       <%= f.label "How did you feel here? " %>
       <div class="experience-selections">
         <%= f.radio_button :positive, :checked => true %>
@@ -35,13 +28,8 @@
     <div class="testimonial-text-box field testimonial-field">
       <%= f.text_area :description, class: "testimonial-box", placeholder: "Describe your experience.." %>
     </div>
-<<<<<<< HEAD
-    <div class="submit-button field">
-      <%= f.submit 'Share Testimonial', class: 'submit-button' %>
-=======
     <div class="submit-button field testimonial-field">
-      <%= f.submit 'Share Testimonial' %>
->>>>>>> cf881238df1844367dbd33d230c4980842d78916
+      <%= f.submit 'Share Testimonial', class: 'submit-button' %>
     </div>
     <input type="hidden" value="<%= @business.id %>" name="testimonial[business_id]", class='business' />
   <% end %>
