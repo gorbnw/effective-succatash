@@ -5,16 +5,25 @@ class TestimonialsController < ApplicationController
     @business = Business.find(testimonial_params[:business_id])
     @testimonials = @business.testimonials
     @vote = Vote.new
+
     if (@testimonial.valid? && tag_params[:tags] != "")
-      @testimonial.save
-      @testimonial.tags << Tag.find(tag_params[:tags])
-      redirect_to business_path(@business)
+        @testimonial.save
+        @testimonial.tags << Tag.find(tag_params[:tags])
+        if request.xhr?
+          render 'businesses/_testimonial', locals: {testimonial: @testimonial, business: @business }, layout: false
+        else
+          redirect_to business_path(@business)
+        end
     else
       @testimonial.valid?
       @testimonial.errors.add(:base, "Please select a tag")
-      render '/businesses/show'
+      if request.xhr?
+        @errors = @testimonial.errors
+        render 'testimonials/_errors_form', layout: false, :status => 422
+      else
+        render '/businesses/show'
+      end
     end
-
 
   end
 

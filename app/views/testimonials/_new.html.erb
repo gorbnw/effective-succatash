@@ -3,9 +3,11 @@
     <div class="testimonial-form-header">
       <%= f.label "Share Your Experience: " %>
     </div>
-    <% if testimonial.errors.any? %>
+    <div class="errors">
+      <% if testimonial.errors.any? %>
       <%= render partial: '/errors', locals: { obj: testimonial } %>
-    <% end %>
+      <% end %>
+    </div>
     <div class="safe-unsafe-selection field testimonial-field">
       <%= f.label "How did you feel here? " %>
       <div class="experience-selections">
@@ -27,8 +29,8 @@
       <%= f.text_area :description, class: "testimonial-box", placeholder: "Describe your experience.." %>
     </div>
     <div class="submit-button field testimonial-field">
-      <%= f.submit 'Share Testimonial' %>
+      <%= f.submit 'Share Testimonial', class: 'submit-button' %>
     </div>
-    <input type="hidden" value="<%= @business.id %>" name="testimonial[business_id]" />
+    <input type="hidden" value="<%= @business.id %>" name="testimonial[business_id]", class='business' />
   <% end %>
 </div>
