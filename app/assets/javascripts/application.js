@@ -17,15 +17,21 @@
 
 $(document).ready(() => {
 
-  $(".reg-container input").on('focus', (e) => {
+  $(".reg-container .input").on('focus', (e) => {
     let label = $(e.target).closest(".field").find('label');
     $(label).addClass('labelshift');
   })
 
-  $(".reg-container input").on('focusout', (e) => {
+  $(".reg-container .input").on('focusout', (e) => {
     let label = $(e.target).closest(".field").find('label');
       if ($(e.target).val() === "") {
       $(label).removeClass('labelshift');
     }
   })
+
+  $(".reg-container .checkbox").change((e) => {
+    let label = $(e.target).closest(".field").find('label');
+    $(label).toggleClass('bold');
+  })
+
 })

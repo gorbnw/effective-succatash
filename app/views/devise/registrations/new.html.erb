@@ -6,24 +6,24 @@
 
     <div class="field ">
       <%= f.label :username %>
-      <%= f.text_field :username %>
+      <%= f.text_field :username, class: 'input' %>
     </div>
 
     <div class="field">
       <%= f.label :email %>
-      <%= f.email_field :email %>
+      <%= f.email_field :email, class: 'input' %>
     </div>
 
     <div class="field">
       <%= f.label :password %>
       <% if @minimum_password_length %>
-      <%= f.password_field :password, autocomplete: "off" %>
+      <%= f.password_field :password, autocomplete: "off", class: 'input' %>
       <% end %>
     </div>
 
     <div class="field">
       <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: 'input' %>
     </div>
 
     <div class="actions">
