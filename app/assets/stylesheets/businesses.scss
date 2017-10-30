@@ -9,6 +9,28 @@
   padding: 10px;
 }
 
+.search-bar {
+  padding: 20px;
+}
+
+.business-field {
+  display: inline-block;
+  position: relative;
+  width: 63%;
+}
+
+.city-field {
+  display: inline-block;
+  position: relative;
+  width: 20%;
+}
+
+.search-button {
+  display: inline-block;
+  position: relative;
+  width: 12%;
+}
+
 .business {
   border-bottom: 1px solid var(--darkblue);
   display: flex;
