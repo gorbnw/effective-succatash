@@ -3,15 +3,15 @@
 <ul class="testimonial-summary">
 
   <div class="testimonial-container praise">
-    <li class="count"><%= Business.count_praise(@business["id"]) %> </li>
-    <% if Business.count_praise(@business["id"]) == "No praise for this business yet"%>
+    <li class="count"><%= Testimonial.count({verbose: true, yelp_id: business["id"], positive: true}) %> </li>
+    <% if Testimonial.count({verbose: false, yelp_id: business["id"], positive: true}) == 0 %>
     <li>Be the first to leave a review</li>
     <% end %>
   </div>
 
   <div class="testimonial-container criticism">
-    <li class="count"><%= Business.count_criticism(@business["id"]) %> </li>
-    <% if Business.count_criticism(@business["id"]) == "No criticism for this business yet" %>
+    <li class="count"><%= Testimonial.count({verbose: true, yelp_id: business["id"], positive: false}) %> </li>
+    <% if Testimonial.count({verbose: false, yelp_id: business["id"], positive: false}) == 0 %>
     <li>Be the first to leave a review</li>
     <% end %>
   </div>
