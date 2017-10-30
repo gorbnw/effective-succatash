@@ -1,5 +1,3 @@
-require_relative "../models/yelphelper"
-
 class BusinessesController < ApplicationController
   def index
     @businesses = nil
