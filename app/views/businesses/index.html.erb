@@ -14,7 +14,7 @@
       <% @businesses.each do |business| %>
       <%= render partial: 'doodad', locals: {business: business} %>
         <li class="business">
-          <p><span class="name"><%= link_to business["name"], "/businesses/show/#{business['id']}" %></span><span class="phone"><%= business["display_phone"] %></span><%= business["location"]["display_address"].join(" ") %></p>
+          <p><span class="name"><%= link_to business["name"], "/businesses/#{business['id']}" %></span><span class="phone"><%= business["display_phone"] %></span><%= business["location"]["display_address"].join(" ") %></p>
         </li>
       <% end %>
     </ul>
