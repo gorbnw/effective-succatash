@@ -36,6 +36,7 @@
 
 html {
   width: 100%;
+  font-family: 'Frank Ruhl Libre', serif;
 }
 
 body {
@@ -52,6 +53,7 @@ body {
 
 a {
   color: var(--link);
+  text-decoration: none;
 }
 a:hover {
   color: var(--positive);
