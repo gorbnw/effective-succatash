@@ -10,6 +10,55 @@
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.search-bar {
+  padding: 15px;
+}
+
+.business-container {
+  display: inline-block;
+  position: relative;
+  padding: 5px;
+  width: 55%;
+}
+
+.business-label {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.business-field {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.city-container {
+  display: inline-block;
+  position: relative;
+  padding: 5px;
+  width: 20%;
+}
+
+.city-label {
+  display: inline-block;
+  position: relative;
+  width: 100%
+}
+
+.city-field {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.search-button {
+  display: inline-block;
+  position: relative;
+  margin: 5px;
+  width: 15%;
+}
+
 .business {
   border-bottom: 2px solid transparent;
   display: flex;
