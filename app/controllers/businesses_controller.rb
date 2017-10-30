@@ -10,10 +10,9 @@ class BusinessesController < ApplicationController
   end
 
   def show
-    business_details = params[:id]
-    @business = Business.search_business(business_details)
+    @business = Business.get_yelp_business_details(params[:id])
     @testimonial = Testimonial.new
-    @testimonials = Testimonial.where(business_id: params[:id])
+    @testimonials = Testimonial.where(yelp_id: params[:id])
     @vote = Vote.new
   end
 end

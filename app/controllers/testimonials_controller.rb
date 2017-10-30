@@ -3,11 +3,7 @@ class TestimonialsController < ApplicationController
     @testimonial = Testimonial.new(testimonial_params)
     @testimonial.user = current_user
 
-    business_details = testimonial_params[:business_id]
-    @business = Business.search_business(business_details)
-    @testimonials = Testimonial.find_by(business_id: business_details)
-    @vote = Vote.new
-    # 4/0
+    @business = Business.get_yelp_business_details(testimonial_params[:yelp_id])
 
     if (@testimonial.valid? && tag_params[:tags] != "")
         @testimonial.save
@@ -15,7 +11,7 @@ class TestimonialsController < ApplicationController
         if request.xhr?
           render 'businesses/_testimonial', locals: {testimonial: @testimonial, business: @business }, layout: false
         else
-          redirect_to "/businesses/#{testimonial_params[:business_id]}"
+          redirect_to "/businesses/#{testimonial_params[:yelp_id]}"
         end
     else
       @testimonial.valid?
@@ -24,6 +20,8 @@ class TestimonialsController < ApplicationController
         @errors = @testimonial.errors
         render 'testimonials/_errors_form', layout: false, :status => 422
       else
+        @testimonials = Testimonial.where(yelp_id: testimonial_params[:yelp_id])
+        @vote = Vote.new
         render '/businesses/show'
       end
     end
@@ -33,7 +31,7 @@ class TestimonialsController < ApplicationController
   private
 
   def testimonial_params
-    params.require(:testimonial).permit(:description, :positive, :anonymous, :business_id)
+    params.require(:testimonial).permit(:description, :positive, :anonymous, :yelp_id)
   end
 
   def tag_params
