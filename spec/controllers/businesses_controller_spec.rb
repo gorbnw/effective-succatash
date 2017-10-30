@@ -8,9 +8,6 @@ RSpec.describe BusinessesController, type: :controller do
     it 'returns a 200 status' do
       expect(response.status).to eq 200
     end
-    it 'assigns all businesses' do
-      expect(assigns[:businesses]).to eq Business.all
-    end
   end
 
   describe 'businesses#show' do
