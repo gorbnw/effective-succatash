@@ -31,6 +31,6 @@
     <div class="submit-button field testimonial-field">
       <%= f.submit 'Share Testimonial', class: 'submit-button' %>
     </div>
-    <input type="hidden" value="<%= @business.id %>" name="testimonial[business_id]", class='business' />
+    <input type="hidden" value="<%= @business['id'] %>" name="testimonial[business_id]", class='business' />
   <% end %>
 </div>

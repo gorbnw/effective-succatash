@@ -14,7 +14,7 @@ RSpec.describe Business, type: :model do
     end
   end
 
-  describe "#count_praise" do
+  xdescribe "#count_praise" do
     let!(:business){FactoryBot.create(:business)}
     let!(:testimonial){FactoryBot.create(:testimonial, :positive)}
     let!(:testimonial2){FactoryBot.create(:testimonial, :negative)}
