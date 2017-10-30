@@ -12,7 +12,7 @@
     <header>
       <nav id="nav-bar">
         <ul>
-          <li id="nav-logo"><a href="/"><%= image_tag("Mockingjay-logo.png", :alt =>"MyKindofSpace", :class =>'image-hieght') %></a></li>
+          <li id="nav-logo"><a class="logo-nav" href="/">LogoHere</a></li>
           <% if user_signed_in? %>
             <li class="nav-item"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
           <% else %>
