@@ -31,9 +31,7 @@ class Business < ApplicationRecord
 
   def self.search_business(args)
     yelp_uri = "https://api.yelp.com/v3/businesses/"
-    # query = yelp_uri + URI.encode_www_form(args)
-    # business = args
-    query = yelp_uri + args
+    query = yelp_uri + I18n.transliterate(args)
     response = HTTParty.get(query, headers: {"Authorization" => ENV["YELP_TOKEN"] + " " + ENV["YELP_TOKEN_SECRET"] })
     response.parsed_response
 
