@@ -6,7 +6,7 @@
   </div>
     <div class="business-overview-right">
       <div class="business-photo">
-        <%= image_tag "placehold.gif" %>
+        <%= image_tag @business["photos"][1], class: "show-image show-size" %>
       </div>
       <%= render partial: 'businesses/details', locals: {business: @business} %>
     </div>

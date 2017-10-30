@@ -116,3 +116,12 @@ div.doodad {
   // background-color: var(--negative);
   border: 2px solid var(--negative);
 }
+
+
+.show-image {
+  height: 250px;
+  width: 250px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
