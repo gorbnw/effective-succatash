@@ -1,6 +1,6 @@
 class BusinessesController < ApplicationController
   def index
-    @businesses = Business.all
+    @businesses = nil
   end
 
   def search
