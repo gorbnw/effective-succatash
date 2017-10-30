@@ -1,6 +1,6 @@
 class BusinessesController < ApplicationController
   def index
-    @location = Business.get_user_location
+    session[:user_location] = User.get_user_location
     @businesses = nil
   end
 
