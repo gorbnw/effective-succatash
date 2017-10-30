@@ -13,6 +13,11 @@
   border: 1px solid black;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+
+div.content {
+  display: flex;
 }
 
 .business-header {
@@ -28,6 +33,11 @@
 .phone {
   font-style: italic;
   margin-right: 0.5rem;
+}
+
+.list-item {
+  margin: 0;
+  margin-bottom: 0.5rem;
 }
 
 .detail {
@@ -51,8 +61,6 @@ ul {
   display: grid;
   grid-template-columns: 2fr 1fr;
   border-bottom: solid var(--border-color) 2px;
-
-
 }
 
 .business-photo {
@@ -62,7 +70,11 @@ ul {
 .business-photo img {
   margin: auto;
   display: block;
+}
 
+div.doodad {
+  margin-top: 1rem;
+  margin-right: 1rem;
 }
 
 .business-details {
@@ -70,13 +82,11 @@ ul {
 }
 
 .business-overview-left{
-
   padding: 10px;
 }
 
 .business-overview-right{
   padding: 10px;
-
 }
 
 .testimonial-summary {

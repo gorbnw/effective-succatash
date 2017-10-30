@@ -12,22 +12,23 @@
     <h2 class="business-header">Businesses</h2>
     <ul class="business-list">
       <% @businesses.each do |business| %>
-      <%= render partial: 'doodad', locals: {business: business} %>
         <li class="business">
-          <div class="business-photo">
-            <img src="<%= business['image_url'] %>" width="150">
+          <div class="content">
+            <div class="business-photo">
+              <img src="<%= business['image_url'] %>" width="150">
+            </div>
+            <% categories = [] %>
+            <% business['categories'].each do |category| %>
+              <% categories << category["title"] %>
+            <% end %>
+            <div class="index-details">
+              <p class="name list-item"><%= link_to business["name"], "/businesses/#{business['id']}" %></p>
+              <p class="list-item"><%= categories.join(", ") %></p>
+              <p class="phone list-item"><%= business["display_phone"] %></p>
+              <p class="list-item"><%= business["location"]["display_address"].join(", ") %></p>
+            </div>
           </div>
-          <% categories = [] %>
-          <% business['categories'].each do |category| %>
-            <% categories << category["title"] %>
-          <% end %>
-          <div class="index-details">
-            <p class="name"><%= link_to business["name"], "/businesses/show/#{business['id']}" %></p>
-            <p><%= categories.join(", ") %></p>
-            <p class="phone"><%= business["display_phone"] %></p>
-            <p><%= business["location"]["display_address"].join(", ") %></p>
-
-          </div>
+          <%= render partial: 'doodad', locals: {business: business} %>
         </li>
       <% end %>
     </ul>
