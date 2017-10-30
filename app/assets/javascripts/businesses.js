@@ -4,7 +4,7 @@
 $(document).ready(() => {
 
   $(document).on("submit", '#new_testimonial', (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     let anonymous = null;
     const setAnonymous = () => {
       if($(e.target).find('input[name="testimonial[anonymous]"]:checked').val() === "1"){
@@ -22,17 +22,22 @@ $(document).ready(() => {
                                   tags: tags,
                                   anonymous: setAnonymous(),
                                   description: description,
-                                  business_id: business} }
+                                  yelp_id: business} }
     $.ajax({
       method: "POST",
       url,
       data
     }).done((response) => {
-      $('.testimonial-list').append(response);
+      $('.errors').empty();
+      $('.no-testimonials').remove();
+      $('.testimonial-list').prepend(response);
       $('.new_testimonial')[0].reset();
     }).fail((response) => {
       console.log(response)
       $('.errors').html(response.responseText);
+    }).always(() => {
+      $('input.submit-button').removeAttr('disabled');
+
     }) // end ajax response
 
   }) //end new testimonial listener

@@ -24,7 +24,7 @@
 
     <div class="testimonial-list">
       <% if @testimonials.empty? %>
-        No one has written a testimonial yet
+        <p class="no-testimonials">No one has written a testimonial yet</p>
       <% else %>
         <% @testimonials.each do |testimonial| %>
           <%= render partial: 'businesses/testimonial', locals: {testimonial: testimonial } %>
