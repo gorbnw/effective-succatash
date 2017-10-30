@@ -1,0 +1,8 @@
+<div class="doodad">
+  <table class="doodad">
+    <tr>
+      <td> <%= Testimonial.count({verbose: false, business_id: business['id'], positive: true}) %> </td>
+      <td> <%= Testimonial.count({verbose: false, business_id: business['id'], positive: false}) %></td>
+    </tr>
+  </table>
+</div>
