@@ -5,7 +5,6 @@ class Business < ApplicationRecord
   include HTTParty
 
   validates :name, :phone, :address, presence: true
-  has_many :testimonials
 
   def self.count_praise(yelp_business)
     count = Testimonial.where(business_id: yelp_business, positive: true).count
