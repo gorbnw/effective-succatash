@@ -16,7 +16,7 @@ class User < ApplicationRecord
   def self.get_user_location
     google_coord_uri = "https://www.googleapis.com/geolocation/v1/geolocate?key=#{ENV['GOOGLE_MAPS_KEY']}"
     coordinates = HTTParty.post(google_coord_uri, :headers => { 'Content-Type' => 'application/json' }).parsed_response["location"]
-    return '' if google_coord_uri == nil
+    return '' if coordinates == nil
 
     lat = coordinates["lat"]
     long = coordinates["lng"]
