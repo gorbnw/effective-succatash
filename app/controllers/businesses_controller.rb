@@ -1,6 +1,12 @@
 class BusinessesController < ApplicationController
   def index
-    @businesses = Business.all
+    @businesses = nil
+  end
+
+  def search
+    hash = {"term" => params[:search][:term], "location" => params[:search][:location]}
+    p @businesses = Business.search_business(hash)
+    render "businesses/index"
   end
 
   def show
