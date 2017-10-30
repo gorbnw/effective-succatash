@@ -35,7 +35,7 @@ $(document).ready(() => {
   })
 
   $(".reg-container .input").on('focus', (e) => {
-    let label = $(e.target).close
+    let label = $(e.target).closeset(".field").find('label')
   })
 
 })
