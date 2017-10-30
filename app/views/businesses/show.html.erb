@@ -1,7 +1,7 @@
 
 <div class="business-overview">
   <div class="business-overview-left">
-    <h1 class="business-name"> <%= @business.name %> </h1>
+    <h1 class="business-name"> <%= @business['name'] %> </h1>
     <%= render partial: 'businesses/testimonial_summary', locals: {business: @business} %>
   </div>
     <div class="business-overview-right">

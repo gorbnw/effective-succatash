@@ -13,6 +13,7 @@
     <ul class="business-list">
       <% @businesses.each do |business| %>
         <li class="business">
+<<<<<<< HEAD
           <div class="content">
             <div class="business-photo">
               <img src="<%= business['image_url'] %>" width="150">
@@ -29,6 +30,9 @@
             </div>
           </div>
           <%= render partial: 'doodad', locals: {business: business} %>
+=======
+          <p><span class="name"><%= link_to business["name"], "/businesses/#{business['id']}" %></span><span class="phone"><%= business["display_phone"] %></span><%= business["location"]["display_address"].join(" ") %></p>
+>>>>>>> e47f95d86d6f1b61cef7b3d975ec3017d20122a5
         </li>
       <% end %>
     </ul>
