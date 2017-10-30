@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+businesses = ["beer-star-seattle-2", "the-beer-junction-seattle", "redhook-brewlab-seattle", "hill-city-tap-house-and-bottle-shop-seattle", "cloudburst-brewing-seattle", "seattle-beer-co-seattle-7", "teku-tavern-seattle", "old-stove-brewing-seattle", "fremont-brewing-seattle-3", "chucks-hop-shop-seattle-2", "georgetown-brewing-company-seattle", "queen-anne-beerhall-seattle", "ounces-taproom-and-beer-garden-seattle", "swel-seattle", "standard-brewing-seattle", "optimism-brewing-company-seattle", "ballard-beer-company-seattle", "perihelion-brewery-seattle", "figurehead-brewing-seattle"]
 
 tags = ['Unhelpful Staff', 'Wheel-chair accessible', 'Gender-neutral bathrooms', 'Harrassment']
 
@@ -12,14 +13,6 @@ tags.each do |tag|
   Tag.create(description: tag)
 end
 
-20.times do
-  business_info = {
-    name: Faker::Space.constellation,
-    phone: "206-867-5309",
-    address: Faker::Address.street_address
-  }
-  Business.create(business_info)
-end
 
 40.times do
   user_info = {
@@ -32,12 +25,13 @@ end
 
 120.times do
   t = Testimonial.create(
+    user: User.all.sample,
     anonymous: Faker::Boolean.boolean(0.4),
     positive: Faker::Boolean.boolean(0.5),
-    description: Faker::Lorem.paragraph(2, true, 6)
+    description: Faker::Lorem.paragraph(2, true, 6),
+    yelp_id: businesses.sample
   )
-  2.times { t.tags << Tag.all.sample }
 
-  User.all.sample.testimonials << t
-  Business.all.sample.testimonials << t
+  t.tags << Tag.all.sample
+
 end
