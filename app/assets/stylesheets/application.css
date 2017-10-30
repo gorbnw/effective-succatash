@@ -41,11 +41,15 @@
 html {
   width: 100%;
   font-family: 'Frank Ruhl Libre', serif;
+  height: 100%;
 }
 
 body {
   /*background-color: var(--testdarkblue);*/
   background: linear-gradient(to bottom right, #0b212f, #44586a, #a2b4c3); /* Standard syntax */
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .container {
