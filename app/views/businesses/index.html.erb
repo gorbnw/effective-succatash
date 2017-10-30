@@ -1,7 +1,13 @@
 <div class="search-area">
   <%= form_tag search_businesses_path, method: :get, class: "search-bar" do %>
-    <%= text_field_tag 'search[term]', nil, {class: "business-field", placeholder: "Search for a Business"} %>
-    <%= text_field_tag 'search[location]', nil, {class: "city-field", placeholder: "Enter City"} %>
+    <div class="business-container">
+      <%= label_tag "Search a Business", nil, {class: "label-tag"} %>
+      <%= text_field_tag 'search[term]', nil, {class: "business-field"} %>
+    </div>
+    <div class="city-container">
+      <%= label_tag "Enter City", nil, {class: "label-tag"} %>
+      <%= text_field_tag 'search[location]', nil, {class: "city-field"} %>
+    </div>
     <%= submit_tag 'Search', class: "search-button" %>
   <% end %>
 </div>
