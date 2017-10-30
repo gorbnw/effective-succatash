@@ -4,7 +4,6 @@ class VotesController < ApplicationController
     @vote = Vote.new(user_id: current_user.id, testimonial_id: params[:vote][:testimonial_id])
     @vote.save!
     testimonial = Testimonial.find(params[:vote][:testimonial_id])
-    # @business = testimonial.yelp_id
     if request.xhr?
       render :json => testimonial.votes.count.to_json
     else
