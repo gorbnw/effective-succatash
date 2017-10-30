@@ -12,9 +12,23 @@
     <h2 class="business-header">Businesses</h2>
     <ul class="business-list">
       <% @businesses.each do |business| %>
-      <%= render partial: 'doodad', locals: {business: business} %>
         <li class="business">
-          <p><span class="name"><%= link_to business["name"], "/businesses/#{business['id']}" %></span><span class="phone"><%= business["display_phone"] %></span><%= business["location"]["display_address"].join(" ") %></p>
+          <div class="content">
+            <div class="business-photo">
+              <img src="<%= business['image_url'] %>" width="150">
+            </div>
+            <% categories = [] %>
+            <% business['categories'].each do |category| %>
+              <% categories << category["title"] %>
+            <% end %>
+            <div class="index-details">
+              <p class="name"><%= link_to business["name"], "/businesses/#{business['id']}" %></p>
+              <p class="list-item"><%= categories.join(", ") %></p>
+              <p class="phone list-item"><%= business["display_phone"] %></p>
+              <p class="list-item"><%= business["location"]["display_address"].join(", ") %></p>
+            </div>
+          </div>
+          <%= render partial: 'doodad', locals: {business: business} %>
         </li>
       <% end %>
     </ul>
