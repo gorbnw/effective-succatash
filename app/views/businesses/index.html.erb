@@ -1,9 +1,22 @@
 <div class="search-area">
-
   <%= form_tag search_businesses_path, method: :get, class: "search-bar" do %>
-    <%= text_field_tag 'search[term]' %>
-    <%= text_field_tag 'search[location]' %>
-    <%= submit_tag 'search' %>
+    <table class="search-table">
+      <tr>
+        <th><%= label_tag 'Search for a business: ', nil, class: 'search-business' %></th>
+        <th><%= label_tag 'City: ', nil, class: 'search-business' %></th>
+      </tr>
+      <tr>
+        <td><%= text_field_tag 'search[term]', nil, class: 'full-span' %></td>
+        <td><%= text_field_tag 'search[location]', nil, class: 'full-span' %></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div class="search-button">
+            <%= submit_tag 'Search' %>
+          </div>
+        </td>
+      </tr>
+    </table>
   <% end %>
 </div>
 
