@@ -10,7 +10,7 @@
 }
 
 .business {
-  border: 1px solid black;
+  border-bottom: 1px solid var(--darkblue);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -24,10 +24,12 @@ div.content {
   text-align: center;
 }
 
-.name {
+p.name {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-right: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
 }
 
 .phone {
@@ -35,9 +37,9 @@ div.content {
   margin-right: 0.5rem;
 }
 
-.list-item {
-  margin: 0;
-  margin-bottom: 0.5rem;
+p.list-item {
+  margin-bottom: 0.3rem;
+  margin-top: 0.1rem;
 }
 
 .detail {
