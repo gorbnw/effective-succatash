@@ -29,6 +29,7 @@ $(document).ready(() => {
       data
     }).done((response) => {
       $('.errors').empty();
+      $('.no-testimonials').remove();
       $('.testimonial-list').append(response);
       $('.new_testimonial')[0].reset();
     }).fail((response) => {
