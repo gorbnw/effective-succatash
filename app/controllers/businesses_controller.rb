@@ -3,6 +3,12 @@ class BusinessesController < ApplicationController
     @businesses = Business.all
   end
 
+  def search
+    hash = {"term" => params[:search][:term], "location" => params[:search][:location]}
+    p @businesses = Business.search_business(hash)
+    render "businesses/index"
+  end
+
   def show
     @business = Business.find(params[:id])
     @testimonial = Testimonial.new

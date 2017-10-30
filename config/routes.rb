@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
 
-  resources :businesses, only: [:index, :show]
+  resources :businesses do
+    collection do
+      get :search, :action => 'search', as: 'search'
+    end
+  end
   resources :votes, only: [:create]
   resources :testimonials, only: [:show, :create]
 
