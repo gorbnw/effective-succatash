@@ -132,3 +132,23 @@ a:hover {
     font-weight: bold;
   }
 }
+
+table.doodad{
+  border-radius: 10px;
+  border-collapse: collapse;
+  display: inline-table;
+}
+
+table.doodad td:first-of-type{
+  background-color: var(--positive);
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+  padding: 2px 5px 2px 7px;
+
+}
+table.doodad td:last-of-type{
+  padding: 2px 7px 2px 5px;
+  background-color: var(--negative);
+  border-top-right-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
