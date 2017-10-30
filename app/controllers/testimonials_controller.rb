@@ -2,8 +2,10 @@ class TestimonialsController < ApplicationController
   def create
     @testimonial = Testimonial.new(testimonial_params)
     @testimonial.user = current_user
-    @business = Business.find(testimonial_params[:business_id])
-    @testimonials = @business.testimonials
+
+    business_details = testimonial_params[:business_id]
+    @business = Business.search_business(business_details)
+    @testimonials = Testimonial.find_by(business_id: business_details)
     @vote = Vote.new
 
     if (@testimonial.valid? && tag_params[:tags] != "")

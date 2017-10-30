@@ -12,7 +12,6 @@ class BusinessesController < ApplicationController
   def show
     business_details = params[:id]
     @business = Business.search_business(business_details)
-
     @testimonial = Testimonial.new
     @testimonials = Testimonial.find_by(business_id: params[:id])
     @vote = Vote.new
