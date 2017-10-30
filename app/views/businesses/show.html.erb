@@ -17,7 +17,7 @@
     </div>
 
     <div class="testimonial-list">
-      <% if @testimonials.nil? %>
+      <% if @testimonials.empty? %>
         No one has written a testimonial yet
       <% else %>
         <% @testimonials.each do |testimonial| %>

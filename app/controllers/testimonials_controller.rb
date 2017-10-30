@@ -7,6 +7,7 @@ class TestimonialsController < ApplicationController
     @business = Business.search_business(business_details)
     @testimonials = Testimonial.find_by(business_id: business_details)
     @vote = Vote.new
+    # 4/0
 
     if (@testimonial.valid? && tag_params[:tags] != "")
         @testimonial.save
@@ -14,7 +15,7 @@ class TestimonialsController < ApplicationController
         if request.xhr?
           render 'businesses/_testimonial', locals: {testimonial: @testimonial, business: @business }, layout: false
         else
-          redirect_to business_path(@business)
+          redirect_to "/businesses/#{testimonial_params[:business_id]}"
         end
     else
       @testimonial.valid?

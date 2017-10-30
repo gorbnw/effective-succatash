@@ -5,13 +5,10 @@ class Business < ApplicationRecord
   include HTTParty
 
   validates :name, :phone, :address, presence: true
-  has_many :testimonials
+  # has_many :testimonials
 
   def self.count_praise(yelp_business)
-    count = 0
-    if Testimonial.find_by(business_id: yelp_business)
-      count = Testimonial.find_by(business_id: yelp_business).where(positive: true).count
-    end
+    count = Testimonial.where(business_id: yelp_business, positive: true).count
     return "#{count} user gave praise!" if count == 1
     return "#{count} users gave praise!" if count > 0
     "No praise for this business yet"
@@ -19,10 +16,7 @@ class Business < ApplicationRecord
   end
 
   def self.count_criticism(yelp_business)
-    count = 0
-    if Testimonial.find_by(business_id: yelp_business)
-      count = Testimonial.find_by(business_id: yelp_business).where(positive: false).count
-    end
+    count = Testimonial.where(business_id: yelp_business, positive: false).count
     return "#{count} user left criticism" if count == 1
     return "#{count} users left criticism" if count > 0
     "No criticism for this business yet"
