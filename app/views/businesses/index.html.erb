@@ -13,7 +13,20 @@
     <ul class="business-list">
       <% @businesses.each do |business| %>
         <li class="business">
-          <p><span class="name"><%= link_to business["name"], "/businesses/show/#{business['id']}" %></span><span class="phone"><%= business["display_phone"] %></span><%= business["location"]["display_address"].join(" ") %></p>
+          <div class="business-photo">
+            <img src="<%= business['image_url'] %>" width="150">
+          </div>
+          <% categories = [] %>
+          <% business['categories'].each do |category| %>
+            <% categories << category["title"] %>
+          <% end %>
+          <div class="index-details">
+            <p class="name"><%= link_to business["name"], "/businesses/show/#{business['id']}" %></p>
+            <p><%= categories.join(", ") %></p>
+            <p class="phone"><%= business["display_phone"] %></p>
+            <p><%= business["location"]["display_address"].join(", ") %></p>
+
+          </div>
         </li>
       <% end %>
     </ul>
