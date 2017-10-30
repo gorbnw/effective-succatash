@@ -34,4 +34,8 @@ $(document).ready(() => {
     $(label).toggleClass('check-bold').css('color', '#0F1926');
   })
 
+  $(".reg-container .input").on('focus', (e) => {
+    let label = $(e.target).close
+  })
+
 })
