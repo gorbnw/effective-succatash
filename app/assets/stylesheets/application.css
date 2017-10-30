@@ -26,7 +26,11 @@
    --link: #89BBC1;
    --darkblue: #0F1926;
    --errors: #800000;
-
+   --testdarkblue: #091d36;
+   --testmidblue: #3a4e7a;
+   --testlightblue: #c2d2e9;
+   --testwhite: #f1f1f0;
+   --rgbwhite: rgb(255, 255, 255, 0.2);
  }
 
  .errors {
@@ -37,22 +41,26 @@
 html {
   width: 100%;
   font-family: 'Frank Ruhl Libre', serif;
+  height: 100%;
 }
 
 body {
-  background-color: var(--text);
+  /*background-color: var(--testdarkblue);*/
+  background: linear-gradient(to bottom right, #0b212f, #44586a, #a2b4c3); /* Standard syntax */
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .container {
   width: 60%;
   margin: 0 auto;
   color: var(--text);
-  background-color: white;
   border-radius: 10px;
 }
 
 a {
-  color: var(--link);
+  color: var(--testwhite);
   text-decoration: none;
 }
 a:hover {

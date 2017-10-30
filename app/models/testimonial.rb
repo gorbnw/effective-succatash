@@ -9,15 +9,14 @@ class Testimonial < ApplicationRecord
   has_and_belongs_to_many :tags
   has_many :votes
   belongs_to :user
-  # belongs_to :business
 
-  # Example: Testimonial.count({verbose: false, business_id: 1, positive: false}) => 4
-  
+  # Example: Testimonial.count({verbose: false, yelp_id: "busters-ham-house", positive: false}) => 4
+
 
   def self.count(args)
-    business_id = args[:business_id]
+    yelp_id = args[:yelp_id]
     if args[:positive]
-      testimonials = Testimonial.where(business_id: business_id, positive: true)
+      testimonials = Testimonial.where(yelp_id: yelp_id, positive: true)
       count = testimonials.count
       if args[:verbose]
         return "#{count} user gave praise!" if count == 1
@@ -27,7 +26,7 @@ class Testimonial < ApplicationRecord
         count
       end
     else
-      testimonials = Testimonial.where(business_id: business_id, positive: false)
+      testimonials = Testimonial.where(yelp_id: yelp_id, positive: false)
       count = testimonials.count
       if args[:verbose]
         return "#{count} user left criticism" if count == 1
