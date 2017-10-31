@@ -17,5 +17,17 @@ class BusinessesController < ApplicationController
     @testimonial = Testimonial.new
     @testimonials = Testimonial.where(yelp_id: params[:id])
     @vote = Vote.new
+    @tags = @testimonials.map do |testimonial|
+      testimonial.tags
+    end
+    @tags_normalized = []
+    @tags.each do |tag|
+      @tags_normalized.push(tag[0])
+    end
+    @tag_counts = []
+    Tag.all.each do |tag|
+      @tag_counts << @tags_normalized.count(tag)
+    end
+    
   end
 end

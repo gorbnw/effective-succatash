@@ -1,6 +1,8 @@
 
 <div class="business-overview">
 
+  <p><%= @tag_counts %></p>
+
   <div class="business-overview-left">
     <h1 class="business-name"> <%= @business['name'] %> </h1>
     <%= render partial: 'businesses/testimonial_summary', locals: {business: @business} %>
