@@ -244,9 +244,20 @@ div.doodad {
 
 .top-testimonials {
   border-top: 2px solid lightblue;
-  margin: 1rem;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.top-testimonial-header {
+  font-size: 1.2rem;
   text-align: center;
-  height: 200px;
+  color: var(--testlightblue);
+}
+
+.no-testimonials {
+  padding: 1.5rem;
+  font-style: italic;
 }
 
 .count {

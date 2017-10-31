@@ -18,15 +18,21 @@
     </div>
   </div>
   <div class="testimonials-show-container">
-    <div class="top-testimonials-container">
-      <div class="top-testimonials">
-        <h3>Top Testimonials Here</h3>
-        <% if @testimonials.empty? %>
-          <p class="no-testimonials">No one has written a testimonial yet.</p>
-          <p class="no-testimonials">Be the first to share your experience!</p>
+    <div class="top-testimonials">
+      <div class="positive-testimonial">
+        <p class="top-testimonial-header">Most Supported Positive Testimonial</p>
+        <% if !@positive_testimonial || @positive_testimonial.votes.count == 0 %>
+          <p class="no-testimonials">Not enough testimonials have votes yet.</p>
         <% else %>
-          <%= render partial: 'businesses/testimonial', locals: {testimonial: @testimonials[1] } %>
-          <%= render partial: 'businesses/testimonial', locals: {testimonial: @testimonials[1] } %>
+          <%= render partial: 'businesses/testimonial', locals: {testimonial: @positive_testimonial } %>
+        <% end %>
+      </div>
+      <div class="negative_testimonial">
+        <p class="top-testimonial-header">Most Supported Negative Testimonial</p>
+        <% if !@negative_testimonial || @negative_testimonial.votes.count == 0 %>
+          <p class="no-testimonials">Not enough testimonials have votes yet.</p>
+        <% else %>
+          <%= render partial: 'businesses/testimonial', locals: {testimonial: @negative_testimonial } %>
         <% end %>
       </div>
     </div>
