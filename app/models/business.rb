@@ -5,7 +5,6 @@ class Business < ApplicationRecord
   include HTTParty
 
   validates :name, :phone, :address, presence: true
-  # has_many :testimonials
 
   def self.count_praise(yelp_business)
     count = Testimonial.where(business_id: yelp_business, positive: true).count
@@ -29,14 +28,14 @@ class Business < ApplicationRecord
     response.parsed_response["businesses"]
   end
 
-  def self.search_business(args)
+  def self.get_yelp_business_details(yelp_id)
     yelp_uri = "https://api.yelp.com/v3/businesses/"
-    # query = yelp_uri + URI.encode_www_form(args)
-    # business = args
-    query = yelp_uri + args
+    query = yelp_uri + I18n.transliterate(yelp_id)
     response = HTTParty.get(query, headers: {"Authorization" => ENV["YELP_TOKEN"] + " " + ENV["YELP_TOKEN_SECRET"] })
     response.parsed_response
 
   end
+
+
 
 end

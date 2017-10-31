@@ -134,6 +134,7 @@ a:hover {
   font-weight: bold;
 }
 
+
 @keyframes labelshift {
   to {
     transform: translate(0,0);
@@ -160,4 +161,26 @@ table.doodad td:last-of-type{
   background-color: var(--negative);
   border-top-right-radius: 9px;
   border-bottom-right-radius: 9px;
+}
+
+.alert {
+  border: 2px solid #800000;
+  border-radius: 5px;
+  height: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #ffcccc;
+  color: #800000;
+  text-align: center;
+}
+
+.notice {
+  border: 2px solid #004d00;
+  border-radius: 5px;
+  height: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #ccffcc;
+  color: #004d00;
+  text-align: center;
 }

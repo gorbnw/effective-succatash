@@ -1,3 +1,11 @@
+<% if flash[:notice] %>
+  <p class="notice"><%= notice %></p>
+<% end %>
+
+<% if flash[:alert] %>
+  <p class="alert"><%= alert %></p>
+<% end %>
+
 <div class="search-area search-container">
   <%= form_tag search_businesses_path, method: :get, class: "search-bar" do %>
     <div class="field business-container ">
