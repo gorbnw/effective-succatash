@@ -1,22 +1,27 @@
 <div class="testimonial">
-  <div class="testimonial-header">
+  <div class="header">
+
+    <div class="testimonial-text">
+      <%= testimonial.description %>
+    </div>
+
     <div class="vote-container">
       <%= render partial: "testimonials/vote", locals: {testimonial: testimonial} %>
       <span class="vote-count"><%= testimonial.votes.count %></span>
     </div>
-  <% if testimonial.anonymous %>
-    Anonymous
-  <% else %>
-    <%= testimonial.user.username %>
-  <% end %>
-</div>
-  
-  <p>
-    <% testimonial.tags.each do |tag| %>
-      <span class="tag"> <%= tag.description %> </span> &nbsp;
-    <% end %>
-  </p>
-  <p><%= testimonial.created_at.strftime("Posted %m/%d/%Y") %> </p>
-  <p class="testimonial-text"> <%= testimonial.description %> </p>
+  </div>
+      <p>
+        <% testimonial.tags.each do |tag| %>
+        <span class="tag"> <%= tag.description %> </span> &nbsp;
+        <% end %>
+      </p>
+
+      <% if testimonial.anonymous %>
+      <p class='date-and-time'>Anonymous</p>
+      <% else %>
+      <p class='date-and-time'><%= testimonial.user.username %></p>
+      <% end %>
+
+      <p class='date-and-time'><%= testimonial.created_at.strftime("Posted %m/%d/%Y") %> </p>
 
 </div>
