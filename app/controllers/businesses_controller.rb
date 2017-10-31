@@ -1,4 +1,6 @@
 class BusinessesController < ApplicationController
+  include BusinessesHelper
+
   def index
     session[:user_location] = User.get_user_location
     @businesses = nil
@@ -17,17 +19,6 @@ class BusinessesController < ApplicationController
     @testimonial = Testimonial.new
     @testimonials = Testimonial.where(yelp_id: params[:id])
     @vote = Vote.new
-    @tags = @testimonials.map do |testimonial|
-      testimonial.tags
-    end
-    @tags_normalized = []
-    @tags.each do |tag|
-      @tags_normalized.push(tag[0])
-    end
-    @tag_counts = []
-    Tag.all.each do |tag|
-      @tag_counts << @tags_normalized.count(tag)
-    end
-    
+    @tag_counts = tag_counts(@testimonials) # Uses the tag_counts method from the business helper module
   end
 end
