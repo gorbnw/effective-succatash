@@ -131,3 +131,26 @@ h3 {
     margin-top: 0.3rem;
   }
 }
+
+li.tag {
+  border: 1px solid var(--darkblue);
+  border-radius: 5px;
+  color: 1px solid var(--darkblue);
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  padding: 5px;
+  
+}
+
+.experience-tag {
+  p {
+    text-align: left;
+  }
+  input {
+    background: transparent;
+    border: none;
+    display: inline-block;
+    font-size: 14px;
+  }
+}

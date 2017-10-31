@@ -22,4 +22,21 @@ $(document).ready(() => {
     })
   }) // End Ajax of vote count button.
 
-});
+  $('.tag').on('click', (e) => {
+    e.preventDefault;
+    if($(e.delegateTarget).closest('li').attr('name') === 'tags') {
+      $(e.delegateTarget).attr('name', 'clicked')
+      $(e.delegateTarget).find('input').css('color', '#FCFCFC')
+      $(e.delegateTarget).css('border-color', '#FCFCFC')
+      $(e.delegateTarget).find('input').css('background-color', '#3a4e7a')
+      $(e.delegateTarget).css('background-color', '#3a4e7a')
+    } else {
+      $(e.delegateTarget).attr('name', 'tags')
+      $(e.delegateTarget).find('input').css('color', 'black')
+      $(e.delegateTarget).css('border-color', 'black')
+      $(e.delegateTarget).find('input').css('background-color', '#89BBC1')
+      $(e.delegateTarget).css('background-color', '#89BBC1')
+    }
+  })
+
+}); //end document ready

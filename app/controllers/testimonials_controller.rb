@@ -6,9 +6,11 @@ class TestimonialsController < ApplicationController
     @business = Business.get_yelp_business_details(testimonial_params[:yelp_id])
     @vote = Vote.new
 
-    if (@testimonial.valid? && tag_params[:tags] != "")
+    if (@testimonial.valid? && params[:testimonial][:tags].count != 0)
         @testimonial.save
-        @testimonial.tags << Tag.find(tag_params[:tags])
+        params[:testimonial][:tags].each do |tag|
+          @testimonial.tags << Tag.find(tag)
+        end
         if request.xhr?
           render 'businesses/_testimonial', locals: {testimonial: @testimonial, business: @business, vote: @vote }, layout: false
         else
@@ -35,6 +37,6 @@ class TestimonialsController < ApplicationController
   end
 
   def tag_params
-    params.require(:testimonial).permit(:tags)
+    params.permit(:tags)
   end
 end

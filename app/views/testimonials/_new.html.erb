@@ -3,34 +3,46 @@
     <div class="testimonial-form-header">
       <%= f.label "Share Your Experience: " %>
     </div>
+
     <div class="errors">
       <% if testimonial.errors.any? %>
       <%= render partial: '/errors', locals: { obj: testimonial } %>
       <% end %>
     </div>
+
     <div class="safe-unsafe-selection field testimonial-field">
       <%= f.label "How did you feel here? " %>
       <div class="experience-selections">
-        <%= f.radio_button :positive, :checked => true %>
+        <%= f.radio_button :positive, true %>
         <%= f.label "Safe" %>
-        <%= f.radio_button :positive, :checked => false  %>
+        <%= f.radio_button :positive, false  %>
         <%= f.label "Unsafe" %>
       </div>
     </div>
-    <div class="experience-tag field testimonial-field">
-      <%= f.label "Tag Your Experience: " %>
-      <%= f.collection_select :tags, Tag.all, :id, :description, prompt: "Please select a tag" %>
-    </div>
+
     <div class="anonymous-field field testimonial-field">
       <%= f.label "Check to publish anonymously: " %>
       <%= f.check_box :anonymous %>
     </div>
+
     <div class="testimonial-text-box field testimonial-field">
       <%= f.text_area :description, class: "testimonial-box", placeholder: "Describe your experience.." %>
+    </div>
+
+    <div class="experience-tag field testimonial-field">
+      <p>Select up to five tags:</p>
+      <ul class='tags-list'>
+        <% Tag.all.each do |tag| %>
+          <p class="tag" name="tags" value= <%= tag.id %> >
+            <input type="text" name="testimonial[tags]" value=" <%= tag.description %> " readonly>
+          </p>
+        <% end %>
+      </ul>
     </div>
     <div class="submit-button field testimonial-field">
       <%= f.submit 'Share Testimonial', class: 'submit-button' %>
     </div>
+
     <input type="hidden" value="<%= @business['id'] %>" name="testimonial[yelp_id]", class='business' />
   <% end %>
 </div>
