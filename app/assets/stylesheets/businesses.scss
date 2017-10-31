@@ -4,11 +4,135 @@
 
 // Business index
 
+
+// SEARCH BAR STUFF ------
+
 .business-list-div {
   margin: 0 auto;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+// .search-bar {
+//   padding: 15px;
+// }
+
+// .business-container {
+//   // display: inline-block;
+//   // position: relative;
+//   padding: 5px;
+//   // width: 55%;
+// }
+
+// .business-label {
+//   display: inline-block;
+//   position: relative;
+//   width: 100%;
+// }
+
+// .city-container {
+//   // display: inline-block;
+//   // position: relative;
+//   padding: 5px;
+//   width: 20%;
+// }
+
+.search-button {
+  margin: 5px;
+  width: 15%;
+}
+
+.search-area {
+  padding: 4rem;
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.search-button {
+  border: none;
+  background-color: var(--testdarkblue);
+  color: var(--offwhite);
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0rem;
+}
+
+.search-button:hover {
+  background-color: #3a4a5e;
+  color: var(--testwhite);
+}
+
+input.city-field {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  border-bottom: 2px solid var(--testdarkblue);
+  color: var(--testwhite);
+  width: 175px;
+}
+
+input.business-field {
+  background-color: transparent;
+  color: var(--testwhite);
+  font-size: 1.2rem;
+  border: none;
+  border-bottom: 2px solid var(--testdarkblue);
+}
+
+input.business-field::placeholder {
+  color: white;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.business-container {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  .input {
+    width: 85%;
+  }
+}
+
+.city-container {
+  width: 30%;
+  margin-right: 0.3rem;
+}
+
+.search-container label {
+  display: block;
+  transform: translate(8px, 20px);
+  color: var(--testdarkblue);
+  margin-bottom: 0.2rem;
+}
+
+.search-icon {
+  width: 25px;
+  height: 25px;
+  color: var(--testdarkblue);
+  margin-right: 0.5rem;
+}
+// .labelshiftsearch {
+//   animation: labelshiftsearch .5s forwards;
+// }
+// //
+// @keyframes labelshiftsearch {
+//   to {
+//     transform: translate(0,0);
+//     color: white;
+//   }
+// }
+
+// BUSINESS LIST STUFF -----
 
 .business {
   border-bottom: 2px solid transparent;
