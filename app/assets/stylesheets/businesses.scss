@@ -165,6 +165,7 @@ div.doodad {
   margin: auto;
   display: block;
 }
+
 // SHOW PAGE STYLING STUFF -------
 
 .business-name {
@@ -188,7 +189,7 @@ div.doodad {
 
 .charts {
   border: 2px solid lightblue;
-  width: 500px;
+  width: 400px;
   height: 300px;
   margin: 1rem;
 }
@@ -196,7 +197,10 @@ div.doodad {
 .business-images {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .business-photo {
@@ -208,9 +212,9 @@ div.doodad {
 }
 
 .map-frame {
-  margin-top: 10px;
   width: 150px;
   height: 150px;
+  margin-left: 1rem;
 }
 
 .testimonial-summary {
@@ -220,7 +224,6 @@ div.doodad {
   width: 95%;
   height: 45%;
 }
-
 
 .top-testimonials {
   border-top: 2px solid lightblue;
@@ -233,10 +236,6 @@ div.doodad {
   line-height: 150%;
 }
 
-.testimonial-show-container {
-  border-top: 1px solid var(--testlightblue);
-}
-
 .testimonial-container {
   height: 50%;
   border-radius: 15px;
@@ -246,7 +245,7 @@ div.doodad {
   border: 2px solid var(--positive);
   margin-bottom: 5px;
 }
+
 .criticism {
-  // background-color: var(--negative);
   border: 2px solid var(--negative);
 }
