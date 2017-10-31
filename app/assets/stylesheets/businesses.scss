@@ -4,60 +4,99 @@
 
 // Business index
 
+
+// SEARCH BAR STUFF ------
+
 .business-list-div {
   margin: 0 auto;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.search-bar {
-  padding: 15px;
-}
+// .search-bar {
+//   padding: 15px;
+// }
 
-.business-container {
-  display: inline-block;
-  position: relative;
-  padding: 5px;
-  width: 55%;
-}
+// .business-container {
+//   // display: inline-block;
+//   // position: relative;
+//   padding: 5px;
+//   // width: 55%;
+// }
 
-.business-label {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-}
+// .business-label {
+//   display: inline-block;
+//   position: relative;
+//   width: 100%;
+// }
 
-.business-field {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-}
-
-.city-container {
-  display: inline-block;
-  position: relative;
-  padding: 5px;
-  width: 20%;
-}
-
-.city-label {
-  display: inline-block;
-  position: relative;
-  width: 100%
-}
-
-.city-field {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-}
+// .city-container {
+//   // display: inline-block;
+//   // position: relative;
+//   padding: 5px;
+//   width: 20%;
+// }
 
 .search-button {
-  display: inline-block;
-  position: relative;
   margin: 5px;
   width: 15%;
 }
+
+.search-area {
+  padding: 4rem;
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.search-button {
+  border: none;
+  background-color: var(--testdarkblue);
+  color: var(--offwhite);
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0rem;
+}
+
+.business-container {
+  width: 60%;
+  .input {
+    width: 95%;
+  }
+}
+
+.city-container {
+  width: 30%;
+  margin-right: 0.3rem;
+}
+
+.search-container label {
+  display: block;
+  // transform: translate(8px, 20px);
+  color: var(--offwhite);
+  margin-bottom: 0.2rem;
+}
+
+.labelshiftsearch {
+  animation: labelshiftsearch .5s forwards;
+}
+//
+@keyframes labelshiftsearch {
+  to {
+    transform: translate(0,0);
+    color: var(--testdarkblue);
+
+  }
+}
+
+// BUSINESS LIST STUFF -----
 
 .business {
   border-bottom: 2px solid transparent;

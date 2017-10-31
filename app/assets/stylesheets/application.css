@@ -102,9 +102,9 @@ a:hover {
 }
 
 .reg-container .input {
-    font-size: 1em;
-    padding: 5px 5px;
-    margin-bottom: 10px;
+  font-size: 1em;
+  padding: 5px 5px;
+  margin-bottom: 10px;
 }
 
 .reg-container .no-shift {
@@ -112,22 +112,21 @@ a:hover {
 }
 
 .reg-container .no-shift label {
-    transform: translate(0,0);
-    display: inline-block;
-    margin-top: 5px;
-    width: 70%;
+  transform: translate(0,0);
+  display: inline-block;
+  margin-top: 5px;
+  width: 70%;
 }
 
 .reg-container input[type=checkbox] {
-      display: inline-block;
-      width: 20px;
-      float: left;
-      padding: 0;
-      margin: 10px 10px 10px 0px;
+  display: inline-block;
+  width: 20px;
+  float: left;
+  padding: 0;
+  margin: 10px 10px 10px 0px;
 }
 
 .labelshift {
-  transform: translate(0,0);
   animation: labelshift .5s forwards;
 }
 

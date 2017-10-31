@@ -1,11 +1,11 @@
 <div class="search-area search-container">
   <%= form_tag search_businesses_path, method: :get, class: "search-bar" do %>
     <div class="business-container field">
-      <%= label_tag "Search a Business", nil, {class: "label-tag"} %>
+      <%= label_tag "Search a Business", nil %>
       <%= text_field_tag 'search[term]', nil, {class: "business-field input"} %>
     </div>
     <div class="city-container field">
-      <%= label_tag "Enter City", nil, {class: "label-tag"} %>
+      <%= label_tag "Enter City", nil %>
       <%= text_field_tag 'search[location]', nil, {class: "city-field input"} %>
     </div>
     <%= submit_tag 'Search', class: "search-button" %>

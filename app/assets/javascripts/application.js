@@ -34,8 +34,18 @@ $(document).ready(() => {
     $(label).toggleClass('check-bold').css('color', '#0F1926');
   })
 
-  $(".reg-container .input").on('focus', (e) => {
-    let label = $(e.target).closeset(".field").find('label')
+  // SEARCH BAR --
+
+  $(".search-container .input").on('focus', (e) => {
+    let label = $(e.target).closest(".field").find('label');
+    $(label).addClass('labelshiftsearch');
+  })
+
+  $(".search-container .input").on('focusout', (e) => {
+    let label = $(e.target).closest(".field").find('label');
+      if ($(e.target).val() === "") {
+      $(label).removeClass('labelshiftsearch');
+    }
   })
 
 })
