@@ -1,22 +1,38 @@
 
 <div class="business-overview">
-
-  <div class="business-overview-left">
-    <h1 class="business-name"> <%= @business['name'] %> </h1>
-    <%= render partial: 'businesses/testimonial_summary', locals: {business: @business} %>
-  </div>
+  <h1 class="business-name"> <%= @business['name'] %> </h1>
+  <div class="upper-section">
+    <div class="business-overview-left">
+      <div class="charts">
+        <h3>Chart area</h3>
+      </div>
+      <!-- <%= render partial: 'businesses/testimonial_summary', locals: {business: @business} %> -->
+    </div>
     <div class="business-overview-right">
-      <div class="business-photo">
+      <div class="business-images">
         <%= image_tag @business["photos"][1], class: "show-image show-size" %>
         <iframe
-          class="map-frame"
-          frameborder="0" style="border:0"
-          src="https://www.google.com/maps/embed/v1/place?key=<%= ENV['GOOG_MAP_KEY'] %>&q=<%= @business['name'] %>,<%= @business['location']['display_address'] %>" >
-        </iframe>
+        class="map-frame"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=<%= ENV['GOOG_MAP_KEY'] %>&q=<%= @business['name'] %>,<%= @business['location']['display_address'] %>" >
+      </iframe>
       </div>
       <%= render partial: 'businesses/details', locals: {business: @business} %>
     </div>
   </div>
+  <div class="testimonials-show-container">
+    <div class="top-testimonials-container">
+      <div class="top-testimonials">
+        <h3>Top Testimonials Here</h3>
+        <% if @testimonials.empty? %>
+          <p class="no-testimonials">No one has written a testimonial yet.</p>
+          <p class="no-testimonials">Be the first to share your experience!</p>
+        <% else %>
+          <%= render partial: 'businesses/testimonial', locals: {testimonial: @testimonials[1] } %>
+          <%= render partial: 'businesses/testimonial', locals: {testimonial: @testimonials[1] } %>
+        <% end %>
+      </div>
+    </div>
 
     <div class="testimonial-form">
       <%= render partial: 'testimonials/new', locals: { testimonial: @testimonial, business: @business } %>
@@ -33,3 +49,5 @@
           <% end %>
       <% end %>
     </div>
+  </div>
+</div>

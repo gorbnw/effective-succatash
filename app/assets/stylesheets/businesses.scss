@@ -155,43 +155,62 @@ ul {
   margin: 0;
 }
 
-.business-name {
-  margin: 0;
-  font-size: 300%;
-  text-decoration: underline;
-  text-decoration-color: var(--border-color);
-}
-
-.business-overview {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  border-bottom: solid var(--border-color) 2px;
-}
-
-.business-photo {
-  margin: 1rem;
-}
-
-.business-photo img {
-  margin: auto;
-  display: block;
-}
 
 div.doodad {
   margin-top: 1rem;
   margin-right: 1rem;
 }
 
-.business-details {
-  padding: 10px;
+.business-photo img {
+  margin: auto;
+  display: block;
+}
+// SHOW PAGE STYLING STUFF -------
+
+.business-name {
+  margin: 0;
+  font-size: 3rem;
+  text-decoration: underline;
+  text-decoration-color: var(--border-color);
 }
 
-.business-overview-left{
-  padding: 10px;
+.business-overview {
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid var(--border-color) 2px;
 }
 
-.business-overview-right{
-  padding: 10px;
+.upper-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.charts {
+  border: 2px solid lightblue;
+  width: 500px;
+  height: 300px;
+  margin: 1rem;
+}
+
+.business-images {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.business-photo {
+  margin: 1rem;
+}
+
+.show-image {
+  height: 150px;
+}
+
+.map-frame {
+  margin-top: 10px;
+  width: 150px;
+  height: 150px;
 }
 
 .testimonial-summary {
@@ -202,8 +221,20 @@ div.doodad {
   height: 45%;
 }
 
+
+.top-testimonials {
+  border-top: 2px solid lightblue;
+  margin: 1rem;
+  text-align: center;
+  height: 200px;
+}
+
 .count {
   line-height: 150%;
+}
+
+.testimonial-show-container {
+  border-top: 1px solid var(--testlightblue);
 }
 
 .testimonial-container {
@@ -218,18 +249,4 @@ div.doodad {
 .criticism {
   // background-color: var(--negative);
   border: 2px solid var(--negative);
-}
-
-.show-image {
-  height: 250px;
-  width: 250px;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.map-frame {
-  margin-top: 10px;
-  width: 250px;
-  height: 150px;
 }
