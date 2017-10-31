@@ -1,8 +1,28 @@
 <div class="doodad">
   <table class="doodad">
-    <tr>
-      <td> <%= Testimonial.count({verbose: false, yelp_id: business['id'], positive: true}) %> </td>
-      <td> <%= Testimonial.count({verbose: false, yelp_id: business['id'], positive: false}) %></td>
-    </tr>
+      <% if Testimonial.where(yelp_id: business['id']).count <= 0 %>
+      <tr>
+        <th colspan=2> No testimonials yet</th>
+      </tr>
+      <tr>
+        <td class=doodad-no-data>&nbsp;</td>
+      </tr>
+      <% else %>
+        <tr>
+          <th colspan=2> <%= Testimonial.get_percent_pos(business['id']) %>% positive </th>
+        </tr>
+        <tr>
+        <% if Testimonial.count_positive(business['id']) > 0 %>
+          <td class=doodad-positive style='<%= "width:#{Testimonial.get_percent_pos(business['id'])}%;" %>' >  &nbsp;</td>
+          <% end %>
+        <% if Testimonial.count_negative(business['id']) > 0 %>
+            <% if Testimonial.count_positive(business['id']) == 0 %>
+              <td class=doodad-negative > &nbsp; </td>
+            <% else %>
+              <td class=doodad-negative ></td>
+            <% end %>
+        <% end %>
+        </tr>
+      <% end %>
   </table>
 </div>
