@@ -73,13 +73,21 @@
 input.city-field {
   background-color: transparent;
   border: none;
+  font-size: 1.2rem;
   border-bottom: 2px solid var(--testdarkblue);
+  color: white;
 }
 
 input.business-field {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid var(--testdarkblue);
+}
+
+input.business-field::placeholder {
+  color: white;
+  font-size: 1.2rem;
+  opacity: 1.0;
 }
 
 .business-container {
@@ -107,7 +115,7 @@ input.business-field {
   width: 25px;
   height: 25px;
   color: var(--testdarkblue);
-  margin-right: 0.3rem;
+  margin-right: 0.5rem;
 }
 // .labelshiftsearch {
 //   animation: labelshiftsearch .5s forwards;
