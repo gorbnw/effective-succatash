@@ -4,7 +4,9 @@
   <div class="upper-section">
     <div class="business-overview-left">
       <div class="charts">
-        <div class="show-doodad"></div>
+        <div class="show-doodad">
+          <%= render partial: 'doodad', locals: {business: @business} %>
+        </div>
         <div id="donutchart" style="width: 250px; height: 250px;"></div>
       </div>
       <!-- <%= render partial: 'businesses/testimonial_summary', locals: {business: @business} %> -->

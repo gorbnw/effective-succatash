@@ -195,7 +195,6 @@ div.doodad {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1rem;
   box-sizing: border-box;
   align-items: center;
 }
@@ -205,9 +204,6 @@ div.doodad {
 }
 
 .show-doodad {
-  background-color: var(--testdarkblue);
-  height: 25px;
-  width: 250px;
   margin-bottom: 1rem;
 }
 
