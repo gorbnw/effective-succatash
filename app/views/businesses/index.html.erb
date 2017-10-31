@@ -1,8 +1,17 @@
+<% if flash[:notice] %>
+  <p class="notice"><%= notice %></p>
+<% end %>
+
+<% if flash[:alert] %>
+  <p class="alert"><%= alert %></p>
+<% end %>
+
 <div class="search-area">
 
-  <% if flash[:city] %>
+  <!-- <% if flash[:city] %>
     <p class="errors"> <%= flash[:city] %> </p>
-  <% end %>
+  <% end %> -->
+
   <%= form_tag search_businesses_path, method: :get, class: "search-bar" do %>
     <%= text_field_tag 'search[term]' %>
     <%= text_field_tag('search[location]', value = session[:user_location]) %>

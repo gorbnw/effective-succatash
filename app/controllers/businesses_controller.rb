@@ -7,7 +7,7 @@ class BusinessesController < ApplicationController
   def search
     business_details = {"term" => params[:search][:term], "location" => params[:search][:location]}
     flash.clear if params[:search][:location] != ""
-    flash[:city] = "Please enter a city to search" if params[:search][:location] == ""
+    flash[:alert] = "Please enter a city to search" if params[:search][:location] == ""
     @businesses = Business.search_businesses(business_details)
     render "businesses/index"
   end
