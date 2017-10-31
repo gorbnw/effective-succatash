@@ -84,8 +84,10 @@ input.business-field {
 
 .business-container {
   width: 60%;
+  display: flex;
+  flex-direction: row;
   .input {
-    width: 95%;
+    width: 85%;
   }
 }
 
@@ -101,6 +103,12 @@ input.business-field {
   margin-bottom: 0.2rem;
 }
 
+.search-icon {
+  width: 25px;
+  height: 25px;
+  color: var(--testdarkblue);
+  margin-right: 0.3rem;
+}
 // .labelshiftsearch {
 //   animation: labelshiftsearch .5s forwards;
 // }
