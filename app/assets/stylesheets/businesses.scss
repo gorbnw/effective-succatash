@@ -46,7 +46,7 @@
   padding: 4rem;
   margin-top: 7rem;
   margin-bottom: 2rem;
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .search-bar {
@@ -65,6 +65,23 @@
   margin-bottom: 0rem;
 }
 
+.search-button:hover {
+  background-color: #3a4a5e;
+  color: var(--testwhite)
+}
+
+input.city-field {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--testdarkblue);
+}
+
+input.business-field {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--testdarkblue);
+}
+
 .business-container {
   width: 60%;
   .input {
@@ -79,22 +96,21 @@
 
 .search-container label {
   display: block;
-  // transform: translate(8px, 20px);
-  color: var(--offwhite);
+  transform: translate(8px, 20px);
+  color: var(--testdarkblue);
   margin-bottom: 0.2rem;
 }
 
-.labelshiftsearch {
-  animation: labelshiftsearch .5s forwards;
-}
-//
-@keyframes labelshiftsearch {
-  to {
-    transform: translate(0,0);
-    color: var(--testdarkblue);
-
-  }
-}
+// .labelshiftsearch {
+//   animation: labelshiftsearch .5s forwards;
+// }
+// //
+// @keyframes labelshiftsearch {
+//   to {
+//     transform: translate(0,0);
+//     color: white;
+//   }
+// }
 
 // BUSINESS LIST STUFF -----
 

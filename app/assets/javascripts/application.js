@@ -36,12 +36,12 @@ $(document).ready(() => {
 
   // SEARCH BAR --
 
-  $(".search-container .input").on('focus', (e) => {
+  $(".search-bar .input").on('focus', (e) => {
     let label = $(e.target).closest(".field").find('label');
     $(label).addClass('labelshiftsearch');
   })
 
-  $(".search-container .input").on('focusout', (e) => {
+  $(".search-bar .input").on('focusout', (e) => {
     let label = $(e.target).closest(".field").find('label');
       if ($(e.target).val() === "") {
       $(label).removeClass('labelshiftsearch');
