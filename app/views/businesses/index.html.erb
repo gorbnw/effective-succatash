@@ -8,10 +8,6 @@
 
 <div class="search-area">
 
-  <!-- <% if flash[:city] %>
-    <p class="errors"> <%= flash[:city] %> </p>
-  <% end %> -->
-
   <%= form_tag search_businesses_path, method: :get, class: "search-bar" do %>
     <%= text_field_tag 'search[term]' %>
     <%= text_field_tag('search[location]', value = session[:user_location]) %>
@@ -45,4 +41,9 @@
       <% end %>
     </ul>
   </div>
-<% end %>
+  <% else %>
+  <div class="mission">
+    at battle cry, it is our mission to provide a fair, empathetic and kind platform for users to voice their concerns and give praise when praise is due.
+
+  </div>
+  <% end %>
