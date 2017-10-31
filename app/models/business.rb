@@ -36,4 +36,6 @@ class Business < ApplicationRecord
 
   end
 
+
+
 end
