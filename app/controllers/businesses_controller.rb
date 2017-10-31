@@ -16,12 +16,8 @@ class BusinessesController < ApplicationController
     @business = Business.get_yelp_business_details(params[:id])
     @testimonial = Testimonial.new
     @testimonials = Testimonial.where(yelp_id: params[:id])
-    p @testimonials.where(positive: false)
     @positive_testimonial = top_testimonial(@testimonials, true)
-    p "*" * 70
-    p @positive_testimonial
     @negative_testimonial = top_testimonial(@testimonials, false)
-    p @negative_testimonial
     @vote = Vote.new
   end
 
