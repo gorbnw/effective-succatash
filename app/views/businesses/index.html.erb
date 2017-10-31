@@ -2,7 +2,7 @@
 
   <%= form_tag search_businesses_path, method: :get, class: "search-bar" do %>
     <%= text_field_tag 'search[term]' %>
-    <%= text_field_tag 'search[location]' %>
+    <%= text_field_tag('search[location]', value = session[:user_location]) %>
     <%= submit_tag 'search' %>
   <% end %>
 </div>
