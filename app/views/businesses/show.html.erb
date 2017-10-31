@@ -25,8 +25,16 @@
           <p class="no-testimonials">No one has written a testimonial yet.</p>
           <p class="no-testimonials">Be the first to share your experience!</p>
         <% else %>
-          <%= render partial: 'businesses/testimonial', locals: {testimonial: @testimonials[1] } %>
-          <%= render partial: 'businesses/testimonial', locals: {testimonial: @testimonials[1] } %>
+          <% if @positive_testimonial.votes.count == 0 %>
+            <p class="no-testimonials">Not enough testimonials have votes yet.</p>
+          <% else %>
+            <%= render partial: 'businesses/testimonial', locals: {testimonial: @positive_testimonial } %>
+          <% end %>
+          <% if @negative_testimonial.votes.count == 0 %>
+            <p class="no-testimonials">Not enough testimonials have votes yet.</p>
+          <% else %>
+            <%= render partial: 'businesses/testimonial', locals: {testimonial: @negative_testimonial } %>
+          <% end %>
         <% end %>
       </div>
     </div>
