@@ -11,9 +11,9 @@
     <div class="safe-unsafe-selection field testimonial-field">
       <%= f.label "How did you feel here? " %>
       <div class="experience-selections">
-        <%= f.radio_button :positive, :checked => true %>
+        <%= f.radio_button :positive, true %>
         <%= f.label "Safe" %>
-        <%= f.radio_button :positive, :checked => false  %>
+        <%= f.radio_button :positive, false  %>
         <%= f.label "Unsafe" %>
       </div>
     </div>

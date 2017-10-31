@@ -245,9 +245,29 @@ div.doodad {
 .top-testimonials {
   border-top: 2px solid lightblue;
   margin: 1rem;
-  text-align: center;
   height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
+
+.top-testimonial-header {
+  font-size: 1.2rem;
+}
+
+.top-testimonials-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+// positive_testimonial {
+//   width: 45%;
+// }
+//
+// negative_testimonial {
+//   width: 45%;
+// }
 
 .count {
   line-height: 150%;
