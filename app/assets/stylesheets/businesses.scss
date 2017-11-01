@@ -184,9 +184,13 @@ div.doodad {
 
 .business-overview-right {
   background-color: rgba(255, 255, 255, 0.4);
-  padding: 1rem;
+  padding: 0 1rem 0 1rem;
   box-sizing: border-box;
   border-radius: 5px;
+}
+
+.details-header {
+  text-align: center;
 }
 
 .upper-section {
