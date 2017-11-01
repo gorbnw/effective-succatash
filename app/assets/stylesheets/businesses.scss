@@ -201,12 +201,16 @@ p.list-item {
 
 .detail {
   font-size: 80%;
+  span {
+    font-weight: bold;
+  }
 }
 
-ul {
+.business-details {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 
@@ -253,10 +257,14 @@ div.doodad {
   padding: 0 1rem 0 1rem;
   box-sizing: border-box;
   border-radius: 5px;
+  width: 40%;
+  min-width: 283px;
 }
 
 .details-header {
   text-align: center;
+  margin-top: 3.5rem;
+  font-size: 18px;
 }
 
 .upper-section {
@@ -297,9 +305,10 @@ div.doodad {
 }
 
 .map-frame {
-  width: 250px;
-  height: 250px;
   margin-left: 1rem;
+  min-width: 250px;
+  min-height: 250px;
+  margin: 0 auto;
 }
 
 .testimonial-summary {

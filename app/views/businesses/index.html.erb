@@ -26,9 +26,6 @@
       <% @businesses.each do |business| %>
         <li class="business">
           <div class="content">
-            <!-- <div class="business-photo">
-              <img src="<%= business['image_url'] %>" width="150">
-            </div> -->
             <% categories = [] %>
             <% business['categories'].each do |category| %>
               <% categories << category["title"] %>
