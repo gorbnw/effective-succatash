@@ -72,6 +72,10 @@ input.business-field::placeholder {
   opacity: 0.8;
 }
 
+input:focus{
+    outline: none;
+}
+
 .business-container {
   width: 60%;
   display: flex;
