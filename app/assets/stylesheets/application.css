@@ -51,10 +51,6 @@ body {
   background-attachment: fixed;
 }
 
-header {
-    border: 1px solid transparent;
-}
-
 .container {
   width: 60%;
   margin: 0 auto;
@@ -206,14 +202,92 @@ td.doodad-no-data{
   text-align: center;
 }
 
-@media screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
+
+/*Global Styles*/
+
   .container {
     width: 100%;
   }
-}
+  /*Nav Bar Styles*/
 
-@media screen and (max-width: 1425px)
-              and (min-width: 701px) {
+  #nav-logo{
+    margin-left: 5%;
+    font-size: 2rem;
+  }
+
+  /*Search Bar Styles*/
+
+  .search-area {
+    padding: 4rem;
+    margin-top: 1rem;
+  }
+
+  .search-bar {
+    display: block;
+  }
+
+  .search-icon {
+    display: none;
+  }
+
+  .business-container {
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    padding: 15px 5px;
+  }
+
+  .city-container {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 15px 5px;
+    margin: 15px 0 10px;
+  }
+
+  .business-container .input,
+  .city-container .input {
+    width: 100%;
+  }
+
+  .search-button {
+    padding: 15px 5px;
+    width: 100%;
+  }
+
+  /*business index styles */
+
+
+  .business-photo img {
+    display: none;
+  }
+
+  /* business index - doodad styles */
+  div.doodad {
+    min-width: 30%;
+    margin-right: 5%;
+  }
+
+  table.doodad{
+    width: 100%;
+  }
+
+  .no-testimonials {
+    font-size: .7em;
+  }
+
+  .index-details {
+    padding: 2%;
+    max-width: 80%;
+  }
+
+
+}
+/*  End small screen size */
+@media only screen and (max-width: 1400px)
+                   and (min-width: 700px) {
+
   .container {
     width: 80%;
   }

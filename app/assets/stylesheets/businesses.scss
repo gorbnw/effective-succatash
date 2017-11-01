@@ -23,8 +23,6 @@
   margin-top: 7rem;
   margin-bottom: 2rem;
   background-color: rgba(255, 255, 255, 0.2);
-  // min-width: 715px;
-  // max-width: 815px;
 }
 
 .search-bar {
@@ -55,7 +53,6 @@ input.city-field {
   opacity: 0.8;
   border-bottom: 2px solid var(--testdarkblue);
   color: var(--testwhite);
-  // width: 175px;
 }
 
 input.business-field {
@@ -262,14 +259,4 @@ div.doodad {
 
 .criticism {
   border: 2px solid var(--negative);
-}
-
-/*************BREAKPOINTS!****************/
-
-@media screen and (max-width: 1425px) {
-
-  input.city-field {
-    width: 80%;
-  }
-
 }
