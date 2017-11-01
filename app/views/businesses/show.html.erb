@@ -1,13 +1,12 @@
 <div class="business-overview">
-  <p><%= @tag_counts %></p>
   <h1 class="business-name"> <%= @business['name'] %> </h1>
   <div class="upper-section">
     <div class="business-overview-left">
       <div class="charts">
+        <div id="donutchart"></div>
         <div class="show-doodad">
           <%= render partial: 'doodad', locals: {business: @business} %>
         </div>
-        <div id="donutchart" style="width: 250px; height: 250px;"></div>
       </div>
       <!-- <%= render partial: 'businesses/testimonial_summary', locals: {business: @business} %> -->
     </div>
@@ -55,4 +54,5 @@
       <% end %>
     </div>
   </div>
+  <p hidden class="yelp_id"><%= @tag_counts %></p>
 </div>

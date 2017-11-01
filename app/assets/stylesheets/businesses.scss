@@ -188,19 +188,13 @@ div.doodad {
 }
 
 .charts {
-  border: 2px solid lightblue;
-  width: 400px;
-  height: 300px;
   margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
   align-items: center;
-}
-
-#donutchart {
-  background-color: var(--testmidblue);
+  width: 400px;
 }
 
 .show-doodad {

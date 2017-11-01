@@ -3,35 +3,28 @@
 
 $(document).ready(() => {
 
-  let tag_counts = null
-
-  $.ajax({
-    method: 'GET',
-    url: business_path()
-  })
+  let tag_counts = $(".yelp_id")[0].innerText;
+  tag_counts = JSON.parse(tag_counts);
 
   google.charts.load("current", {packages:["corechart"]});
 
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable(tag_counts);
 
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
-        ]);
+    var options = {
+      pieHole: 0.2,
+      backgroundColor: 'transparent',
+      colors:['#091d36','#3a4e7a', '#c2d2e9', '#0F1926', '#4F6D8E'],
+      width: 800,
+      height: 300,
+      chartArea: { left: 10, width: "50%", height: "70%" },
+      legend: {position: 'right', textStyle: {color: 'white', fontSize: 12}}
+    };
 
-        var options = {
-          title: 'My Daily Activities',
-          pieHole: 0.4,
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-        chart.draw(data, options);
-      }
+    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+    chart.draw(data, options);
+  }
 
   $(document).on("submit", '#new_testimonial', (e) => {
     e.preventDefault();
@@ -74,6 +67,6 @@ $(document).ready(() => {
 
   // Adding the Google Chart API to Business Show Page
 
-  const data = new google.visualization.DataTable();
+  // const data = new google.visualization.DataTable();
 
 }); //end document ready

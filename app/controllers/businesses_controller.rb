@@ -21,7 +21,7 @@ class BusinessesController < ApplicationController
     @positive_testimonial = top_testimonial(@testimonials, true)
     @negative_testimonial = top_testimonial(@testimonials, false)
     @vote = Vote.new
-    @tag_counts = tag_counts(@testimonials).to_json # Uses the tag_counts method from the business helper module
+    @tag_counts = tag_counts(@testimonials) # Uses the tag_counts method from the business helper module
   end
 
   def top_testimonial(testimonials, boolean)
