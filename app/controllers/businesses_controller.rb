@@ -25,9 +25,9 @@ class BusinessesController < ApplicationController
   end
 
   def offset
-    business_details = params[:business_details]
-    4/0
-    @businesses = Business.get_offset_businesses(business_details)
+    @offset = params[:search][:offset].to_i + 50
+    business_details = {"term" => params[:search][:term], "location" => params[:search][:location]}
+    @businesses = Business.get_offset_businesses(business_details, @offset)
     render 'businesses/index'
   end
 

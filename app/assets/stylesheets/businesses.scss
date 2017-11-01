@@ -171,6 +171,18 @@ div.doodad {
   display: block;
 }
 
+.offset-info {
+  input.submit {
+    background: none;
+    color: var(--offwhite);
+    border: none;
+    padding: 0;
+  }
+  input.submit:hover {
+    color: var(--positive);
+  }
+}
+
 // SHOW PAGE STYLING STUFF -------
 
 .business-name {
