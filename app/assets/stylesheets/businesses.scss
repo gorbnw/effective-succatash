@@ -4,6 +4,55 @@
 
 // Business index
 
+// LOADING BAR THINGS -----
+
+.google-chart {
+  height: 300px;
+  width: 500px;
+  padding: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-container {
+  width: 70px;
+  height: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.circle {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 0.2rem;
+  animation: move 1s infinite;
+}
+
+.s2 {
+  animation-delay: 0.1s;
+}
+.s3 {
+  animation-delay: 0.2s;
+}
+.s4 {
+  animation-delay: 0.3s;
+}
+.s5 {
+  animation-delay: 0.4s;
+}
+
+@keyframes move {
+  30% {
+    transform: scale(1.2);
+  }
+}
+
 
 // SEARCH BAR STUFF ------
 

@@ -3,33 +3,39 @@
 
 $(document).ready(() => {
 
+  let tag_counts = $(".yelp_id")[0].innerText;
+  tag_counts = JSON.parse(tag_counts);
 
-  if ($(".yelp_id")[0] !== undefined){
-    let tag_counts = $(".yelp_id")[0].innerText;
-    tag_counts = JSON.parse(tag_counts);
+  google.charts.load("current", {packages:["corechart"]});
 
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable(tag_counts);
 
-    google.charts.load("current", {packages:["corechart"]});
+    var options = {
+      pieHole: 0.2,
+      title: 'Common Tags Used At This Business',
+      titleTextStyle: { color: 'white',
+                        fontSize: 16},
+      backgroundColor: 'none',
+      colors:['#091d36','#3a4e7a', '#c2d2e9', '#0F1926', '#4F6D8E', '#72a4db', '#8da3bc', '#1d3f66', '#063468', '#616b77'],
+      tooltip: {textStyle: { color: 'black',
+                            fontSize: 12,
+                            italic: true},
+                isHTML: true},
+      width: 500,
+      height: 400,
+      pieSliceText: 'none',
+      chartArea: { left: 40, width: "80%", height: "80%" },
+      legend: {position: 'labeled', alignment: 'end', textStyle: {color: 'white', fontSize: 12, italic: true}}
+    };
 
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-      var data = google.visualization.arrayToDataTable(tag_counts);
+    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
 
-      var options = {
-        pieHole: 0.2,
-        title: 'Common Tags Used At This Business',
-        backgroundColor: 'transparent',
-        colors:['#091d36','#3a4e7a', '#c2d2e9', '#0F1926', '#4F6D8E', '#72a4db', '#8da3bc', '#1d3f66', '#063468', '#616b77'],
-        width: 400,
-        height: 300,
-        chartArea: { left: 10, width: "100%", height: "100%" },
-        legend: {position: 'right', textStyle: {color: 'white', fontSize: 12}}
-      };
-
-      var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-      chart.draw(data, options);
+    $('.loading-container').hide();
+    chart.draw(data, options);
+    $('#donutchart').show();
   }
-}
 
   $(document).on("submit", '#new_testimonial', (e) => {
     e.preventDefault();
