@@ -28,6 +28,13 @@ class Business < ApplicationRecord
     response.parsed_response["businesses"]
   end
 
+  def self.get_offset_businesses(args)
+    yelp_uri = "https://api.yelp.com/v3/businesses/search?offset=50?"
+    query = yelp_uri + URI.encode_www_form(args)
+    response = HTTParty.get(query, headers: {"Authorization" => ENV["YELP_TOKEN"] + " " + ENV["YELP_TOKEN_SECRET"]})
+    response.parsed_response['businesses']
+  end
+
   def self.get_yelp_business_details(yelp_id)
     yelp_uri = "https://api.yelp.com/v3/businesses/"
     query = yelp_uri + I18n.transliterate(yelp_id)

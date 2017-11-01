@@ -44,5 +44,9 @@
         </li>
       <% end %>
     </ul>
+    <form class="" action="/businesses/offset" method="get">
+      <input type="hidden" name="business_details" value="<%= @business_details %>" >
+      <input type="submit" name="" value="Not what you were looking for? See more">
+    </form>
   </div>
 <% end %>
