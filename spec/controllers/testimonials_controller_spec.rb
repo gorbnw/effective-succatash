@@ -27,4 +27,6 @@ describe TestimonialsController, type: :controller do
     post :create, params: { testimonial: { description: "The bouncers here are rad!", positive: true, anonymous: false, business_id: business.id, tags: tag.id } }
     expect(Testimonial.last.tags).to include(tag)
   end
+
+  it 'returns the tags for a testimonial'
 end
