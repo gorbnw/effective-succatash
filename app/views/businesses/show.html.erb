@@ -11,6 +11,7 @@
       <!-- <%= render partial: 'businesses/testimonial_summary', locals: {business: @business} %> -->
     </div>
     <div class="business-overview-right">
+      <h3>Business Details</h3>
       <div class="business-images">
         <%= image_tag @business["photos"][1], class: "show-image show-size" %>
         <iframe class="map-frame" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV['GOOG_MAP_KEY'] %>&q=<%= @business['name'] %>,<%= @business['location']['display_address'] %>" ></iframe>

@@ -16,9 +16,9 @@ $(document).ready(() => {
       pieHole: 0.2,
       backgroundColor: 'transparent',
       colors:['#091d36','#3a4e7a', '#c2d2e9', '#0F1926', '#4F6D8E'],
-      width: 800,
+      width: 400,
       height: 300,
-      chartArea: { left: 10, width: "50%", height: "70%" },
+      chartArea: { left: 10, width: "100%", height: "100%" },
       legend: {position: 'right', textStyle: {color: 'white', fontSize: 12}}
     };
 

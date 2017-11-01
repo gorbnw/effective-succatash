@@ -182,6 +182,13 @@ div.doodad {
   border-bottom: solid var(--border-color) 2px;
 }
 
+.business-overview-right {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
 .upper-section {
   display: flex;
   flex-direction: row;
@@ -189,25 +196,13 @@ div.doodad {
 }
 
 .charts {
-<<<<<<< HEAD
-=======
-  width: 400px;
-  height: 300px;
->>>>>>> c834443406160783c9d97e444f9a7a18f87c4a69
   margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
   align-items: center;
-<<<<<<< HEAD
   width: 400px;
-=======
-}
-
-#donutchart {
-  background-color: var(--testlightblue);
->>>>>>> c834443406160783c9d97e444f9a7a18f87c4a69
 }
 
 .show-doodad {
