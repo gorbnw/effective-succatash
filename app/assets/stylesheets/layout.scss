@@ -1,26 +1,21 @@
 #nav-bar {
   position: relative !important;
   display: block;
+  height: 100px;
   margin-bottom: 25px;
   width: 100%;
   left: 0;
   right: 0;
   padding: 0;
   ul {
+    position: absolute;
     list-style: none;
-    text-align: right;
+    right: 10%;
     margin: 0;
     padding-top: 3rem;
     padding-bottom: 1rem;
   }
 }
-
-#nav-logo{
-  position: absolute;
-  margin-left: 10%;
-  font-size: 3rem;
-}
-
 
 .image-height {
   height: 25px;

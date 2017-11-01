@@ -66,6 +66,12 @@ a:hover {
   color: var(--positive);
 }
 
+.logo-nav {
+  position: absolute;
+  width: 100px;
+  top: 5vh;
+  left: 15%;
+}
 
 
 /********************************************/
@@ -211,9 +217,14 @@ td.doodad-no-data{
   }
   /*Nav Bar Styles*/
 
-  #nav-logo{
-    margin-left: 5%;
-    font-size: 2rem;
+
+  .logo-nav {
+    width: 60px;
+    left: 10%;
+  }
+
+  #nav-bar ul {
+    right: 5%;
   }
 
   /*Search Bar Styles*/
