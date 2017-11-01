@@ -26,7 +26,7 @@ $(document).ready(() => {
     e.preventDefault;
   })
 
-  $('.tag').on('click', (e) => {
+  $('div.testimonial-form .tag').on('click', (e) => {
     e.preventDefault;
     if($('.tags-list').find('li[name="clicked"]').length < 5) {
       if($(e.delegateTarget).closest('li').attr('name') === 'tags') {
