@@ -170,7 +170,8 @@ div.doodad {
 
 .business-name {
   margin: 0;
-  font-size: 3rem;
+  font-size: 2.3rem;
+  color: var(--testlightblue);
   text-decoration: underline;
   text-decoration-color: var(--border-color);
 }
@@ -188,13 +189,25 @@ div.doodad {
 }
 
 .charts {
+<<<<<<< HEAD
+=======
+  width: 400px;
+  height: 300px;
+>>>>>>> c834443406160783c9d97e444f9a7a18f87c4a69
   margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
   align-items: center;
+<<<<<<< HEAD
   width: 400px;
+=======
+}
+
+#donutchart {
+  background-color: var(--testlightblue);
+>>>>>>> c834443406160783c9d97e444f9a7a18f87c4a69
 }
 
 .show-doodad {

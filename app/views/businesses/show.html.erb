@@ -39,15 +39,19 @@
     </div>
 
     <div class="testimonial-form">
-      <%= render partial: 'testimonials/new', locals: { testimonial: @testimonial, business: @business } %>
+      <% if user_signed_in? %>
+        <%= render partial: 'testimonials/new', locals: { testimonial: @testimonial, business: @business } %>
+      <% else %>
+        <p>Do you have an experience to share? Please <a href="/users/sign_in">login</a>!</p>
+      <% end %>
     </div>
 
+    <h3>Testimonials</h3>
     <div class="testimonial-list">
       <% if @testimonials.empty? %>
         <p class="no-testimonials">No one has written a testimonial yet.</p>
         <p class="no-testimonials">Be the first to share your experience!</p>
       <% else %>
-      <h3>Testimonials</h3>
         <% @testimonials.each do |testimonial| %>
           <%= render partial: 'businesses/testimonial', locals: {testimonial: testimonial } %>
           <% end %>
