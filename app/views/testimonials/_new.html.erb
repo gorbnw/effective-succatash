@@ -30,12 +30,12 @@
     </div>
 
     <div class="experience-tag field testimonial-field">
-      <p>Select up to five tags:</p>
+      <p class="tag-instructions">Select up to five tags:</p>
+      <p class='tags-errors'></p>
       <ul class='tags-list'>
         <% Tag.all.each do |tag| %>
-          <p class="tag" name="tags" value= <%= tag.id %> >
+          <li class="tag" name="tags" value= <%= tag.id %> >
             <input type="text" name="testimonial[tags]" value=" <%= tag.description %> " readonly>
-          </p>
         <% end %>
       </ul>
     </div>

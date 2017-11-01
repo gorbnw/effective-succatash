@@ -74,6 +74,10 @@ h3 {
     margin-left: 1rem;
     margin-bottom: 0.5rem;
   }
+  .tags-errors {
+    color: var(--errors);
+    font-size: 0.8rem;
+  }
   p {
     text-align: center;
   }
@@ -139,8 +143,8 @@ li.tag {
   display: inline-block;
   margin-bottom: 5px;
   margin-right: 5px;
-  padding: 5px;
-  
+  background-color: white;
+  padding-right: 7px;
 }
 
 .experience-tag {
@@ -148,9 +152,11 @@ li.tag {
     text-align: left;
   }
   input {
+    border-radius: 5px;
     background: transparent;
     border: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 13px;
+    padding-right: 7px;
   }
 }

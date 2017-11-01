@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 businesses = ["beer-star-seattle-2", "the-beer-junction-seattle", "redhook-brewlab-seattle", "hill-city-tap-house-and-bottle-shop-seattle", "cloudburst-brewing-seattle", "seattle-beer-co-seattle-7", "teku-tavern-seattle", "old-stove-brewing-seattle", "fremont-brewing-seattle-3", "chucks-hop-shop-seattle-2", "georgetown-brewing-company-seattle", "queen-anne-beerhall-seattle", "ounces-taproom-and-beer-garden-seattle", "swel-seattle", "standard-brewing-seattle", "optimism-brewing-company-seattle", "ballard-beer-company-seattle", "perihelion-brewery-seattle", "figurehead-brewing-seattle"]
 
-tags = ['Unkind Staff', 'Accessible Space', 'Gender-neutral bathrooms', 'Harrassment', "Unresponsive Staff", "Accomodating Staff", "Accomodating Patrons", "Other-Abled Friendly"]
+tags = ['Unkind Staff', 'Gender-neutral bathrooms', 'Harrassment', "Accomodating Staff", "Accomodating Patrons", "Other-Abled Friendly", "Welcoming Environment", "Inaccessible Space", "Gender pronoun friendly", "LGBTQ Friendly", "LGBTQ Unfriendly", "Other Unsafe", "Other Safe"]
 
 tags.each do |tag|
   Tag.create(description: tag)

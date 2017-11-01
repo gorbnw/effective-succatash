@@ -18,7 +18,7 @@ class TestimonialsController < ApplicationController
         end
     else
       @testimonial.valid?
-      @testimonial.errors.add(:base, "Please select a tag")
+      @testimonial.errors.add(:base, "Please select a tag") if params[:testimonial][:tags] == nil
       if request.xhr?
         @errors = @testimonial.errors
         render 'testimonials/_errors_form', layout: false, :status => 422

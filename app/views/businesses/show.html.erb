@@ -47,12 +47,12 @@
       <% end %>
     </div>
 
+    <h3>Testimonials</h3>
     <div class="testimonial-list">
       <% if @testimonials.empty? %>
         <p class="no-testimonials">No one has written a testimonial yet.</p>
         <p class="no-testimonials">Be the first to share your experience!</p>
       <% else %>
-      <h3>Testimonials</h3>
         <% @testimonials.each do |testimonial| %>
           <%= render partial: 'businesses/testimonial', locals: {testimonial: testimonial } %>
           <% end %>

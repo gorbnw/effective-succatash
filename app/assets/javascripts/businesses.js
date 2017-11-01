@@ -25,7 +25,6 @@ $(document).ready(() => {
     }
 
     getTags()
-    debugger
     const url = $(e.target).attr('action')
     const positive = $(e.target).find('input[name="testimonial[positive]"]:checked').val()
     const tags = tagsValues
