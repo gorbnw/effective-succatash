@@ -1,17 +1,24 @@
-
 <div class="business-overview">
   <h1 class="business-name"> <%= @business['name'] %> </h1>
   <div class="upper-section">
     <div class="business-overview-left">
       <div class="charts">
+        <div class="google-chart">
+          <% if @testimonials.length > 1 %>
+            <%= render partial: 'loading_gif' %>
+            <div style="display:none" id="donutchart"></div>
+          <% else %>
+            <p class="no-testimonials">This business doesn't have enough data to display tags.</p>
+          <% end %>
+        </div>
         <div class="show-doodad">
           <%= render partial: 'doodad', locals: {business: @business} %>
         </div>
-        <div id="donutchart" style="width: 250px; height: 250px;"></div>
       </div>
       <!-- <%= render partial: 'businesses/testimonial_summary', locals: {business: @business} %> -->
     </div>
     <div class="business-overview-right">
+      <h4 class="details-header">Business Details</h4>
       <div class="business-images">
         <%= image_tag @business["photos"][1], class: "show-image show-size" %>
         <iframe class="map-frame" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV['GOOG_MAP_KEY'] %>&q=<%= @business['name'] %>,<%= @business['location']['display_address'] %>" ></iframe>
@@ -40,19 +47,24 @@
     </div>
 
     <div class="testimonial-form">
-      <%= render partial: 'testimonials/new', locals: { testimonial: @testimonial, business: @business } %>
+      <% if user_signed_in? %>
+        <%= render partial: 'testimonials/new', locals: { testimonial: @testimonial, business: @business } %>
+      <% else %>
+        <p>Do you have an experience to share? Please <a href="/users/sign_in">login</a>!</p>
+      <% end %>
     </div>
 
+    <h3>Testimonials</h3>
     <div class="testimonial-list">
       <% if @testimonials.empty? %>
         <p class="no-testimonials">No one has written a testimonial yet.</p>
         <p class="no-testimonials">Be the first to share your experience!</p>
       <% else %>
-      <h3>Testimonials</h3>
         <% @testimonials.each do |testimonial| %>
           <%= render partial: 'businesses/testimonial', locals: {testimonial: testimonial } %>
           <% end %>
       <% end %>
     </div>
   </div>
+  <p hidden class="yelp_id"><%= @tag_counts %></p>
 </div>

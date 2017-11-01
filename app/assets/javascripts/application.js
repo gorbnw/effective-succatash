@@ -19,32 +19,32 @@ $(document).ready(() => {
 
   $(".reg-container .input").on('focus', (e) => {
     let label = $(e.target).closest(".field").find('label');
-    $(label).addClass('labelshift');
+    label.addClass('labelshift');
   })
 
   $(".reg-container .input").on('focusout', (e) => {
     let label = $(e.target).closest(".field").find('label');
       if ($(e.target).val() === "") {
-      $(label).removeClass('labelshift');
+      label.removeClass('labelshift');
     }
   })
 
   $(".reg-container .checkbox").change((e) => {
     let label = $(e.target).closest(".field").find('label');
-    $(label).toggleClass('check-bold').css('color', '#0F1926');
+    label.toggleClass('check-bold').css('color', '#0F1926');
   })
 
   // SEARCH BAR --
 
   $(".search-bar .input").on('focus', (e) => {
     let label = $(e.target).closest(".field").find('label');
-    $(label).addClass('labelshiftsearch');
+    label.addClass('labelshiftsearch');
   })
 
   $(".search-bar .input").on('focusout', (e) => {
     let label = $(e.target).closest(".field").find('label');
       if ($(e.target).val() === "") {
-      $(label).removeClass('labelshiftsearch');
+      label.removeClass('labelshiftsearch');
     }
   })
 
