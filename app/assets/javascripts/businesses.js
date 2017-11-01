@@ -13,9 +13,21 @@ $(document).ready(() => {
         return anonymous = "0"
       }
     }
+
+    const tagsList = $(e.target).find('li[name="clicked"]')
+    let tagsValues = []
+
+    const getTags = () => {
+      for(var i = 0; i < tagsList.length; i++){
+        tagsValues.push(tagsList[i].value);
+      };
+      return tagsValues
+    }
+
+    getTags()
     const url = $(e.target).attr('action')
     const positive = $(e.target).find('input[name="testimonial[positive]"]:checked').val()
-    const tags = $(e.target).find('select').val()
+    const tags = tagsValues
     const description = $(e.target).find('textarea').val()
     const business = $(e.target).find('.business').val()
     const data = { testimonial: { positive: positive,
@@ -23,6 +35,7 @@ $(document).ready(() => {
                                   anonymous: setAnonymous(),
                                   description: description,
                                   yelp_id: business} }
+
     $.ajax({
       method: "POST",
       url,

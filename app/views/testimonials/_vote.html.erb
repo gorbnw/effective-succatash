@@ -1,4 +1,16 @@
-<%= form_for @vote, url: votes_path, :html => {:class => "vote-form"} do |f| %>
-  <%= f.hidden_field :testimonial_id, :value => testimonial.id, class: 'testimonial-id' %>
-  <%= f.submit "I hear you", class: 'form-button' %>
+<% if user_signed_in? && testimonial.user != current_user && testimonial.votes.find_by(user_id: current_user.id) == nil %>
+
+  <%= form_for @vote, url: votes_path, :html => {:class => "vote-form"} do |f| %>
+    <%= f.hidden_field :testimonial_id, :value => testimonial.id, class: 'testimonial-id' %>
+    <%= f.submit "I hear you", class: 'form-button' %>
+  <% end %>
+
+<% else %>
+<div class="vote-holder">
+  <form class="vote-form">
+    <input type="submit" class="form-button" value="I hear you">
+  </form>
+
+</div>
+
 <% end %>
