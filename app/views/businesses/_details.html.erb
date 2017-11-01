@@ -1,5 +1,5 @@
 <ul class="business-details">
   <li>Phone: <span class="detail"><%= business['display_phone'] %></span></li>
   <li>Address: <span class="detail"><%= business['location']['display_address'].join(' ') %></span></li>
-  <li>Gender Neutral Restrooms?: <%= Business.check_GNR(business) %> </li>
+  <li>Gender Neutral Restrooms?: <span class="detail"><%= Business.check_GNR(business) %></span></li>
 </ul>

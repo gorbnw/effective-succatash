@@ -1,4 +1,6 @@
 class BusinessesController < ApplicationController
+  include BusinessesHelper
+
   def index
     session[:user_location] = User.get_user_location
     @businesses = nil
@@ -16,13 +18,10 @@ class BusinessesController < ApplicationController
     @business = Business.get_yelp_business_details(params[:id])
     @testimonial = Testimonial.new
     @testimonials = Testimonial.where(yelp_id: params[:id])
-    p @testimonials.where(positive: false)
     @positive_testimonial = top_testimonial(@testimonials, true)
-    p "*" * 70
-    p @positive_testimonial
     @negative_testimonial = top_testimonial(@testimonials, false)
-    p @negative_testimonial
     @vote = Vote.new
+    @tag_counts = tag_counts(@testimonials) # Uses the tag_counts method from the business helper module
   end
 
   def top_testimonial(testimonials, boolean)
