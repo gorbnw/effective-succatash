@@ -6,21 +6,6 @@ class Business < ApplicationRecord
 
   validates :name, :phone, :address, presence: true
 
-  def self.count_praise(yelp_business)
-    count = Testimonial.where(business_id: yelp_business, positive: true).count
-    return "#{count} user gave praise!" if count == 1
-    return "#{count} users gave praise!" if count > 0
-    "No praise for this business yet"
-
-  end
-
-  def self.count_criticism(yelp_business)
-    count = Testimonial.where(business_id: yelp_business, positive: false).count
-    return "#{count} user left criticism" if count == 1
-    return "#{count} users left criticism" if count > 0
-    "No criticism for this business yet"
-  end
-
   def self.search_businesses(args)
     yelp_uri = "https://api.yelp.com/v3/businesses/search?"
     query = yelp_uri + URI.encode_www_form(args)

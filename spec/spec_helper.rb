@@ -15,6 +15,10 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require 'simplecov'
+require 'webmock/rspec'
+
+WebMock.disable_net_connect!(allow_localhost: true)
+
 SimpleCov.start 'rails' do
   add_filter "/app/channels/application_cable/channel.rb"
   add_filter "/app/channels/application_cable/connection.rb"
