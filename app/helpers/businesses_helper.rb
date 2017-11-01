@@ -1,14 +1,16 @@
 module BusinessesHelper
   def tag_counts(testimonials)
     # The following counts the number of tags for the testimonials that are given
-    tags = testimonials.map do |testimonial|
+    testimonial_tags = testimonials.map do |testimonial|
       testimonial.tags
     end
 
     tags_normalized = []
 
-    tags.each do |tag|
-      tags_normalized.push(tag[0])
+    testimonial_tags.each do |tags|
+      tags.each do |tag|
+        tags_normalized.push(tag)
+      end
     end
 
     tag_counts = []
