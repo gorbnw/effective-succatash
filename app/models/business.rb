@@ -21,12 +21,6 @@ class Business < ApplicationRecord
     "No criticism for this business yet"
   end
 
-  def self.count_tags(yelp_business)
-    ####################################
-    ###### INSERT TAG COUNT LOGIC ######
-    # p yelp_business.tags
-  end
-
   def self.search_businesses(args)
     yelp_uri = "https://api.yelp.com/v3/businesses/search?"
     query = yelp_uri + URI.encode_www_form(args)
