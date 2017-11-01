@@ -17,6 +17,17 @@ module BusinessesHelper
       tag_counts << tags_normalized.count(tag)
     end
 
-    return tag_counts
+    descriptions = Tag.all.map { |tag| tag.description }
+
+    tag_counts_array_of_arrays = [["Tag", "Count"]]
+
+    i = 0
+
+    while i < descriptions.length
+      tag_counts_array_of_arrays << [descriptions[i], tag_counts[i]]
+      i += 1
+    end
+
+    return tag_counts_array_of_arrays
   end
 end

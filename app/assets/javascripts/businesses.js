@@ -42,4 +42,8 @@ $(document).ready(() => {
 
   }) //end new testimonial listener
 
+  // Adding the Google Chart API to Business Show Page
+
+  const data = new google.visualization.DataTable();
+
 }); //end document ready
