@@ -16,5 +16,5 @@ Rails.application.routes.draw do
 
   root to: "businesses#index"
 
-
+  get '/about', to: 'home#about', as: 'about'
 end
