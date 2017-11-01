@@ -14,8 +14,9 @@ $(document).ready(() => {
 
     var options = {
       pieHole: 0.2,
+      title: 'Common Tags Used At This Business',
       backgroundColor: 'transparent',
-      colors:['#091d36','#3a4e7a', '#c2d2e9', '#0F1926', '#4F6D8E'],
+      colors:['#091d36','#3a4e7a', '#c2d2e9', '#0F1926', '#4F6D8E', '#72a4db', '#8da3bc', '#1d3f66', '#063468', '#616b77'],
       width: 400,
       height: 300,
       chartArea: { left: 10, width: "100%", height: "100%" },
