@@ -24,8 +24,8 @@
 
       <p class='date-and-time'><%= testimonial.created_at.strftime("Posted %m/%d/%Y") %> </p>
       <% if current_user == testimonial.user %>
-        <p class='date-and-time'>You posted this testimonial!</p>
+        <p class='date-and-time'>You posted this testimonial</p>
       <% elsif testimonial.votes.find_by(user_id: current_user.id) != nil %>
-        <p class='date-and-time'>You offered solidarity on this testimonial!</p>
+        <p class='date-and-time'>You offered solidarity on this testimonial</p>
       <% end %>
 </div>
