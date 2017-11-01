@@ -1,4 +1,3 @@
-class Testimonial < ApplicationRecord
   validates_presence_of :description, :message => "Description cannot be blank"
   validates :anonymous, inclusion: { in: [true, false] }
   # cannot validate boolean with presence: true method since adding a
@@ -50,6 +49,3 @@ class Testimonial < ApplicationRecord
   def self.count_negative(yelp_id)
     Testimonial.where(yelp_id: yelp_id, positive: false).count
   end
-
-
-end

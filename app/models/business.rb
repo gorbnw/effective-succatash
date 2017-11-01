@@ -4,8 +4,6 @@ require 'uri'
 class Business < ApplicationRecord
   include HTTParty
 
-  validates :name, :phone, :address, presence: true
-
   def self.search_businesses(args)
     yelp_uri = "https://api.yelp.com/v3/businesses/search?"
     query = yelp_uri + URI.encode_www_form(args)

@@ -42,6 +42,18 @@ RSpec.configure do |config|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
 
+  config.before(:each) do
+    stub_request(:get, /api.yelp.com/).
+      with(headers: {'Accept'=>'*/*', 'User-Agent'=>'Ruby'}).
+      to_return(status: 200, body: "stubbed response", headers: {})
+  end
+
+  # config.before(:each) do
+  #   allow(Business).to receive(:search_businesses).and_return(search_response)
+  #   allow(Business).to receive(:search_more_businesses).and_return(second_fake_search)
+  #   allow(Business).to receive(:find_business).and_return(fake_business)
+  # end
+
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
   end
