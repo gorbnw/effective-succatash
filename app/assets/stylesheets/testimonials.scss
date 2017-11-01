@@ -24,8 +24,25 @@
   font-size: 14px;
 }
 
+.testimonial .inline {
+  display: inline;
+  padding-right: 15px;
+  font-size: 14px;
+}
+
+.testimonial .safe {
+  padding-right: 15px;
+  font-size: 14px;
+  display: inline;
+  float: right;
+}
+
 .testimonial-text {
   display: inline-block;
+}
+
+.testimonial .username{
+  font-weight: bold;
 }
 
 .vote-container {

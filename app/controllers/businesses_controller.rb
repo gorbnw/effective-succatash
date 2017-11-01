@@ -7,10 +7,10 @@ class BusinessesController < ApplicationController
   end
 
   def search
-    business_details = {"term" => params[:search][:term], "location" => params[:search][:location]}
+    @business_details = {"term" => params[:search][:term], "location" => params[:search][:location]}
     flash.clear if params[:search][:location] != ""
     flash[:alert] = "Please enter a city to search" if params[:search][:location] == ""
-    @businesses = Business.search_businesses(business_details)
+    @businesses = Business.search_businesses(@business_details)
     render "businesses/index"
   end
 
@@ -22,6 +22,13 @@ class BusinessesController < ApplicationController
     @negative_testimonial = top_testimonial(@testimonials, false)
     @vote = Vote.new
     @tag_counts = tag_counts(@testimonials) # Uses the tag_counts method from the business helper module
+  end
+
+  def offset
+    @offset = params[:search][:offset].to_i + 50
+    business_details = {"term" => params[:search][:term], "location" => params[:search][:location]}
+    @businesses = Business.get_offset_businesses(business_details, @offset)
+    render 'businesses/index'
   end
 
   def top_testimonial(testimonials, boolean)
