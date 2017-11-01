@@ -4,11 +4,11 @@
     <div class="business-overview-left">
       <div class="charts">
         <div class="google-chart">
-          <% if @tag_counts.length > 1 %>
+          <% if @testimonials.length > 1 %>
             <%= render partial: 'loading_gif' %>
             <div style="display:none" id="donutchart"></div>
           <% else %>
-            <p>This business doesn't have enough data.</p>
+            <p class="no-testimonials">This business doesn't have enough data to display tags.</p>
           <% end %>
         </div>
         <div class="show-doodad">
