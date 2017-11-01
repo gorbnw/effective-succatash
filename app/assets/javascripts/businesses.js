@@ -15,16 +15,26 @@ $(document).ready(() => {
     var options = {
       pieHole: 0.2,
       title: 'Common Tags Used At This Business',
-      backgroundColor: 'transparent',
+      titleTextStyle: { color: 'white',
+                        fontSize: 16},
+      backgroundColor: 'none',
       colors:['#091d36','#3a4e7a', '#c2d2e9', '#0F1926', '#4F6D8E', '#72a4db', '#8da3bc', '#1d3f66', '#063468', '#616b77'],
-      width: 400,
-      height: 300,
-      chartArea: { left: 10, width: "100%", height: "100%" },
-      legend: {position: 'right', textStyle: {color: 'white', fontSize: 12}}
+      tooltip: {textStyle: { color: 'black',
+                            fontSize: 12,
+                            italic: true},
+                isHTML: true},
+      width: 500,
+      height: 400,
+      pieSliceText: 'none',
+      chartArea: { left: 40, width: "80%", height: "80%" },
+      legend: {position: 'labeled', alignment: 'end', textStyle: {color: 'white', fontSize: 12, italic: true}}
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+
+    $('.loading-container').hide();
     chart.draw(data, options);
+    $('#donutchart').show();
   }
 
   $(document).on("submit", '#new_testimonial', (e) => {

@@ -3,7 +3,14 @@
   <div class="upper-section">
     <div class="business-overview-left">
       <div class="charts">
-        <div id="donutchart"></div>
+        <div class="google-chart">
+          <% if @tag_counts.length > 1 %>
+            <%= render partial: 'loading_gif' %>
+            <div style="display:none" id="donutchart"></div>
+          <% else %>
+            <p>This business doesn't have enough data.</p>
+          <% end %>
+        </div>
         <div class="show-doodad">
           <%= render partial: 'doodad', locals: {business: @business} %>
         </div>
