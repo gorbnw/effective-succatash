@@ -3,7 +3,10 @@ class TestimonialsController < ApplicationController
     @testimonial = Testimonial.new(testimonial_params)
     @testimonial.user = current_user
 
-    @business = Business.get_yelp_business_details(testimonial_params[:yelp_id])
+
+    #consider removing this request
+    # @business = Business.get_yelp_business_details(testimonial_params[:yelp_id])
+    @business = {"id" => params[:testimonial][:yelp_id], "display_phone" => params[:yelp_phone], "location" => { "display_address" => params[:yelp_address]}, "name" => params[:yelp_name]}
     @vote = Vote.new
 
     if (@testimonial.valid? && params[:testimonial][:tags].count != 0)
@@ -19,8 +22,8 @@ class TestimonialsController < ApplicationController
     else
       @testimonial.valid?
       @testimonial.errors.add(:base, "Please select a tag") if params[:testimonial][:tags] == nil
+      @errors = @testimonial.errors
       if request.xhr?
-        @errors = @testimonial.errors
         render 'testimonials/_errors_form', layout: false, :status => 422
       else
         @testimonials = Testimonial.where(yelp_id: testimonial_params[:yelp_id])
@@ -36,7 +39,4 @@ class TestimonialsController < ApplicationController
     params.require(:testimonial).permit(:description, :positive, :anonymous, :yelp_id)
   end
 
-  def tag_params
-    params.permit(:tags)
-  end
 end
