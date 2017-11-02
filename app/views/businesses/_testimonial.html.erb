@@ -6,8 +6,11 @@
     </div>
 
     <div class="vote-container">
-      <%= render partial: "testimonials/vote", locals: {testimonial: testimonial} %>
-      <span class="vote-count"><%= testimonial.votes.count %></span>
+      <div class="vote-button-and-count">
+        <%= render partial: "testimonials/vote", locals: {testimonial: testimonial} %>
+        <span class="vote-count"><%= testimonial.votes.count %></span>
+      </div>
+      <div class="vote-error"></div>
     </div>
   </div>
       <p>
@@ -40,11 +43,4 @@
         <p class='date-and-time'>You offered solidarity on this testimonial!</p>
         <% end %>
       <% end %>
-      <!-- <p class="safe">
-        <% if testimonial.positive %>
-          felt safe
-        <% else %>
-          felt unsafe
-        <% end %>
-      </p> -->
 </div>
