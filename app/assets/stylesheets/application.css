@@ -311,11 +311,39 @@ td.doodad-no-data{
   width: 100%;
 }
 
-.charts {
-  display: none;
+.business-overview-left {
   width: 100%;
-  border: 1px solid red;
+  margin: 0;
 }
+
+.charts {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+.google-chart {
+  width: 80%;
+  display: block;
+  margin: 1rem auto;
+  padding: 10px;
+}
+
+div.doodad {
+  margin: 1rem auto 0;
+  width: 80%;
+}
+
+table.doodad {
+  padding: 0 5px;
+  margin: 0 auto;
+}
+
+.loading-container {
+  margin-top: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .testimonial-form {
   max-width: 100%;
@@ -341,6 +369,7 @@ li.tag {
 li.tag input {
   font-size: .8em;
 }
+
 
 }
 /*  End small screen size */
