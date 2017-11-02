@@ -1,6 +1,7 @@
 <div class="business-overview">
   <h1 class="business-name"> <%= @business['name'] %> </h1>
   <div class="upper-section">
+
     <div class="business-overview-left">
       <div class="charts">
         <div class="google-chart">
@@ -16,6 +17,7 @@
         </div>
       </div>
     </div>
+
     <div class="business-overview-right">
       <h4 class="details-header">Business Details</h4>
       <div class="business-images">
@@ -24,6 +26,7 @@
       <%= render partial: 'businesses/details', locals: {business: @business} %>
     </div>
   </div>
+  
   <div class="testimonials-show-container">
     <div class="top-testimonials">
       <div class="positive-testimonial">

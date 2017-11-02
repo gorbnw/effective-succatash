@@ -79,6 +79,11 @@ $(document).ready(() => {
       $('.no-testimonials').remove();
       $('.testimonial-list').prepend(response);
       $('.new_testimonial')[0].reset();
+      $('li').css('color', 'black')
+      $('li').css('background-color', '#FCFCFC')
+      $('input').css('background-color', '#FCFCFC')
+      $('input').css('color', 'black')
+      $('li').css('border-color', 'black')
       $('.form-button').removeAttr('data-disable-with');
     }).fail((response) => {
       $('.errors').html(response.responseText);
