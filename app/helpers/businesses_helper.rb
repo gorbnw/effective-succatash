@@ -33,3 +33,5 @@ module BusinessesHelper
     return tag_counts_array_of_arrays
   end
 end
+
+private
