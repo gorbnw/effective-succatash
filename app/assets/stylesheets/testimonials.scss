@@ -12,10 +12,12 @@
 }
 
 .testimonial .tag {
-  color: var(--light-text);
-  background-color: var(--text);
   border: 2px solid var(--text);
   border-radius: 5px;
+  color: var(--text);
+  font-size: 14px;
+  padding: 2px;
+  display: inline-block;
 }
 
 .testimonial .date-and-time {

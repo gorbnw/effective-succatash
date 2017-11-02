@@ -10,7 +10,7 @@
   height: 300px;
   width: 500px;
   padding: 2rem;
-  margin-top: 1rem;
+  margin-top: 2.2rem;
   margin-bottom: 1rem;
   display: flex;
   flex-direction: row;
@@ -249,9 +249,14 @@ div.doodad {
 .business-name {
   font-family: 'Noto Serif', serif;
   margin: 0;
+<<<<<<< HEAD
   font-size: 2rem;
   color: white;
   text-decoration-color: var(--border-color);
+=======
+  font-size: 2.3rem;
+  color: var(--offwhite);
+>>>>>>> 58291557807e74877455d218e6769e9def72a5f1
 }
 
 .business-overview {
