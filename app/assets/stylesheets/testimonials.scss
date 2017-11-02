@@ -15,11 +15,11 @@
 }
 
 .testimonial .tag {
-  border: 2px solid var(--text);
+  border: 2px solid var(--darkestpurple);
   border-radius: 5px;
-  color: var(--text);
-  font-size: 14px;
-  padding: 2px;
+  color: var(--darkestpurple);
+  font-size: 12px;
+  padding: 3px;
   display: inline-block;
 }
 
@@ -27,15 +27,12 @@
   display: inline;
   padding-right: 15px;
   font-size: 14px;
-  color: var(--rust);
 }
 
 .testimonial .inline {
   display: inline;
   padding-right: 15px;
   font-size: 14px;
-  color: var(--rust);
-
 }
 
 .testimonial .safe {
@@ -43,8 +40,6 @@
   font-size: 14px;
   display: inline;
   float: right;
-  color: var(--rust);
-  
 }
 
 .testimonial-text {
@@ -109,13 +104,13 @@ h3 {
 
 .testimonial-form {
   padding: 10px;
+  color: white;
   max-width: 450px;
   min-width: 350px;
   margin: 0 auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid var(--border-color);
-  background-color: var(--light-text);
+  background-color: var(--testdarkblue);
   border-radius: 4px;
   .errors {
     margin-left: 1rem;
@@ -174,7 +169,7 @@ h3 {
   justify-content: center;
   input {
     border: none;
-    background-color: var(--text);
+    background-color: var(--darkerpurple);
     color: white;
     padding: 0.4rem;
     font-size: 0.6rem;

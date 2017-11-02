@@ -32,6 +32,9 @@
    --testwhite: #f1f1f0;
    --rgbwhite: rgb(255, 255, 255, 0.2);
    --rust: #912C00;
+   --purple: #8088B2;
+   --darkerpurple: #3F568B;
+   --darkestpurple: #182449;
  }
 
  .errors {
@@ -65,7 +68,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: var(--positive);
+  color: var(--darkestpurple);
 }
 
 .logo-nav {
