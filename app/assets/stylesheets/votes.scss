@@ -13,7 +13,10 @@
   padding: 0.3rem;
   margin-right: 0.5rem;
   font-size: 0.8rem;
-  background-color: var(--light-text);
+  color: white;
+  margin-left: 1.5rem;
+  background-color: var(--rust);
+
 }
 
 
@@ -33,5 +36,6 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  margin-bottom: 0.5rem;
 
 }
