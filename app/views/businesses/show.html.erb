@@ -19,7 +19,7 @@
     <div class="business-overview-right">
       <h4 class="details-header">Business Details</h4>
       <div class="business-images">
-        <iframe class="map-frame" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV['GOOG_MAP_KEY'] %>&q=<%= @business['name'] %>,<%= @business['location']['display_address'] %>" ></iframe>
+        <iframe class="map-frame" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV['GOOG_MAP_KEY'] %>&q=<%= @business['name'] %>, <%= @business['location']['display_address'] %>" ></iframe>
       </div>
       <%= render partial: 'businesses/details', locals: {business: @business} %>
     </div>
