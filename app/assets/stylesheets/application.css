@@ -31,6 +31,10 @@
    --testlightblue: #c2d2e9;
    --testwhite: #f1f1f0;
    --rgbwhite: rgb(255, 255, 255, 0.2);
+   --rust: #912C00;
+   --purple: #8088B2;
+   --darkerpurple: #3F568B;
+   --darkestpurple: #182449;
  }
 
  .errors {
@@ -40,7 +44,8 @@
 
 html {
   width: 100%;
-  font-family: 'Frank Ruhl Libre', serif;
+  /*font-family: 'Frank Ruhl Libre', serif;*/
+  font-family: 'Roboto', sans-serif;
   height: 100%;
 }
 
@@ -63,7 +68,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: var(--positive);
+  color: var(--darkestpurple);
 }
 
 .logo-nav {
@@ -159,6 +164,8 @@ table.doodad{
 
 table.doodad th{
   color: var(--testwhite);
+  font-family: 'Noto Serif', serif;
+  font-size: 0.7rem;
 }
 
 td.doodad-positive{
@@ -408,7 +415,6 @@ td.doodad-no-data{
       width: 80%;
     }
 
-
     .business-name {
       margin: 0;
       font-size: 2.3rem;
@@ -427,7 +433,7 @@ td.doodad-no-data{
     }
 
     .testimonial-form {
-      max-width: 80%;
+      /*max-width: 80%;*/
       margin-bottom: 100px;
     }
 

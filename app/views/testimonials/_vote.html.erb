@@ -1,5 +1,5 @@
 <%= form_for @vote, url: votes_path, :html => {:class => "vote-form"} do |f| %>
   <%= f.hidden_field :testimonial_id, :value => testimonial.id, class: 'testimonial-id' %>
   <%= f.hidden_field :authenticity_token, value: form_authenticity_token %>
-  <%= f.submit "I hear you", class: 'form-button' %>
+  <%= f.submit "Me Too!", class: 'form-button' %>
 <% end %>
