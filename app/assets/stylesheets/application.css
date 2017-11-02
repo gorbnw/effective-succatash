@@ -415,7 +415,6 @@ td.doodad-no-data{
       width: 80%;
     }
 
-
     .business-name {
       margin: 0;
       font-size: 2.3rem;
@@ -434,7 +433,7 @@ td.doodad-no-data{
     }
 
     .testimonial-form {
-      max-width: 80%;
+      /*max-width: 80%;*/
       margin-bottom: 100px;
     }
 

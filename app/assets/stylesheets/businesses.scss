@@ -299,11 +299,12 @@ div.doodad {
   height: 150px;
 }
 
-.map-frame {
+iframe.map-frame {
   margin-left: 1rem;
   min-width: 250px;
   min-height: 250px;
   margin: 0 auto;
+  border: 1px solid var(--darkerpurple)
 }
 
 .testimonial-summary {
