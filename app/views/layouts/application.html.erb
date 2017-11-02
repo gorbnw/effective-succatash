@@ -6,16 +6,18 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Roboto" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
     <header>
+
       <nav id="nav-bar">
+        <a href="/"><%= image_tag("https://dl.dropboxusercontent.com/s/431espnjn47sgqj/feelfree-logo-white.svg?dl=0", :class => 'logo-nav') %></a>
         <ul>
-          <li id="nav-logo"><a class="logo-nav" href="/">LogoHere</a></li>
           <% if user_signed_in? %>
             <li class="nav-item"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
           <% else %>
@@ -24,7 +26,6 @@
           <% end %>
         </ul>
       </nav>
-      <!-- Devise uses this for flash and notice alerts -->
     </header>
 
     <div class="container">
