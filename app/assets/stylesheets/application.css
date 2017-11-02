@@ -288,12 +288,18 @@ td.doodad-no-data{
 
     /* business index - doodad styles */
     div.doodad {
-      min-width: 30%;
-      margin-right: 5%;
+      /*min-width: 30%;*/
+      width: 50%;
+      /*margin-right: 5%;*/
+    }
+
+    div.content {
+      /*min-width: 40%;*/
+      width: 50%;
     }
 
     table.doodad{
-      width: 100%;
+      width: 60%;
     }
 
     .no-testimonials {
@@ -340,9 +346,14 @@ td.doodad-no-data{
       padding: 10px;
     }
 
+    .content {
+      /*border: 2px solid pink;*/
+
+    }
+
     div.doodad {
       margin: 1rem auto 0;
-      width: 80%;
+      /*border: 1px dashed green;*/
     }
 
     table.doodad {
