@@ -212,215 +212,232 @@ td.doodad-no-data{
 
 /*Global Styles*/
 
-  .container {
-    width: 100%;
-  }
-  /*Nav Bar Styles*/
+    header {
+      height: 150px;
+    }
+
+    .business-name {
+      padding-left: 5%;
+    }
+
+    .container {
+      width: 100%;
+    }
+    /*Nav Bar Styles*/
 
 
-  .logo-nav {
-    width: 60px;
-    left: 10%;
-  }
+    .logo-nav {
+      width: 60px;
+      left: 10%;
+    }
 
-  #nav-bar ul {
-    right: 5%;
-  }
+    #nav-bar ul {
+      right: 5%;
+    }
 
-  /*Search Bar Styles*/
+    /*Search Bar Styles*/
 
-  .search-area {
-    padding: 4rem;
-    margin-top: 1rem;
-  }
+    .search-area {
+      padding: 4rem;
+      margin-top: 1rem;
+    }
 
-  .search-bar {
-    display: block;
-  }
+    .search-bar {
+      display: block;
+    }
 
-  .search-icon {
-    display: none;
-  }
+    .search-icon {
+      display: none;
+    }
 
-  .business-container {
-    box-sizing: border-box;
-    width: 100%;
-    display: block;
-    padding: 15px 5px;
-  }
+    .business-container {
+      box-sizing: border-box;
+      width: 100%;
+      display: block;
+      padding: 15px 5px;
+    }
 
-  .city-container {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    padding: 15px 5px;
-    margin: 15px 0 10px;
-  }
+    .city-container {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      padding: 15px 5px;
+      margin: 15px 0 10px;
+    }
 
-  .business-container .input,
-  .city-container .input {
-    width: 100%;
-  }
+    .business-container .input,
+    .city-container .input {
+      width: 100%;
+    }
 
-  .search-button {
-    padding: 15px 5px;
-    width: 100%;
-  }
+    .search-button {
+      padding: 15px 5px;
+      width: 100%;
+    }
 
-  /*business index styles */
-
-
-  .business-photo img {
-    display: none;
-  }
-
-  /* business index - doodad styles */
-  div.doodad {
-    min-width: 30%;
-    margin-right: 5%;
-  }
-
-  table.doodad{
-    width: 100%;
-  }
-
-  .no-testimonials {
-    font-size: .7em;
-  }
-
-  .index-details {
-    padding: 2%;
-    max-width: 80%;
-  }
+    /*business index styles */
 
 
-/*Show page Styles */
+    .business-photo img {
+      display: none;
+    }
 
-.business-name {
-  margin: 0;
-  font-size: 2.3rem;
-}
+    .business-list {
+      padding-left: 0;
+    }
 
-.upper-section {
-  display: block;
-}
+    /* business index - doodad styles */
+    div.doodad {
+      min-width: 30%;
+      margin-right: 5%;
+    }
 
-.business-overview-right {
-  display: block;
-  margin-top: 15px;
-  width: 100%;
-}
+    table.doodad{
+      width: 100%;
+    }
 
-.business-overview-left {
-  width: 100%;
-  margin: 0;
-}
+    .no-testimonials {
+      font-size: .7em;
+    }
 
-.charts {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-}
-.google-chart {
-  width: 80%;
-  display: block;
-  margin: 1rem auto;
-  padding: 10px;
-}
-
-div.doodad {
-  margin: 1rem auto 0;
-  width: 80%;
-}
-
-table.doodad {
-  padding: 0 5px;
-  margin: 0 auto;
-}
-
-.loading-container {
-  margin-top: 40%;
-  margin-left: auto;
-  margin-right: auto;
-}
+    .index-details {
+      padding: 2%;
+      max-width: 80%;
+    }
 
 
-.testimonial-form {
-  max-width: 100%;
-}
+  /*Show page Styles */
 
-.submit-button input {
-    width: 80%;
-    padding: 15px 10px;
-    font-size: 1.2em;
-}
+    .business-name {
+      margin: 0;
+      font-size: 2.3rem;
+    }
 
-.tags-list {
-  padding: 0;
-}
+    .upper-section {
+      display: block;
+    }
 
-li.tag {
-  margin: 5px 10px;
-  width: 125px;
-  padding: 10px 5px;
-  background-color: white;
-}
+    .business-overview-right {
+      display: block;
+      margin-top: 15px;
+      width: 100%;
+    }
 
-li.tag input {
-  font-size: .8em;
-}
+    .business-overview-left {
+      width: 100%;
+      margin: 0;
+    }
+
+    .charts {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .google-chart {
+      width: 80%;
+      display: block;
+      margin: 1rem auto;
+      padding: 10px;
+    }
+
+    div.doodad {
+      margin: 1rem auto 0;
+      width: 80%;
+    }
+
+    table.doodad {
+      padding: 0 5px;
+      margin: 0 auto;
+    }
+
+    .loading-container {
+      margin-top: 40%;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
 
-}
-/*  End small screen size */
-@media only screen and (max-width: 1400px)
-                   and (min-width: 700px) {
+    .testimonial-form {
+      max-width: 100%;
+    }
 
-  .container {
-    width: 80%;
-  }
+    .submit-button input {
+        width: 80%;
+        padding: 15px 10px;
+        font-size: 1.2em;
+    }
 
-  .business-name {
-    margin: 0;
-    font-size: 2.3rem;
-  }
+    .tags-list {
+      padding: 0;
+    }
 
-  .business-overview-right {
-    margin-top: 15px;
-    width: 50%;
-    max-width: 450px;
-    max-height: 450px;
+    li.tag {
+      margin: 5px 10px;
+      width: 125px;
+      padding: 10px 5px;
+      background-color: white;
+    }
+
+    li.tag input {
+      font-size: .8em;
+    }
+
   }
 
-  .charts {
-    margin-right: 5px;
-    width: 300px;
-  }
 
-  .testimonial-form {
-    max-width: 100%;
-  }
+  /*  End small screen size */
+  @media only screen and (max-width: 1400px)
+                     and (min-width: 700px) {
 
-  .submit-button input {
+    header {
+      height: 200px;
+    }
+
+    .container {
+      width: 80%;
+    }
+
+
+    .business-name {
+      margin: 0;
+      font-size: 2.3rem;
+    }
+
+    .business-overview-right {
+      margin-top: 15px;
       width: 50%;
-      padding: 15px 10px;
-      font-size: 1.2em;
+      max-width: 450px;
+      max-height: 450px;
+    }
+
+    .charts {
+      margin-right: 5px;
+      width: 300px;
+    }
+
+    .testimonial-form {
+      max-width: 80%;
+      margin-bottom: 100px;
+    }
+
+    .submit-button input {
+        width: 30%;
+        padding: 15px 10px;
+        font-size: 1.2em;
+    }
+
+    .tags-list {
+      text-align: center;
+    }
+
+    li.tag {
+      margin: 5px 5px;
+      padding: 5px 5px;
+      background-color: white;
+    }
+
+    li.tag input {
+      font-size: .8em;
+    }
+
   }
-
-  .tags-list {
-    text-align: center;
-  }
-
-  li.tag {
-    margin: 10px 10px;
-    padding: 10px 5px;
-    background-color: white;
-  }
-
-  li.tag input {
-    font-size: 1.2em;
-  }
-
-
-
-}
