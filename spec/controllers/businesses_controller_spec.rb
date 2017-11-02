@@ -66,4 +66,52 @@ RSpec.describe BusinessesController, type: :controller do
     end
   end
 
+  describe "businesses#offset" do
+    let(:resp_double) { double(parsed_response: offset_response) }
+    let(:args) { {"term" => "beefjerky", "location" => "seattle"} }
+    before(:each) do
+      allow(HTTParty).to receive(:get).and_return(resp_double)
+      get :offset, params: { search: { offset: "0", "term" => "beefjerky", "location" => "seattle" } }
+    end
+
+    it "assigns offset" do
+      expect(assigns[:offset]).to eq 50
+    end
+
+    it "assigns businesses" do
+      expect(assigns[:businesses]).to eq(resp_double.parsed_response["businesses"])
+    end
+  end
+
+  describe "businesses#search" do
+    context "when location is passed in search params" do
+      let(:resp_double) { double(parsed_response: search_response) }
+      let(:args) { {"term" => "hungryhut", "location" => "glencoe, al"} }
+      before(:each) do
+        allow(HTTParty).to receive(:get).and_return(resp_double)
+        get :search, params: { search: { "term" => "beefjerky", "location" => "seattle" } }
+      end
+
+      it "assigns business_details" do
+        expect(assigns[:business_details]).to eq({ "term" => "beefjerky", "location" => "seattle" })
+      end
+
+      it "returns a 200 status code" do
+        expect(response.status).to eq 200
+      end
+
+      it "assigns a collection of businesses" do
+        expect(assigns[:businesses]).to eq(resp_double.parsed_response["businesses"])
+      end
+
+      it "renders the show page" do
+        expect(response).to render_template(:index)
+      end
+
+      it "clears flash messages" do
+        expect(flash[:alert]).to eq nil
+      end
+    end
+
+  end
 end
