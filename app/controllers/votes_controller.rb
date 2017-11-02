@@ -2,11 +2,11 @@ class VotesController < ApplicationController
 
   def create
     if user_signed_in?
-      @vote = Vote.find_by(user_id: current_user.id, testimonial_id: params[:vote][:testimonial_id])
+      @vote = Vote.find_by(user_id: current_user.id, testimonial_id: vote_params[:testimonial_id])
       if @vote
         @vote.destroy
       else
-        @vote = Vote.create(user_id: current_user.id, testimonial_id: params[:vote][:testimonial_id])
+        @vote = Vote.create(user_id: current_user.id, testimonial_id: vote_params[:testimonial_id])
       end
       testimonial = Testimonial.find(params[:vote][:testimonial_id])
       if request.xhr?
