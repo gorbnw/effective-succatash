@@ -23,8 +23,8 @@ $(document).ready(() => {
                             fontSize: 12,
                             italic: true},
                 isHTML: true},
-      width: 500,
-      height: 400,
+      // width: 500,
+      // height: 400,
       pieSliceText: 'none',
       chartArea: { left: 40, width: "80%", height: "80%" },
       legend: {position: 'labeled', alignment: 'end', textStyle: {color: 'white', fontSize: 12, italic: true}}
