@@ -1,6 +1,7 @@
 <div class="business-overview">
   <h1 class="business-name"> <%= @business['name'] %> </h1>
   <div class="upper-section">
+
     <div class="business-overview-left">
       <div class="charts">
         <div class="google-chart">
@@ -16,32 +17,34 @@
         </div>
       </div>
     </div>
+
     <div class="business-overview-right">
       <h4 class="details-header">Business Details</h4>
       <div class="business-images">
-        <iframe class="map-frame" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV['GOOG_MAP_KEY'] %>&q=<%= @business['name'] %>, <%= @business['location']['display_address'] %>" ></iframe>
+        <iframe class="map-frame" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV['GOOG_MAP_KEY'] %>&q=<%= @business['name'] %>, <%= @business['location']['display_address'] %>" ></iframe>
       </div>
       <%= render partial: 'businesses/details', locals: {business: @business} %>
     </div>
   </div>
+
   <div class="testimonials-show-container">
     <div class="top-testimonials">
-      <div class="positive-testimonial">
-        <p class="top-testimonial-header">Most Supported Positive Testimonial</p>
-        <% if !@positive_testimonial || @positive_testimonial.votes.count == 0 %>
-          <p class="no-testimonials">Not enough testimonials have votes yet.</p>
-        <% else %>
-          <%= render partial: 'businesses/testimonial', locals: {testimonial: @positive_testimonial } %>
+      <% if @positive_testimonial && @negative_testimonial %>
+        <div class="positive-testimonial">
+          <% if @positive_testimonial.votes.count == 0 %>
+          <% else %>
+          <p class="top-testimonial-header">Most Supported Positive Feedback</p>
+            <%= render partial: 'businesses/testimonial', locals: {testimonial: @positive_testimonial } %>
+          <% end %>
+        </div>
+        <div class="negative_testimonial">
+          <% if @negative_testimonial.votes.count == 0 %>
+          <% else %>
+            <p class="top-testimonial-header">Most Supported Constructive Feedback</p>
+            <%= render partial: 'businesses/testimonial', locals: {testimonial: @negative_testimonial } %>
+          <% end %>
+        </div>
         <% end %>
-      </div>
-      <div class="negative_testimonial">
-        <p class="top-testimonial-header">Most Supported Negative Testimonial</p>
-        <% if !@negative_testimonial || @negative_testimonial.votes.count == 0 %>
-          <p class="no-testimonials">Not enough testimonials have votes yet.</p>
-        <% else %>
-          <%= render partial: 'businesses/testimonial', locals: {testimonial: @negative_testimonial } %>
-        <% end %>
-      </div>
     </div>
 
     <div class="testimonial-form">
