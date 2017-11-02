@@ -13,34 +13,34 @@
       <div class="vote-error"></div>
     </div>
   </div>
-      <p>
-        <% testimonial.tags.each do |tag| %>
-        <span class="tag"> <%= tag.description %> </span> &nbsp;
-        <% end %>
-      </p>
+  <p> <span class="tagged-with">Tagged with:</span>
+    <% testimonial.tags.each do |tag| %>
+    <span class="tag"> <%= tag.description %> </span> &nbsp;
+    <% end %>
+  </p>
 
-      <p class='inline'>
-        <span class="username">
-          <% if testimonial.anonymous %>
-            Anonymous
-          <% else %>
-            <%= testimonial.user.username %>
-          <% end %>
-        </span>
-        felt
-        <% if testimonial.positive %>
-           safe
-        <% else %>
-           unsafe
-        <% end %>
-      </p>
-
-      <p class='date-and-time'><%= testimonial.created_at.strftime("Posted %m/%d/%Y") %> </p>
-      <% if user_signed_in? %>
-        <% if current_user == testimonial.user %>
-        <p class='date-and-time'>You posted this testimonial!</p>
-        <% elsif testimonial.votes.find_by(user_id: current_user.id) != nil %>
-        <p class='date-and-time'>You offered solidarity on this testimonial!</p>
-        <% end %>
+  <p class='inline'>
+    <span class="username">
+      <% if testimonial.anonymous %>
+        Anonymous
+      <% else %>
+        <%= testimonial.user.username %>
       <% end %>
+    </span>
+    felt
+    <% if testimonial.positive %>
+       safe
+    <% else %>
+       unsafe
+    <% end %>
+  </p>
+
+  <p class='date-and-time'><%= testimonial.created_at.strftime("Posted %m/%d/%Y") %> </p>
+  <% if user_signed_in? %>
+    <% if current_user == testimonial.user %>
+    <p class='date-and-time'>You posted this testimonial!</p>
+    <% elsif testimonial.votes.find_by(user_id: current_user.id) != nil %>
+    <p class='date-and-time'>You offered solidarity on this testimonial!</p>
+    <% end %>
+  <% end %>
 </div>
