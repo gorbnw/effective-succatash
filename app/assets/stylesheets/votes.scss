@@ -1,6 +1,6 @@
 .vote-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   float: right;
@@ -14,14 +14,24 @@
   background-color: var(--light-text)
 }
 
+
 .form-button:hover {
   background-color: var(--negative)
 }
+
 
 .vote-count {
 
 }
 
-.vote-errors {
-  font-size: 12px; 
+.vote-error {
+  font-size: 12px;
+  color: var(--errors);
+}
+
+.vote-button-and-count {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
 }
