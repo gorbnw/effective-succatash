@@ -86,7 +86,6 @@ RSpec.describe BusinessesController, type: :controller do
   describe "businesses#search" do
     context "when location is passed in search params" do
       let(:resp_double) { double(parsed_response: search_response) }
-      let(:args) { {"term" => "hungryhut", "location" => "glencoe, al"} }
       before(:each) do
         allow(HTTParty).to receive(:get).and_return(resp_double)
         get :search, params: { search: { "term" => "beefjerky", "location" => "seattle" } }
@@ -112,6 +111,24 @@ RSpec.describe BusinessesController, type: :controller do
         expect(flash[:alert]).to eq nil
       end
     end
+    context "when location is not passed in search params" do
+      let(:resp_double) { double(parsed_response: search_response) }
+      before(:each) do
+        allow(HTTParty).to receive(:get).and_return(resp_double)
+        get :search, params: { search: { "term" => "beefjerky",  "location" => "" } }
+      end
 
+      it "assigns a flash alert" do
+        expect(flash[:alert]).to eq "Please enter a city to search"
+      end
+
+      it "returns a 200 status code" do
+        expect(response.status).to eq 200
+      end
+
+      it "renders the show page" do
+        expect(response).to render_template(:index)
+      end
+    end
   end
 end
