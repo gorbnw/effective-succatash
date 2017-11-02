@@ -24,6 +24,8 @@ SimpleCov.start 'rails' do
   add_filter "/app/channels/application_cable/connection.rb"
   add_filter "/app/jobs/application_job.rb"
   add_filter "/app/mailers/application_mailer.rb"
+  add_filter "/app/controllers/users/*"
+  add_filter "/app/controllers/application_controller.rb"
 end
 require 'factory_bot_rails'
 
@@ -47,12 +49,6 @@ RSpec.configure do |config|
       with(headers: {'Accept'=>'*/*', 'User-Agent'=>'Ruby'}).
       to_return(status: 200, body: "stubbed response", headers: {})
   end
-
-  # config.before(:each) do
-  #   allow(Business).to receive(:search_businesses).and_return(search_response)
-  #   allow(Business).to receive(:search_more_businesses).and_return(second_fake_search)
-  #   allow(Business).to receive(:find_business).and_return(fake_business)
-  # end
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
