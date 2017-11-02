@@ -101,6 +101,7 @@
 input.city-field {
   background-color: transparent;
   border: none;
+  font-family: 'Noto Serif', serif;
   font-size: 1.2rem;
   opacity: 0.8;
   border-bottom: 2px solid var(--testdarkblue);
@@ -110,6 +111,7 @@ input.city-field {
 
 input.business-field {
   background-color: transparent;
+  font-family: 'Noto Serif', serif;
   color: var(--testwhite);
   font-size: 1.2rem;
   border: none;
@@ -178,11 +180,13 @@ div.content {
 }
 
 .business-header {
+  font-family: 'Noto Serif', sans-serif;
+  font-size: 1.8rem;
   text-align: center;
 }
 
 p.name {
-  font-weight: bold;
+  font-family: 'Noto Serif', sans-serif;
   font-size: 1.3rem;
   margin-right: 0.5rem;
   margin-top: 1rem;
@@ -195,8 +199,10 @@ p.name {
 }
 
 p.list-item {
+  font-size: 0.9rem;
   margin-bottom: 0.3rem;
   margin-top: 0.1rem;
+  margin-lefT: 0.5rem;
 }
 
 .detail {
@@ -215,7 +221,7 @@ p.list-item {
 
 
 div.doodad {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-right: 1rem;
 }
 
@@ -226,10 +232,12 @@ div.doodad {
 
 .offset-info {
   input.submit {
+    font-family: 'Noto Serif', serif;
     background: none;
     color: var(--offwhite);
     border: none;
     padding: 0;
+    font-size: 0.9rem;
   }
   input.submit:hover {
     color: var(--positive);
@@ -239,6 +247,7 @@ div.doodad {
 // SHOW PAGE STYLING STUFF -------
 
 .business-name {
+  font-family: 'Noto Serif', serif;
   margin: 0;
   font-size: 2.3rem;
   color: var(--testlightblue);
@@ -262,6 +271,7 @@ div.doodad {
 }
 
 .details-header {
+  font-family: 'Noto Serif', serif;
   text-align: center;
   margin-top: 3.5rem;
   font-size: 18px;
@@ -330,6 +340,12 @@ div.doodad {
   font-size: 1.2rem;
   text-align: center;
   color: var(--testlightblue);
+  font-family: 'Noto Serif', serif;
+}
+
+.testimonials-show-container h3 {
+  font-family: 'Noto Serif', serif;
+  font-size: 1.5rem;
 }
 
 .no-testimonials {
