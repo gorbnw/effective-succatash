@@ -79,8 +79,8 @@ $(document).ready(() => {
       $('.no-testimonials').remove();
       $('.testimonial-list').prepend(response);
       $('.new_testimonial')[0].reset();
+      $('.form-button').removeAttr('data-disable-with');
     }).fail((response) => {
-      console.log(response)
       $('.errors').html(response.responseText);
     }).always(() => {
       $('input.submit-button').removeAttr('disabled');

@@ -1,29 +1,33 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 $(document).ready(() => {
-  $('.vote-form').on('submit', (e) => {
+  $('.form-button').removeAttr('data-disable-with');
+
+  $(document).on('submit', '.vote-form', (e) => {
+
     e.preventDefault();
     // may not be event delegated - keep an eye out
 
+
     const url = $(e.target).closest('.vote-form').attr('action')
+    const token = $(e.target).closest('.vote-form').find('input[name="authenticity_token"]').val();
 
     const data = $(e.target).closest('.vote-form').find('.testimonial-id').val();
 
     const request = $.ajax({
       method: 'POST',
       url: url,
-      data: { vote: {testimonial_id: data} }
+      data: { vote: {testimonial_id: data}, authenticity_token: token }
     }).done((response) => {
       $(e.target).closest('.vote-container').find('.vote-count').text(response);
-    }).fail(() => {
-      alert("Oops, Something went wrong, please try again!");
-    }).always(() => {
-      console.log('Click Registered');
-    })
+    }).fail((response) => {
+      $(e.target).closest('.testimonial').find('.vote-error').text(response['responseText']);
+    });
   }) // End Ajax of vote count button.
 
   $('.form-button').on('click', (e) => {
     e.preventDefault;
+
   })
 
   $('div.testimonial-form .tag').on('click', (e) => {
