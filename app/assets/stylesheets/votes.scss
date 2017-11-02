@@ -8,15 +8,18 @@
 
 .form-button {
   border: none;
+  font-family: 'Noto Serif', serif;
   border-radius: 5px;
   padding: 0.3rem;
   margin-right: 0.5rem;
-  background-color: var(--light-text)
+  font-size: 0.8rem;
+  background-color: var(--light-text);
 }
 
 
 .form-button:hover {
-  background-color: var(--negative)
+  background-color: var(--testdarkblue);
+  color: white;
 }
 
 
