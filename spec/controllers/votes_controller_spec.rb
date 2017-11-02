@@ -2,31 +2,41 @@ require 'rails_helper'
 
 RSpec.describe VotesController, type: :controller do
   let(:user) { FactoryBot.create(:user)}
-  let(:business) { FactoryBot.create(:business)}
   let(:testimonial) { FactoryBot.build(:testimonial, :positive)}
 
   before do
-    sign_in :user, create(:user)
+    sign_in create(:user), scope: :user
   end
 
   describe 'votes#create' do
     before(:each) do
-      testimonial.business_id = business.id
       testimonial.user_id = user.id
       testimonial.save
-      post :create, params: {current_user: user, vote: {testimonial_id: testimonial.id} }
     end
 
-    xit 'returns a 302 status' do
+    it 'returns a 302 status' do
+      post :create, params: {current_user: user, vote: {testimonial_id: testimonial.id} }
       expect(response.status).to eq 302
     end
 
-    xit 'assigns the vote' do
+    it 'assigns the vote' do
+      post :create, params: {current_user: user, vote: {testimonial_id: testimonial.id} }
       expect(assigns[:vote]).to be_an_instance_of(Vote)
     end
 
-    xit 'assigns the business' do
-      expect(assigns[:business]).to eq business
+    it 'destroys the vote if the user has already voted on the testimonial yet' do
+      post :create, params: {current_user: user, vote: {testimonial_id: testimonial.id} }
+      expect{ post :create, params: {current_user: user, vote: {testimonial_id: testimonial.id} } }.to change { Vote.all.length }.by(-1)
     end
+
+    it 'creates a new vote if the user has not voted on the testimonial yet' do
+      expect{ post :create, params: {current_user: user, vote: {testimonial_id: testimonial.id} } }.to change { Vote.all.length }.by(1)
+    end
+
+    it 'does not create a new vote if the user is not logged in' do
+      sign_out(user)
+      expect{ post :create, params: {vote: {testimonial_id: testimonial.id} } }.to change { Vote.all.length }.by(0)
+    end
+
   end
 end
