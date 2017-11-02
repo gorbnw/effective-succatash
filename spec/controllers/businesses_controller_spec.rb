@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe BusinessesController, type: :controller do
-  describe 'businesses#index' do
-    let!(:business){FactoryBot.create(:business)}
+  xdescribe 'businesses#index' do
     before(:each) { get :index}
 
     it 'returns a 200 status' do

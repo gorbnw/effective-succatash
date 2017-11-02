@@ -1,72 +1,47 @@
 require 'rails_helper'
+require_relative '../support/api'
 
 RSpec.describe Business, type: :model do
-  describe "Attributes" do
-    let!(:business){FactoryBot.create(:business)}
-    it 'has a name' do
-      expect(business.name).to eq("Krumbo's Smell Zone")
-    end
-    it 'has a phone # ' do
-      expect(business.phone).to eq("206-867-5309")
-    end
-    it 'has an address' do
-      expect(business.address).to eq("99 Apricot Ct, Seattle, WA, 98144")
+
+  before(:each) do
+    allow(ENV).to receive(:[]).with("YELP_TOKEN").and_return("yelp")
+    allow(ENV).to receive(:[]).with("YELP_TOKEN_SECRET").and_return("secrets")
+  end
+
+  describe "#search_businesses" do
+    context 'when all valid fields are present' do
+      let(:resp_double) { double(parsed_response: search_response) }
+      let(:args) { {"term" => "hungryhut", "location" => "glencoe, al"} }
+      before(:each) do
+        allow(HTTParty).to receive(:get).and_return(resp_double)
+      end
+      it 'returns a list of Yelp businesses' do
+        expect(Business.search_businesses(args)).to eq resp_double.parsed_response["businesses"]
+      end
     end
   end
 
-  xdescribe "#count_praise" do
-    let!(:business){FactoryBot.create(:business)}
-    let!(:testimonial){FactoryBot.create(:testimonial, :positive)}
-    let!(:testimonial2){FactoryBot.create(:testimonial, :negative)}
-
-      it 'counts positive praise for a given business' do
-        business.testimonials << [testimonial, testimonial2]
-        business.save!
-        expect(business.count_praise).to eq "1 user gave praise!"
-      end
-
-      it 'counts negative praise for a given business' do
-        business.testimonials << [testimonial, testimonial2]
-        business.save!
-        expect(business.count_criticism).to eq "1 user left criticism"
-      end
-
-      it 'returns "No praise for this business yet" when no positive praise exists' do
-        expect(business.count_praise).to eq "No praise for this business yet"
-      end
-
-      it 'returns "No citicism for this business yet" when no negative praise exists' do
-        expect(business.count_criticism).to eq "No criticism for this business yet"
-      end
+  describe '#get_offset_businesses' do
+    let(:resp_double) { double(parsed_response: offset_response) }
+    let(:args) { {"term" => "beefjerky", "location" => "seattle"} }
+    before(:each) do
+      allow(HTTParty).to receive(:get).and_return(resp_double)
     end
-
-    describe "validations" do
-      let!(:business){FactoryBot.create(:business)}
-      it "is valid with a name" do
-        expect(business.valid?).to eq true
-      end
-
-      it "is invalid without a name" do
-        business.name = nil
-        expect(business.valid?).to eq false
-      end
-
-      it "is valid with a phone" do
-        expect(business.valid?).to eq true
-      end
-
-      it "is invalid without a phone" do
-        business.phone = nil
-        expect(business.valid?).to eq false
-      end
-
-      it "is valid with a address" do
-        expect(business.valid?).to eq true
-      end
-
-      it "is invalid without a address" do
-        business.address = nil
-        expect(business.valid?).to eq false
-      end
+    it 'returns a list of offset Yelp businesses' do
+      expect(Business.get_offset_businesses(args, 45)).to eq resp_double.parsed_response["businesses"]
     end
+  end
+
+  describe '#get_yelp_business_details' do
+    let(:resp_double) { double(parsed_response: return_business) }
+    let(:yelp_id) { "safeway-marysville" }
+    before(:each) do
+      allow(HTTParty).to receive(:get).and_return(resp_double)
+    end
+    it 'returns a business' do
+      expect(Business.get_yelp_business_details(yelp_id)).to eq resp_double.parsed_response
+    end
+  end
+
+
 end
