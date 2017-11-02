@@ -50,6 +50,4 @@ class Testimonial < ApplicationRecord
   def self.count_negative(yelp_id)
     Testimonial.where(yelp_id: yelp_id, positive: false).count
   end
-
-
 end

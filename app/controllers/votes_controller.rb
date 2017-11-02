@@ -1,13 +1,23 @@
 class VotesController < ApplicationController
 
   def create
-    @vote = Vote.new(user_id: current_user.id, testimonial_id: params[:vote][:testimonial_id])
-    @vote.save!
-    testimonial = Testimonial.find(params[:vote][:testimonial_id])
-    if request.xhr?
-      render :json => testimonial.votes.count.to_json
+    if user_signed_in?
+      @vote = Vote.find_by(user_id: current_user.id, testimonial_id: vote_params[:testimonial_id])
+      if @vote
+        @vote.destroy
+      else
+        @vote = Vote.create(user_id: current_user.id, testimonial_id: vote_params[:testimonial_id])
+      end
+      testimonial = Testimonial.find(params[:vote][:testimonial_id])
+      if request.xhr?
+        render :json => testimonial.votes.count.to_json
+      else
+        redirect_to "/businesses/#{testimonial.yelp_id}"
+      end
     else
-      redirect_to "/businesses/#{testimonial.yelp_id}"
+      if request.xhr?
+        render :json => "Must login!", :status => 401
+      end
     end
   end
 

@@ -1,28 +1,20 @@
 #nav-bar {
   position: relative !important;
   display: block;
+  height: 100px;
   margin-bottom: 25px;
+  width: 100%;
+  left: 0;
+  right: 0;
   padding: 0;
   ul {
+    position: absolute;
     list-style: none;
-    text-align: right;
+    right: 10%;
     margin: 0;
     padding-top: 3rem;
-    padding-left: 1rem;
     padding-bottom: 1rem;
   }
-}
-
-#nav-logo{
-  position: absolute;
-  left: 0px;
-  // margin-top: 10px;
-  margin-left: 10px;
-}
-
-.logo-nav {
-  margin-left: 2rem;
-  font-size: 3rem;
 }
 
 .image-height {
@@ -33,7 +25,6 @@
   width: 100px;
   line-height: 40px;
   height: 40px;
-  margin-right: -4px;
   text-align: center;
   display: inline-block;
   position: relative;

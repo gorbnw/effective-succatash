@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :businesses do
     collection do
       get :search, :action => 'search', as: 'search'
+      get :offset, :action => 'offset', as: 'offset'
     end
   end
   resources :votes, only: [:create]

@@ -46,6 +46,7 @@ gem 'devise'
 # gem 'capistrano-rails', group: :development
 group :test do
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'webmock'
 end
 
 group :development, :test do

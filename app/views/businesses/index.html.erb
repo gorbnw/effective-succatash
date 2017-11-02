@@ -26,9 +26,6 @@
       <% @businesses.each do |business| %>
         <li class="business">
           <div class="content">
-            <div class="business-photo">
-              <img src="<%= business['image_url'] %>" width="150">
-            </div>
             <% categories = [] %>
             <% business['categories'].each do |category| %>
               <% categories << category["title"] %>
@@ -44,6 +41,12 @@
         </li>
       <% end %>
     </ul>
+    <form class="offset-info" action="/businesses/offset" method="get">
+      <input type="hidden" name="search[term]" value= "<%= params[:search][:term] %>" >
+      <input type="hidden" name="search[location]" value= "<%= params[:search][:location] %>">
+      <input type="hidden" name="search[offset]" value=" <%= @offset %> ">
+      <input class='submit' type="submit" name="" value="Not what you were looking for? See more">
+    </form>
   </div>
   <% else %>
   <div class="mission">

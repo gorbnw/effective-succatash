@@ -15,11 +15,17 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require 'simplecov'
+require 'webmock/rspec'
+
+WebMock.disable_net_connect!(allow_localhost: true)
+
 SimpleCov.start 'rails' do
   add_filter "/app/channels/application_cable/channel.rb"
   add_filter "/app/channels/application_cable/connection.rb"
   add_filter "/app/jobs/application_job.rb"
   add_filter "/app/mailers/application_mailer.rb"
+  add_filter "/app/controllers/users/*"
+  add_filter "/app/controllers/application_controller.rb"
 end
 require 'factory_bot_rails'
 
@@ -36,6 +42,12 @@ RSpec.configure do |config|
     # ...rather than:
     #     # => "be bigger than 2"
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+  end
+
+  config.before(:each) do
+    stub_request(:get, /api.yelp.com/).
+      with(headers: {'Accept'=>'*/*', 'User-Agent'=>'Ruby'}).
+      to_return(status: 200, body: "stubbed response", headers: {})
   end
 
   config.before(:suite) do

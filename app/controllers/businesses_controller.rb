@@ -7,10 +7,10 @@ class BusinessesController < ApplicationController
   end
 
   def search
-    business_details = {"term" => params[:search][:term], "location" => params[:search][:location]}
+    @business_details = {"term" => params[:search][:term], "location" => params[:search][:location]}
     flash.clear if params[:search][:location] != ""
     flash[:alert] = "Please enter a city to search" if params[:search][:location] == ""
-    @businesses = Business.search_businesses(business_details)
+    @businesses = Business.search_businesses(@business_details)
     render "businesses/index"
   end
 
@@ -24,12 +24,12 @@ class BusinessesController < ApplicationController
     @tag_counts = tag_counts(@testimonials) # Uses the tag_counts method from the business helper module
   end
 
-  def top_testimonial(testimonials, boolean)
-    testimonials.where(positive: boolean).reduce do |top_testimonial, testimonial|
-      if testimonial.votes.count > top_testimonial.votes.count
-        top_testimonial = testimonial
-      end
-      top_testimonial
-    end
+  def offset
+    @offset = params[:search][:offset].to_i + 50
+    business_details = {"term" => params[:search][:term], "location" => params[:search][:location]}
+    @businesses = Business.get_offset_businesses(business_details, @offset)
+    render 'businesses/index'
   end
+
+
 end
