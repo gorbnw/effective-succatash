@@ -43,7 +43,7 @@ describe TestimonialsController, type: :controller do
 
       let!(:testimonial1) {FactoryBot.create(:testimonial, :positive)}
       let!(:testimonial2) {FactoryBot.create(:testimonial, :negative)}
-      
+
       let!(:params) { {params: {testimonial: {yelp_id: "test"}}} }
       before(:each) do
         post :create, params
@@ -62,7 +62,7 @@ describe TestimonialsController, type: :controller do
       end
 
       it 'assigns a testimonials object' do
-         expect(assigns[:testimonials]).to eq Testimonial.where(yelp_id: testimonial.yelp_id)
+         expect(assigns[:testimonials]).to eq Testimonial.where(yelp_id: testimonial1.yelp_id)
       end
     end
   end
