@@ -6,5 +6,6 @@ FactoryBot.define do
     user
     trait(:positive) {positive true}
     trait(:negative) {positive false}
+    trait(:safeway) { yelp_id "safeway-marysville" }
   end
 end
