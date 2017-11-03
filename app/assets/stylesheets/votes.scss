@@ -8,20 +8,20 @@
 
 .form-button {
   border: none;
+  font-family: 'Noto Serif', serif;
   border-radius: 5px;
   padding: 0.3rem;
-  margin-right: 0.5rem;
-  background-color: var(--light-text)
-}
+  margin-right: 0.2rem;
+  font-size: 0.8rem;
+  color: white;
+  margin-left: 1.5rem;
+  background-color: var(--darkerpurple);
 
+}
 
 .form-button:hover {
-  background-color: var(--negative)
-}
-
-
-.vote-count {
-
+  background-color: var(--testdarkblue);
+  color: white;
 }
 
 .vote-error {
@@ -34,4 +34,6 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  margin-bottom: 0.5rem;
+
 }

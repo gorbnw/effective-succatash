@@ -2,10 +2,12 @@
   <table class="doodad">
       <% if Testimonial.where(yelp_id: business['id']).count <= 0 %>
       <tr>
+        <td class=doodad-no-data>&nbsp;</td>
+      <tr class="no-testimonials">
         <th colspan=2> No testimonials yet</th>
       </tr>
       <tr>
-        <td class=doodad-no-data>&nbsp;</td>
+        <th colspan=2> No testimonials yet</th>
       </tr>
       <% else %>
         <tr>
