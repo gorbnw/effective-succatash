@@ -59,10 +59,12 @@ body {
 .header-title {
   display: inline-block;
   position: absolute;
-  top: 20px;
+  margin: 0;
+  margin-left: 1rem;
   left: 70px;
-  font-size: 2em;
+  font-size: 4em;
   color: white;
+  font-family: 'Shadows Into Light', cursive;
 }
 
 .container {
