@@ -56,6 +56,15 @@ body {
   background-attachment: fixed;
 }
 
+.header-title {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  left: 70px;
+  font-size: 2em;
+  color: white;
+}
+
 .container {
   width: 60%;
   margin: 0 auto;
@@ -73,9 +82,9 @@ a:hover {
 
 .logo-nav {
   position: absolute;
-  width: 100px;
-  top: 5vh;
-  left: 15%;
+  width: 50px;
+  top: 15px;
+  left: 15px;
 }
 
 
@@ -230,9 +239,9 @@ td.doodad-no-data{
 
 /*Global Styles*/
 
-    header {
-      height: 150px;
-    }
+  .header-title {
+    display: none;
+  }
 
     .business-name {
       padding-left: 5%;
@@ -243,11 +252,6 @@ td.doodad-no-data{
     }
     /*Nav Bar Styles*/
 
-
-    .logo-nav {
-      width: 60px;
-      left: 10%;
-    }
 
     #nav-bar ul {
       right: 5%;
@@ -306,13 +310,10 @@ td.doodad-no-data{
 
     /* business index - doodad styles */
     div.doodad {
-      /*min-width: 30%;*/
       width: 50%;
-      /*margin-right: 5%;*/
     }
 
     div.content {
-      /*min-width: 40%;*/
       width: 50%;
     }
 
@@ -353,31 +354,36 @@ td.doodad-no-data{
     }
 
     .charts {
-      display: block;
+      /*display: block;*/
+      display: none;
       margin: 0 auto;
       width: 100%;
+      border: 1px solid red;
     }
     .google-chart {
-      width: 80%;
+      /*width: 100%;*/
       display: block;
-      margin: 1rem auto;
+      margin: 1rem 0;
+      margin-left: 0;
       padding: 10px;
+      border: 1px solid green;
     }
 
-    .content {
-      /*border: 2px solid pink;*/
-
+    #donutchart div {
+      margin: 0;
     }
 
-    div.doodad {
-      margin: 1rem auto 0;
-      /*border: 1px dashed green;*/
+    svg {
+      width: 200;
+      height: 200;
+      margin-left: -45px;
+      border: 3px dashed pink;
     }
 
     table.doodad {
-      padding: 0 5px;
-      margin: 0 auto;
+      width: 170px;
     }
+
 
     .loading-container {
       margin-top: 40%;
@@ -418,9 +424,6 @@ td.doodad-no-data{
   @media only screen and (max-width: 1400px)
                      and (min-width: 700px) {
 
-    header {
-      height: 200px;
-    }
 
     .container {
       width: 80%;
@@ -446,6 +449,10 @@ td.doodad-no-data{
     .testimonial-form {
       /*max-width: 80%;*/
       margin-bottom: 100px;
+    }
+
+    .no-chart-testimonials {
+      width: 50%;
     }
 
     .submit-button input {
