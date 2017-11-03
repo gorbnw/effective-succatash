@@ -410,6 +410,7 @@ td.doodad-no-data{
       width: 100%;
       border: 1px solid red;
     }
+
     .google-chart {
       /*width: 100%;*/
       display: block;
@@ -421,13 +422,6 @@ td.doodad-no-data{
 
     #donutchart div {
       margin: 0;
-    }
-
-    svg {
-      width: 200;
-      height: 200;
-      margin-left: -45px;
-      border: 3px dashed pink;
     }
 
     table.doodad {
@@ -494,6 +488,10 @@ td.doodad-no-data{
     .charts {
       margin-right: 5px;
       width: 300px;
+    }
+
+    .google-chart {
+      border: 3px solid red;
     }
 
     .testimonial-form {

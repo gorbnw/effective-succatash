@@ -25,7 +25,9 @@ $(document).ready(() => {
                             italic: true},
                 isHTML: true},
       pieSliceText: 'none',
-      chartArea: { left: 40, width: "80%", height: "80%" },
+      height: 300,
+      width: 500,
+      chartArea: { left: 40, width: "90%", height: "90%" },
       legend: {position: 'labeled', alignment: 'end', textStyle: {color: 'white', fontSize: 12, italic: true}}
     };
 
