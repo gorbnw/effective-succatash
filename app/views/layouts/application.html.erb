@@ -21,7 +21,7 @@
 
       <nav id="nav-bar">
           <a href="/"><%= image_tag("https://dl.dropboxusercontent.com/s/431espnjn47sgqj/feelfree-logo-white.svg?dl=0", :class => 'logo-nav') %></a>
-          <h1 class="header-title">FEELFREE</h1>
+          <a href="/"><h1 class="header-title">FEELFREE</h1></a>
         <ul>
           <% if user_signed_in? %>
             <li class="nav-item"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>

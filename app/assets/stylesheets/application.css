@@ -68,6 +68,10 @@ body {
   font-family: 'Shadows Into Light', cursive;
 }
 
+a .header-title:hover {
+ color: white;
+}
+
 .container {
   width: 60%;
   margin: 0 auto;
@@ -227,16 +231,22 @@ td.doodad-no-data{
   text-align: center;
 }
 
-.mission {
+.mission,
+.about-container {
   color: var(--offwhite);
   margin: 0 auto;
-  margin-top: 7rem;
   padding: 1rem;
 }
 
-.mission p {
+.mission p,
+.about-container p {
   line-height: 150%
 }
+
+.about-container {
+  margin-top: 5rem;
+}
+
 @media only screen and (max-width: 700px) {
 
 /*Global Styles*/
