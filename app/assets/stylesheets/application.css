@@ -238,11 +238,16 @@ td.doodad-no-data{
   color: var(--offwhite);
   margin: 0 auto;
   padding: 1rem;
+  font-size: 110%;
 }
 
 .mission p,
 .about-container p {
-  line-height: 150%
+  line-height: 145%;
+}
+
+.mission h2, .about-container h2{
+  font-size: 170%;
 }
 
 .about-container {
