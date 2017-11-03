@@ -3,28 +3,31 @@ class TestimonialsController < ApplicationController
     @testimonial = Testimonial.new(testimonial_params)
     @testimonial.user = current_user
 
+    @tags = []
 
-    #consider removing this request
-    # @business = Business.get_yelp_business_details(testimonial_params[:yelp_id])
-    @business = {"id" => params[:testimonial][:yelp_id], "display_phone" => params[:yelp_phone], "location" => { "display_address" => params[:yelp_address]}, "name" => params[:yelp_name]}
+    if params[:tags]
+      params[:tags].each do |tag, value|
+        @tags << Tag.find(value)
+      end
+    end
+
+    @business = Business.get_yelp_business_details(params[:testimonial][:yelp_id])
     @vote = Vote.new
 
-    if (@testimonial.valid? && params[:testimonial][:tags].count != 0)
-        @testimonial.save
-        params[:testimonial][:tags].each do |tag|
-          @testimonial.tags << Tag.find(tag)
+    if @testimonial.save && @tags.any? && @tags.count <= 5
+        @tags.each do |tag|
+          @testimonial.tags << tag
         end
         if request.xhr?
-          render 'businesses/_testimonial', locals: {testimonial: @testimonial, business: @business, vote: @vote }, layout: false
+          render 'businesses/_testimonial', locals: {testimonial: @testimonial, vote: @vote }, layout: false
         else
           redirect_to "/businesses/#{testimonial_params[:yelp_id]}"
         end
     else
-      @testimonial.valid?
-      @testimonial.errors.add(:base, "Please select a tag") if params[:testimonial][:tags] == nil
-      @errors = @testimonial.errors
+      @testimonial.errors.add(:base, "Please select a tag") if @tags.empty?
+      @testimonial.errors.add(:base, "5 tag maximum") if @tags.count > 5
       if request.xhr?
-        render 'testimonials/_errors_form', layout: false, :status => 422
+        render '/_errors', layout: false, :status => 422, locals: {obj: @testimonial}
       else
         @testimonials = Testimonial.where(yelp_id: testimonial_params[:yelp_id])
         render '/businesses/show'

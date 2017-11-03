@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EffectiveSuccatash</title>
+    <title><%= @title ? @title : "FeelFree" %></title>
     <%= csrf_meta_tags %>
+<<<<<<< HEAD
     <!-- <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet"> -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Roboto" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Cabin|Source+Sans+Pro" rel="stylesheet">
+=======
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+>>>>>>> 41cabde67ea8c477f79f82469f1c46c016b90fdc
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -17,7 +22,8 @@
     <header>
 
       <nav id="nav-bar">
-        <a href="/"><%= image_tag("https://dl.dropboxusercontent.com/s/431espnjn47sgqj/feelfree-logo-white.svg?dl=0", :class => 'logo-nav') %></a>
+          <a href="/"><%= image_tag("https://dl.dropboxusercontent.com/s/431espnjn47sgqj/feelfree-logo-white.svg?dl=0", :class => 'logo-nav') %></a>
+          <h1 class="header-title">FEELFREE</h1>
         <ul>
           <% if user_signed_in? %>
             <li class="nav-item"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>

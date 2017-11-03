@@ -2,6 +2,7 @@
 // All this logic will automatically be available in application.js.
 
 $(document).ready(() => {
+  $('.hidden-check').hide();
 
   let tag_counts = $(".yelp_id")[0].innerText;
   tag_counts = JSON.parse(tag_counts);
@@ -23,8 +24,6 @@ $(document).ready(() => {
                             fontSize: 12,
                             italic: true},
                 isHTML: true},
-      width: 500,
-      height: 400,
       pieSliceText: 'none',
       chartArea: { left: 40, width: "80%", height: "80%" },
       legend: {position: 'labeled', alignment: 'end', textStyle: {color: 'white', fontSize: 12, italic: true}}
@@ -48,24 +47,20 @@ $(document).ready(() => {
       }
     }
 
-    const tagsList = $(e.target).find('li[name="clicked"]')
-    let tagsValues = []
+    const checkBoxes = $(e.target).find('.hidden-check:checked');
+    console.log
 
-    const getTags = () => {
-      for(var i = 0; i < tagsList.length; i++){
-        tagsValues.push(tagsList[i].value);
-      };
-      return tagsValues
+    let tags = {};
+    for(var i = 0; i < checkBoxes.length; i++){
+      tags[checkBoxes[i].value] = checkBoxes[i].value;
     }
-
-    getTags()
+    console.log(tags);
     const url = $(e.target).attr('action')
-    const positive = $(e.target).find('input[name="testimonial[positive]"]:checked').val()
-    const tags = tagsValues
-    const description = $(e.target).find('textarea').val()
-    const business = $(e.target).find('.business').val()
-    const data = { testimonial: { positive: positive,
-                                  tags: tags,
+    const positive = $(e.target).find('input[name="testimonial[positive]"]:checked').val();
+    const description = $(e.target).find('textarea').val();
+    const business = $(e.target).find('.business').val();
+    const data = { tags,
+                   testimonial: { positive: positive,
                                   anonymous: setAnonymous(),
                                   description: description,
                                   yelp_id: business} }
@@ -73,13 +68,15 @@ $(document).ready(() => {
     $.ajax({
       method: "POST",
       url,
-      data
+      data,
     }).done((response) => {
       $('.errors').empty();
       $('.no-testimonials').remove();
       $('.testimonial-list').prepend(response);
       $('.new_testimonial')[0].reset();
       $('.form-button').removeAttr('data-disable-with');
+      $('.clicked').removeClass('clicked');
+
     }).fail((response) => {
       $('.errors').html(response.responseText);
     }).always(() => {
@@ -90,7 +87,5 @@ $(document).ready(() => {
   }) //end new testimonial listener
 
   // Adding the Google Chart API to Business Show Page
-
-  // const data = new google.visualization.DataTable();
 
 }); //end document ready

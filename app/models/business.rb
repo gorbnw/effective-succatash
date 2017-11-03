@@ -22,7 +22,9 @@ class Business < ApplicationRecord
     yelp_uri = "https://api.yelp.com/v3/businesses/"
     query = yelp_uri + I18n.transliterate(yelp_id)
     response = HTTParty.get(query, headers: {"Authorization" => ENV["YELP_TOKEN"] + " " + ENV["YELP_TOKEN_SECRET"] })
-    response.parsed_response
+    res = response.parsed_response
+    res[:yelp_id] = yelp_id
+    res
   end
 
   def self.check_GNR(business_details)

@@ -3,6 +3,9 @@ require 'rails_helper'
 describe TestimonialsController, type: :controller do
   before(:each) do
     sign_in create(:user), scope: :user
+    allow(ENV).to receive(:[]).with("YELP_TOKEN").and_return("yelp")
+    allow(ENV).to receive(:[]).with("YELP_TOKEN_SECRET").and_return("secrets")
+    allow(HTTParty).to receive(:get).and_return(resp_double)
   end
 
   describe "#create" do
@@ -11,7 +14,9 @@ describe TestimonialsController, type: :controller do
 
     context 'valid parameters are passed' do
 
-      let!(:testimonial_params) { {params: {testimonial: {description: "Test description", positive: true, anonymous: false, yelp_id: "test", tags: [tag1.id, tag2.id]}, yelp_address: "place", yelp_name: "name", yelp_phone: "XXX-XXX-XXXX"}} }
+      let!(:resp_double) { double(parsed_response: return_business) }
+      let!(:yelp_id) { "safeway-marysville" }
+      let!(:testimonial_params) { {params: {testimonial: {description: "Test description", positive: true, anonymous: false, yelp_id: "test"}, tags: {key1: tag1.id, key2: tag2.id} }} }
 
       before(:each) do
         post :create, testimonial_params
@@ -26,7 +31,7 @@ describe TestimonialsController, type: :controller do
       end
 
       it 'assigns a business variable with yelp business information' do
-        expect(assigns[:business]).to eq({"id"=>"test", "display_phone"=>"XXX-XXX-XXXX", "location"=>{"display_address"=>"place"}, "name"=>"name"})
+        expect(assigns[:business]).to eq(resp_double.parsed_response)
       end
 
       it 'creates a new testimonial' do
@@ -41,6 +46,8 @@ describe TestimonialsController, type: :controller do
 
     context 'valid parameters are not passed' do
 
+      let!(:resp_double) { double(parsed_response: return_business) }
+      let!(:yelp_id) { "safeway-marysville" }
       let!(:testimonial1) {FactoryBot.create(:testimonial, :positive)}
       let!(:testimonial2) {FactoryBot.create(:testimonial, :negative)}
 
@@ -58,7 +65,7 @@ describe TestimonialsController, type: :controller do
       end
 
       it 'assigns errors' do
-        expect(assigns[:errors].messages.count).to eq 4
+        expect(assigns[:testimonial].errors.messages.count).to eq 4
       end
 
       it 'assigns a testimonials object' do
