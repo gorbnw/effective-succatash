@@ -66,6 +66,9 @@ body {
   font-size: 4em;
   color: white;
   font-family: 'Shadows Into Light', cursive;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Slab', sans-serif;
+  padding-top: 26px;
 }
 
 a .header-title:hover {
