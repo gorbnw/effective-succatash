@@ -1,0 +1,21 @@
+.about-container {
+  background-color: var(--testmidblue);
+  border: 1px solid var(--testmidblue);
+  color: var(--offwhite);
+  margin-top: 4rem;
+  padding: 1rem;
+  h1 {
+    text-align: center;
+  }
+  p {
+    text-align: justify;
+  }
+  td {
+    padding-right: 1rem;
+    border-bottom: 1px solid var(--offwhite);
+  }
+  th {
+    text-align: left;
+    border-bottom: 1px solid var(--offwhite);
+  }
+}
