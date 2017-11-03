@@ -84,6 +84,7 @@
 
 .search-button {
   border: none;
+  font-family: 'Source Sans Pro', sans-serif;
   background-color: var(--testdarkblue);
   color: var(--offwhite);
   padding-top: 0.3rem;
@@ -99,16 +100,22 @@
 input.city-field {
   background-color: transparent;
   border: none;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.2rem;
   opacity: 0.8;
   border-bottom: 2px solid var(--testdarkblue);
   color: var(--testwhite);
 }
 
+input.city-field::placeholder {
+  color: white;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
 input.business-field {
   background-color: transparent;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   color: var(--testwhite);
   font-size: 1.2rem;
   border: none;
@@ -118,7 +125,7 @@ input.business-field {
 input.business-field::placeholder {
   color: white;
   font-size: 1.2rem;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 input:focus{
@@ -167,13 +174,13 @@ div.content {
 }
 
 .business-header {
-  font-family: 'Noto Serif', sans-serif;
+  font-family: 'Source Sans Pro', sans-sans-serif;
   font-size: 1.8rem;
   text-align: center;
 }
 
 p.name {
-  font-family: 'Noto Serif', sans-serif;
+  font-family: 'Source Sans Pro', sans-sans-serif;
   font-size: 1.3rem;
   margin-right: 0.5rem;
   margin-top: 1rem;
@@ -219,7 +226,7 @@ div.doodad {
 
 .offset-info {
   input.submit {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Source Sans Pro', sans-serif;
     background: none;
     color: var(--offwhite);
     border: none;
@@ -234,7 +241,7 @@ div.doodad {
 // SHOW PAGE STYLING STUFF -------
 
 .business-name {
-  font-family: 'Noto Serif', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   margin: 0;
   font-size: 2.3rem;
   color: var(--offwhite);
@@ -256,7 +263,7 @@ div.doodad {
 }
 
 .details-header {
-  font-family: 'Noto Serif', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
   margin-top: 3.5rem;
   font-size: 18px;
@@ -299,6 +306,10 @@ div.doodad {
   height: 150px;
 }
 
+.login-request:hover {
+  color: var(--purple);
+}
+
 iframe.map-frame {
   margin-left: 1rem;
   min-width: 250px;
@@ -326,11 +337,11 @@ iframe.map-frame {
   font-size: 1.2rem;
   text-align: center;
   color: var(--testlightblue);
-  font-family: 'Noto Serif', serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .testimonials-show-container h3 {
-  font-family: 'Noto Serif', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.5rem;
 }
 

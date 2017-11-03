@@ -31,8 +31,8 @@
   a {
     text-decoration: none;
     color: var(--offwhite);
-    font-family: 'Noto Serif', serif;
-    font-size: 15px;
+    font-family: 'Source Sans Pro', serif;
+    font-size: 1.5rem;
   }
 }
 
@@ -42,4 +42,16 @@
   height: 40px;
   display: inline-block;
   transition: .15s;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
 }

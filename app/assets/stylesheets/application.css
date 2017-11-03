@@ -45,7 +45,8 @@
 html {
   width: 100%;
   /*font-family: 'Frank Ruhl Libre', serif;*/
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Cabin', sans-serif;
+  font-size: 1rem;
   height: 100%;
 }
 
@@ -179,7 +180,7 @@ table.doodad{
 
 table.doodad th{
   color: var(--testwhite);
-  font-family: 'Noto Serif', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 0.7rem;
 }
 

@@ -6,9 +6,6 @@
       <tr class="no-testimonials">
         <th colspan=2> No testimonials yet</th>
       </tr>
-      <tr>
-        <th colspan=2> No testimonials yet</th>
-      </tr>
       <% else %>
         <tr>
           <th colspan=2> <%= Testimonial.get_percent_pos(business['id']) %>% positive </th>
