@@ -197,7 +197,11 @@ td.doodad-no-data{
   border: 2px solid #800000;
   border-radius: 5px;
   height: 2rem;
+<<<<<<< HEAD
   width: 25%;
+=======
+  width: 204px;
+>>>>>>> 535995080729ccbc827e647c693505f8454a4055
   margin: 0 auto;
   background-color: #ffcccc;
   color: #800000;
@@ -208,13 +212,28 @@ td.doodad-no-data{
   border: 2px solid #004d00;
   border-radius: 5px;
   height: 2rem;
+<<<<<<< HEAD
   width: 25%;
+=======
+  width: 204px;
+>>>>>>> 535995080729ccbc827e647c693505f8454a4055
   margin: 0 auto;
   background-color: #ccffcc;
   color: #004d00;
   text-align: center;
 }
 
+.mission {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--offwhite);
+  margin: 0 auto;
+  margin-top: 7rem;
+  padding: 1rem;
+}
+
+.mission p {
+  line-height: 150%
+}
 @media only screen and (max-width: 700px) {
 
 /*Global Styles*/
