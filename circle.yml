@@ -1,5 +1,7 @@
 deployment:
-  staging:
+  production:
     branch: master
     heroku:
       appname: protected-crag-75076
+    commands:
+      - git push git@heroku.com:protected-crag-75076.git $CIRCLE_SHA1:master
