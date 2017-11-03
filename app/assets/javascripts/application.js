@@ -17,6 +17,10 @@
 
 $(document).ready(() => {
 
+  if ($('.reg-container .input').val() != '') {
+    $('.reg-container label').addClass('labelshift')
+  }
+
   $(".reg-container .input").on('focus', (e) => {
     let label = $(e.target).closest(".field").find('label');
     label.addClass('labelshift');
