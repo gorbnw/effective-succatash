@@ -43,3 +43,15 @@
   display: inline-block;
   transition: .15s;
 }
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
