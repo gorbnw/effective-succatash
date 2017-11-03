@@ -106,15 +106,19 @@ a:hover {
   padding: 20px;
   margin: 0 auto;
   font-size: 1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 5px grey;
 }
 
 .reg-container h2 {
   text-align: center;
+  color: var(--darkestpurple);
 }
 
 .reg-container a {
   text-decoration: none;
   display: inline-block;
+  color: var(--darkerpurple);
 }
 
 .reg-container .input,
@@ -126,7 +130,11 @@ a:hover {
 
 .reg-container label {
   transform: translate(8px, 30px);
-  color: grey;
+  color: darkgrey;
+}
+
+.reg-container .checkbox-label {
+  color: var(--darkestpurple);
 }
 
 .reg-container .input {
@@ -156,6 +164,36 @@ a:hover {
 
 .labelshift {
   animation: labelshift .5s forwards;
+}
+
+.actions .input{
+  border: none;
+  width: 150px;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 5px;
+  padding: 0.3rem;
+  margin-right: 0.2rem;
+  font-size: 0.8rem;
+  color: white;
+  margin-left: 1.5rem;
+  background-color: var(--darkestpurple);
+}
+
+.action .input:hover {
+  background-color: var(--darkerpurple);
+}
+
+.action .input{
+  border: none;
+  width: 150px;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 5px;
+  padding: 0.3rem;
+  margin-right: 0.2rem;
+  font-size: 0.8rem;
+  color: white;
+  margin-left: 1.5rem;
+  background-color: var(--darkestpurple);
 }
 
 .check-bold {
@@ -379,6 +417,7 @@ td.doodad-no-data{
       width: 100%;
       border: 1px solid red;
     }
+
     .google-chart {
       /*width: 100%;*/
       display: block;
@@ -390,13 +429,6 @@ td.doodad-no-data{
 
     #donutchart div {
       margin: 0;
-    }
-
-    svg {
-      width: 200;
-      height: 200;
-      margin-left: -45px;
-      border: 3px dashed pink;
     }
 
     table.doodad {

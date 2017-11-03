@@ -1,0 +1,1772 @@
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+/* line 8, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 18, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+/* line 31, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 50, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 61, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 70, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+/* line 79, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+template,
+[hidden] {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 92, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+/* line 102, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 115, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 125, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 134, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 143, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 152, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 161, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 170, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 179, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 187, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 191, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 202, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 210, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 222, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 234, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 243, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 257, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+/* line 269, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+optgroup {
+  font-weight: bold;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 278, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 288, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 299, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 310, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 322, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+/* line 333, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 346, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 359, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 368, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 378, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 388, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+/* line 397, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+/* line 406, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 416, /Users/jamiedegnan/.rvm/gems/ruby-2.3.3/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+/* line 9, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.google-chart {
+  height: 400px;
+  width: 500px;
+  padding: 1rem;
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 21, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.loading-container {
+  width: 70px;
+  height: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+/* line 28, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.circle {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 0.2rem;
+  animation: move 1s infinite;
+}
+
+/* line 37, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.s2 {
+  animation-delay: 0.1s;
+}
+
+/* line 40, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.s3 {
+  animation-delay: 0.2s;
+}
+
+/* line 43, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.s4 {
+  animation-delay: 0.3s;
+}
+
+/* line 46, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.s5 {
+  animation-delay: 0.4s;
+}
+
+@keyframes move {
+  30% {
+    transform: scale(1.2);
+  }
+}
+/* line 59, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.business-list-div {
+  margin: 0 auto;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 3rem;
+}
+
+/* line 66, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.search-button {
+  margin: 5px;
+  width: 15%;
+}
+
+/* line 71, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.search-area {
+  padding: 4rem;
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* line 78, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+/* line 85, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.search-button {
+  border: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: var(--testdarkblue);
+  color: var(--offwhite);
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0rem;
+}
+
+/* line 95, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.search-button:hover {
+  background-color: #3a4a5e;
+  color: var(--testwhite);
+}
+
+/* line 100, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+input.city-field {
+  background-color: transparent;
+  border: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  border-bottom: 2px solid var(--testdarkblue);
+  color: var(--testwhite);
+}
+
+/* line 110, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+input.city-field::placeholder {
+  color: white;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* line 116, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+input.business-field {
+  background-color: transparent;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--testwhite);
+  font-size: 1.2rem;
+  border: none;
+  border-bottom: 2px solid var(--testdarkblue);
+}
+
+/* line 125, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+input.business-field::placeholder {
+  color: white;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+/* line 131, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+input:focus {
+  outline: none;
+}
+
+/* line 135, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.business-container {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+}
+/* line 139, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.business-container .input {
+  width: 70%;
+}
+
+/* line 144, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.city-container {
+  width: 30%;
+  margin-right: 0.3rem;
+}
+
+/* line 149, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.search-container label {
+  display: block;
+  transform: translate(8px, 20px);
+  color: var(--testdarkblue);
+  margin-bottom: 0.2rem;
+}
+
+/* line 156, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.search-icon {
+  width: 25px;
+  height: 25px;
+  color: var(--testdarkblue);
+  margin-right: 0.5rem;
+}
+
+/* line 165, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.business {
+  border-bottom: 2px solid transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* line 172, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+div.content {
+  display: flex;
+}
+
+/* line 176, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.business-header {
+  font-family: 'Source Sans Pro', sans-sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* line 182, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+p.name {
+  font-family: 'Source Sans Pro', sans-sans-serif;
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+/* line 190, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.phone {
+  font-style: italic;
+  margin-right: 0.5rem;
+}
+
+/* line 195, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+p.list-item {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  margin-top: 0.1rem;
+  margin-lefT: 0.5rem;
+}
+
+/* line 202, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.detail {
+  font-size: 80%;
+}
+/* line 204, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.detail span {
+  font-weight: bold;
+}
+
+/* line 209, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.business-details {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/* line 217, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+div.doodad {
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+}
+
+/* line 222, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.business-photo img {
+  margin: auto;
+  display: block;
+}
+
+/* line 228, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.offset-info input.submit {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: none;
+  color: var(--offwhite);
+  border: none;
+  padding: 0;
+  font-size: 0.9rem;
+}
+/* line 236, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.offset-info input.submit:hover {
+  color: var(--positive);
+}
+
+/* line 243, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.business-name {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  font-size: 2.3rem;
+  color: var(--offwhite);
+}
+
+/* line 250, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.business-overview {
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid var(--border-color) 2px;
+}
+
+/* line 256, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.business-overview-right {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0 1rem 0 1rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 40%;
+  min-width: 283px;
+}
+
+/* line 265, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.details-header {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  margin-top: 3.5rem;
+  font-size: 18px;
+}
+
+/* line 272, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.upper-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* line 278, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.charts {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  width: 500px;
+}
+
+/* line 288, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.show-doodad {
+  margin-bottom: 1rem;
+}
+
+/* line 292, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.business-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+/* line 301, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.business-photo {
+  margin: 1rem;
+}
+
+/* line 305, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.show-image {
+  height: 150px;
+}
+
+/* line 309, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.login-request:hover {
+  color: var(--purple);
+}
+
+/* line 313, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+iframe.map-frame {
+  margin-left: 1rem;
+  min-width: 250px;
+  min-height: 250px;
+  margin: 0 auto;
+  border: 1px solid var(--darkerpurple);
+}
+
+/* line 321, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.testimonial-summary {
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  width: 95%;
+  height: 45%;
+}
+
+/* line 329, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.top-testimonials {
+  border-top: 2px solid var(--darkerpurple);
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* line 336, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.top-testimonial-header {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--testlightblue);
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* line 343, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.testimonials-show-container h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5rem;
+}
+
+/* line 348, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.no-testimonials {
+  padding: 1.5rem;
+  font-style: italic;
+}
+
+/* line 353, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.count {
+  line-height: 150%;
+}
+
+/* line 357, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.testimonial-container {
+  height: 50%;
+  border-radius: 15px;
+}
+
+/* line 362, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.praise {
+  border: 2px solid var(--positive);
+  margin-bottom: 5px;
+}
+
+/* line 367, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/businesses.scss */
+.criticism {
+  border: 2px solid var(--negative);
+}
+/* line 1, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/home.scss */
+.about-container {
+  color: var(--offwhite);
+  margin-top: 4rem;
+  padding: 1rem;
+}
+/* line 5, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/home.scss */
+.about-container h1 {
+  text-align: center;
+}
+/* line 8, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/home.scss */
+.about-container p {
+  text-align: justify;
+}
+/* line 11, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/home.scss */
+.about-container td {
+  padding-right: 1rem;
+  border-bottom: 1px solid var(--offwhite);
+}
+/* line 15, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/home.scss */
+.about-container th {
+  text-align: left;
+  border-bottom: 1px solid var(--offwhite);
+}
+/* line 1, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/layout.scss */
+#nav-bar {
+  position: relative !important;
+  display: block;
+  height: 100px;
+  margin-bottom: 25px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding: 0;
+}
+/* line 10, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/layout.scss */
+#nav-bar ul {
+  position: absolute;
+  list-style: none;
+  right: 10%;
+  margin: 0;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+/* line 20, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/layout.scss */
+.image-height {
+  height: 25px;
+}
+
+/* line 24, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/layout.scss */
+.nav-item {
+  width: 100px;
+  line-height: 40px;
+  height: 40px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+}
+/* line 31, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/layout.scss */
+.nav-item a {
+  text-decoration: none;
+  color: var(--offwhite);
+  font-family: 'Source Sans Pro', serif;
+  font-size: 1.5rem;
+}
+
+/* line 39, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/layout.scss */
+.nav-item :hover {
+  width: 100px;
+  line-height: 40px;
+  height: 40px;
+  display: inline-block;
+  transition: .15s;
+}
+
+/* line 47, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/layout.scss */
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+/* line 1, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.testimonial {
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  padding-left: 0.9rem;
+}
+
+/* line 10, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.testimonial-list .testimonial {
+  border-bottom: 2px solid var(--border-color);
+}
+
+/* line 13, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.testimonial-list .testimonial:last-of-type {
+  border-bottom: none;
+}
+
+/* line 17, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.testimonial .tag {
+  border: 2px solid var(--darkestpurple);
+  border-radius: 5px;
+  color: var(--darkestpurple);
+  font-size: 12px;
+  padding: 3px;
+  display: inline-block;
+}
+
+/* line 26, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.testimonial .date-and-time {
+  display: inline;
+  padding-right: 15px;
+  font-size: 14px;
+}
+
+/* line 32, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.testimonial .inline {
+  display: inline;
+  padding-right: 15px;
+  font-size: 14px;
+}
+
+/* line 38, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.testimonial .safe {
+  padding-right: 15px;
+  font-size: 14px;
+  display: inline;
+  float: right;
+}
+
+/* line 45, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.testimonial-text {
+  display: inline-block;
+  font-size: 0.9rem;
+  text-align: justify;
+  margin-bottom: 1.1rem;
+  margin-left: 0.3rem;
+}
+
+/* line 54, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.footer-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* line 60, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.user-felt {
+  margin-top: 0.3rem;
+  font-weight: bold;
+}
+
+/* line 65, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.testimonial .username {
+  font-weight: bold;
+}
+
+/* line 69, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.vote-container {
+  margin-left: 5px;
+  height: 100%;
+  display: inline-block;
+  align-self: flex-end;
+}
+
+/* line 76, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.vote-count {
+  border: 2px solid var(--darkerpurple);
+  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 5px;
+  padding: 0.16rem 0.25rem 0.18rem 0.25rem;
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--darkerpurple);
+}
+
+/* line 86, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* line 92, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+h3 {
+  color: var(--testlightblue);
+}
+
+/* line 96, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.testimonial-list {
+  margin-bottom: 6rem;
+}
+
+/* line 100, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.no-testimonials {
+  text-align: center;
+  color: var(--testlightblue);
+  font-weight: bold;
+  letter-spacing: .5px;
+}
+
+/* line 107, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.no-chart-testimonials {
+  text-align: center;
+  color: var(--testlightblue);
+  font-weight: bold;
+  letter-spacing: .5px;
+}
+
+/* line 114, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.tagged-with {
+  font-size: 0.9rem;
+}
+
+/* line 120, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.testimonial-form {
+  padding: 10px;
+  color: white;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--testdarkblue);
+  border-radius: 4px;
+}
+/* line 130, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.testimonial-form .errors {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+/* line 134, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.testimonial-form .tags-errors {
+  color: var(--errors);
+  font-size: 0.8rem;
+}
+/* line 138, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.testimonial-form p {
+  text-align: center;
+}
+
+/* line 143, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.testimonial-field {
+  margin-bottom: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  font-size: 0.9rem;
+}
+
+/* line 151, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.testimonial-form-header {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* line 157, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.new_testimonial {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 162, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.testimonial-box {
+  box-sizing: border-box;
+  width: 100%;
+  height: 75px;
+}
+
+/* line 168, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.safe-unsafe-selection {
+  display: flex;
+  flex-direction: row;
+}
+/* line 171, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.safe-unsafe-selection label {
+  margin-right: 0.4rem;
+}
+
+/* line 176, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.experience-selections {
+  display: flex;
+  flex-direction: row;
+}
+
+/* line 181, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.submit-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/* line 185, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.submit-button input {
+  border: none;
+  background-color: var(--darkerpurple);
+  color: white;
+  width: 30%;
+  padding: 15px 10px;
+  font-size: 1.2rem;
+  border-radius: 3px;
+  margin-top: 0.3rem;
+}
+
+/* line 197, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.label-tag {
+  border: 1px solid var(--darkblue);
+  border-radius: 5px;
+  color: var(--darkblue);
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  background-color: white;
+  padding: 0 5px 0 5px;
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 216, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.clicked {
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--darkblue);
+}
+
+/* line 226, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.experience-tag p {
+  text-align: left;
+}
+/* line 229, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/testimonials.scss */
+.experience-tag input {
+  border-radius: 5px;
+  background: transparent;
+  border: none;
+  display: inline-block;
+  font-size: 13px;
+  padding-right: 7px;
+}
+/* line 1, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/votes.scss */
+.vote-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  float: right;
+}
+
+/* line 9, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/votes.scss */
+.form-button {
+  border: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 5px;
+  padding: 0.3rem;
+  margin-right: 0.2rem;
+  font-size: 0.8rem;
+  color: white;
+  margin-left: 1.5rem;
+  background-color: var(--darkerpurple);
+}
+
+/* line 22, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/votes.scss */
+.form-button:hover {
+  background-color: var(--testdarkblue);
+  color: white;
+}
+
+/* line 27, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/votes.scss */
+.vote-error {
+  font-size: 12px;
+  color: var(--errors);
+}
+
+/* line 32, /Users/jamiedegnan/Dropbox/DevBootcamp/SafeWays/effective-succatash/app/assets/stylesheets/votes.scss */
+.vote-button-and-count {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+
+ */
+
+
+ :root {
+   --border-color: #89BBC1;
+   --text: #0D1B2A;
+   --navblue: #4F6D8E;
+   --offwhite: #FCFCFC;
+   --negative: #D999B9;
+   --positive: #DCDBA8;
+   --light-text: #89BBC1;
+   --link: #89BBC1;
+   --darkblue: #0F1926;
+   --errors: #800000;
+   --testdarkblue: #091d36;
+   --testmidblue: #3a4e7a;
+   --testlightblue: #c2d2e9;
+   --testwhite: #f1f1f0;
+   --rgbwhite: rgb(255, 255, 255, 0.2);
+   --rust: #912C00;
+   --purple: #8088B2;
+   --darkerpurple: #3F568B;
+   --darkestpurple: #182449;
+ }
+
+ .errors {
+   color: var(--errors);
+   font-size: 0.8rem;
+ }
+
+html {
+  width: 100%;
+  /*font-family: 'Frank Ruhl Libre', serif;*/
+  font-family: 'Cabin', sans-serif;
+  font-size: 1rem;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(to bottom right, #0b212f, #44586a, #a2b4c3); /* Standard syntax */
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.header-title {
+  display: inline-block;
+  position: absolute;
+  margin: 0;
+  margin-left: 1rem;
+  left: 70px;
+  font-size: 4em;
+  color: white;
+  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Josefin Slab', sans-serif;
+  padding-top: 26px;
+}
+
+a .header-title:hover {
+ color: white;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+  color: var(--text);
+  border-radius: 10px;
+}
+
+a {
+  color: var(--testwhite);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--darkestpurple);
+}
+
+.logo-nav {
+  position: absolute;
+  width: 50px;
+  top: 15px;
+  left: 15px;
+}
+
+
+/********************************************/
+/**********Login Logout Styles***************/
+/********************************************/
+
+.reg-container {
+  width: 200px;
+  padding: 20px;
+  margin: 0 auto;
+  font-size: 1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 5px grey;
+}
+
+.reg-container h2 {
+  text-align: center;
+  color: var(--darkestpurple);
+}
+
+.reg-container a {
+  text-decoration: none;
+  display: inline-block;
+  color: var(--darkerpurple);
+}
+
+.reg-container .input,
+.reg-container label {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+
+.reg-container label {
+  transform: translate(8px, 30px);
+  color: darkgrey;
+}
+
+.reg-container .checkbox-label {
+  color: var(--darkestpurple);
+}
+
+.reg-container .input {
+  font-size: 1em;
+  padding: 5px 5px;
+  margin-bottom: 10px;
+}
+
+.reg-container .no-shift {
+  margin-bottom: 20px;
+}
+
+.reg-container .no-shift label {
+  transform: translate(0,0);
+  display: inline-block;
+  margin-top: 5px;
+  width: 70%;
+}
+
+.reg-container input[type=checkbox] {
+  display: inline-block;
+  width: 20px;
+  float: left;
+  padding: 0;
+  margin: 10px 10px 10px 0px;
+}
+
+.labelshift {
+  animation: labelshift .5s forwards;
+}
+
+.actions .input{
+  border: none;
+  width: 150px;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 5px;
+  padding: 0.3rem;
+  margin-right: 0.2rem;
+  font-size: 0.8rem;
+  color: white;
+  margin-left: 1.5rem;
+  background-color: var(--darkestpurple);
+}
+
+.action .input:hover {
+  background-color: var(--darkerpurple);
+}
+
+.action .input{
+  border: none;
+  width: 150px;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 5px;
+  padding: 0.3rem;
+  margin-right: 0.2rem;
+  font-size: 0.8rem;
+  color: white;
+  margin-left: 1.5rem;
+  background-color: var(--darkestpurple);
+}
+
+.check-bold {
+  font-weight: bold;
+}
+
+
+@keyframes labelshift {
+  to {
+    transform: translate(0,0);
+    color: var(--darkblue);
+    font-weight: bold;
+  }
+}
+
+table.doodad{
+  border-radius: 10px;
+  border-collapse: collapse;
+  display: inline-table;
+  width: 200px;
+  text-align: center;
+  font-weight: normal;
+}
+
+table.doodad th{
+  color: var(--testwhite);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.7rem;
+}
+
+td.doodad-positive{
+  background-color: var(--testwhite);
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 2px 5px 2px 7px;
+
+
+
+}
+td.doodad-negative{
+  padding: 2px 7px 2px 5px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: var(--darkblue);
+  color: var(--testwhite);
+
+}
+
+td.doodad-no-data{
+  padding: 2px 7px 2px 5px;
+  background-color: var(--testlightblue);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.alert {
+  border: 2px solid #800000;
+  border-radius: 5px;
+  height: 2rem;
+  width: 204px;
+  margin: 0 auto;
+  background-color: #ffcccc;
+  color: #800000;
+  text-align: center;
+}
+
+.notice {
+  border: 2px solid #004d00;
+  border-radius: 5px;
+  height: 2rem;
+  width: 204px;
+  margin: 0 auto;
+  background-color: #ccffcc;
+  color: #004d00;
+  text-align: center;
+}
+
+.mission,
+.about-container {
+  color: var(--offwhite);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.mission p,
+.about-container p {
+  line-height: 150%
+}
+
+.about-container {
+  margin-top: 5rem;
+}
+
+@media only screen and (max-width: 700px) {
+
+/*Global Styles*/
+
+  .header-title {
+    display: none;
+  }
+
+    .business-name {
+      padding-left: 5%;
+    }
+
+    .container {
+      width: 100%;
+    }
+    /*Nav Bar Styles*/
+
+
+    #nav-bar ul {
+      right: 5%;
+    }
+
+    /*Search Bar Styles*/
+
+    .search-area {
+      padding: 4rem;
+      margin-top: 1rem;
+    }
+
+    .search-bar {
+      display: block;
+    }
+
+    .search-icon {
+      display: none;
+    }
+
+    .business-container {
+      box-sizing: border-box;
+      width: 100%;
+      display: block;
+      padding: 15px 5px;
+    }
+
+    .city-container {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      padding: 15px 5px;
+      margin: 15px 0 10px;
+    }
+
+    .business-container .input,
+    .city-container .input {
+      width: 100%;
+    }
+
+    .search-button {
+      padding: 15px 5px;
+      width: 100%;
+    }
+
+    /*business index styles */
+
+
+    .business-photo img {
+      display: none;
+    }
+
+    .business-list {
+      padding-left: 0;
+    }
+
+    /* business index - doodad styles */
+    div.doodad {
+      width: 50%;
+    }
+
+    div.content {
+      width: 50%;
+    }
+
+    table.doodad{
+      width: 60%;
+    }
+
+    .no-testimonials {
+      font-size: .7em;
+    }
+
+    .index-details {
+      padding: 2%;
+      max-width: 80%;
+    }
+
+
+  /*Show page Styles */
+
+    .business-name {
+      margin: 0;
+      font-size: 2.3rem;
+    }
+
+    .upper-section {
+      display: block;
+    }
+
+    .business-overview-right {
+      display: block;
+      margin-top: 15px;
+      width: 100%;
+    }
+
+    .business-overview-left {
+      width: 100%;
+      margin: 0;
+    }
+
+    .charts {
+      /*display: block;*/
+      display: none;
+      margin: 0 auto;
+      width: 100%;
+      border: 1px solid red;
+    }
+
+    .google-chart {
+      /*width: 100%;*/
+      display: block;
+      margin: 1rem 0;
+      margin-left: 0;
+      padding: 10px;
+      border: 1px solid green;
+    }
+
+    #donutchart div {
+      margin: 0;
+    }
+
+    table.doodad {
+      width: 170px;
+    }
+
+
+    .loading-container {
+      margin-top: 40%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+    .testimonial-form {
+      max-width: 100%;
+    }
+
+    .submit-button input {
+        width: 80%;
+        padding: 15px 10px;
+        font-size: 1.2em;
+    }
+
+    .tags-list {
+      padding: 0;
+    }
+
+    li.tag {
+      margin: 5px 10px;
+      width: 125px;
+      padding: 10px 5px;
+      background-color: white;
+    }
+
+    li.tag input {
+      font-size: .8em;
+    }
+
+  }
+
+
+  /*  End small screen size */
+  @media only screen and (max-width: 1400px)
+                     and (min-width: 700px) {
+
+
+    .container {
+      width: 80%;
+    }
+
+    .business-name {
+      margin: 0;
+      font-size: 2.3rem;
+    }
+
+    .business-overview-right {
+      margin-top: 15px;
+      width: 50%;
+      max-width: 450px;
+      max-height: 450px;
+    }
+
+    .charts {
+      margin-right: 5px;
+      width: 300px;
+    }
+
+    .testimonial-form {
+      /*max-width: 80%;*/
+      margin-bottom: 100px;
+    }
+
+    .no-chart-testimonials {
+      width: 50%;
+    }
+
+    .submit-button input {
+        width: 30%;
+        padding: 15px 10px;
+        font-size: 1.2em;
+    }
+
+    .tags-list {
+      text-align: center;
+    }
+
+    li.tag {
+      margin: 5px 5px;
+      padding: 5px 5px;
+      background-color: white;
+    }
+
+    li.tag input {
+      font-size: .8em;
+    }
+
+  }
