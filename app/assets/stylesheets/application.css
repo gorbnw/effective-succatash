@@ -202,3 +202,10 @@ td.doodad-no-data{
   color: #004d00;
   text-align: center;
 }
+
+.hidden-check {
+  /*opacity: 0;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;*/
+}
