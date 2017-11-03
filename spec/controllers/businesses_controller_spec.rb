@@ -8,7 +8,7 @@ RSpec.describe BusinessesController, type: :controller do
     allow(ENV).to receive(:[]).with("YELP_TOKEN_SECRET").and_return("secrets")
   end
 
-  xdescribe 'businesses#index' do
+  describe 'businesses#index' do
     let(:resp_double) { double(parsed_response: search_response) }
     let(:args) { {"term" => "hungryhut", "location" => "glencoe, al"} }
     before(:each) do
