@@ -56,6 +56,15 @@ body {
   background-attachment: fixed;
 }
 
+.header-title {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  left: 70px;
+  font-size: 2em;
+  color: white;
+}
+
 .container {
   width: 60%;
   margin: 0 auto;
@@ -230,9 +239,9 @@ td.doodad-no-data{
 
 /*Global Styles*/
 
-    header {
-      height: 150px;
-    }
+  .header-title {
+    display: none;
+  }
 
     .business-name {
       padding-left: 5%;
@@ -301,13 +310,10 @@ td.doodad-no-data{
 
     /* business index - doodad styles */
     div.doodad {
-      /*min-width: 30%;*/
       width: 50%;
-      /*margin-right: 5%;*/
     }
 
     div.content {
-      /*min-width: 40%;*/
       width: 50%;
     }
 
@@ -374,20 +380,10 @@ td.doodad-no-data{
       border: 3px dashed pink;
     }
 
-    .content {
-      /*border: 2px solid pink;*/
-
-    }
-
-    div.doodad {
-      margin: 1rem auto 0;
-      /*border: 1px dashed green;*/
-    }
-
     table.doodad {
-      padding: 0 5px;
-      margin: 0 auto;
+      width: 170px;
     }
+
 
     .loading-container {
       margin-top: 40%;
@@ -428,9 +424,6 @@ td.doodad-no-data{
   @media only screen and (max-width: 1400px)
                      and (min-width: 700px) {
 
-    header {
-      height: 200px;
-    }
 
     .container {
       width: 80%;
