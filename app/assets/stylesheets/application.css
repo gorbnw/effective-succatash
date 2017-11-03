@@ -45,7 +45,8 @@
 html {
   width: 100%;
   /*font-family: 'Frank Ruhl Libre', serif;*/
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Cabin', sans-serif;
+  font-size: 1rem;
   height: 100%;
 }
 
@@ -164,7 +165,7 @@ table.doodad{
 
 table.doodad th{
   color: var(--testwhite);
-  font-family: 'Noto Serif', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 0.7rem;
 }
 
@@ -197,11 +198,7 @@ td.doodad-no-data{
   border: 2px solid #800000;
   border-radius: 5px;
   height: 2rem;
-<<<<<<< HEAD
-  width: 25%;
-=======
   width: 204px;
->>>>>>> 535995080729ccbc827e647c693505f8454a4055
   margin: 0 auto;
   background-color: #ffcccc;
   color: #800000;
@@ -212,11 +209,7 @@ td.doodad-no-data{
   border: 2px solid #004d00;
   border-radius: 5px;
   height: 2rem;
-<<<<<<< HEAD
-  width: 25%;
-=======
   width: 204px;
->>>>>>> 535995080729ccbc827e647c693505f8454a4055
   margin: 0 auto;
   background-color: #ccffcc;
   color: #004d00;
