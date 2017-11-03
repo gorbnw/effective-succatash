@@ -32,20 +32,18 @@
     <div class="experience-tag field testimonial-field">
       <p class="tag-instructions">Select up to five tags:</p>
       <p class='tags-errors'></p>
-      <ul class='tags-list'>
+      <div class='tags-list'>
         <% Tag.all.each do |tag| %>
-          <li class="tag" name="tags" value= <%= tag.id %> >
-            <input type="text" name="testimonial[tags]" value=" <%= tag.description %> " readonly>
+            <label class="label-tag"> <%= tag.description %> <input class="hidden-check" type="checkbox" name="tags[<%= tag.id %>]" value="<%= tag.id %>"></label>
+
+
         <% end %>
-      </ul>
+      </div>
     </div>
     <div class="submit-button field testimonial-field">
+      <input type="hidden" value="<%= @business['id'] %>" name="testimonial[yelp_id]", class='business' />
       <%= f.submit 'Share Testimonial', class: 'submit-button' %>
     </div>
 
-    <input type="hidden" value="<%= @business['id'] %>" name="testimonial[yelp_id]", class='business' />
-    <input type="hidden" value="<%= @business['display_phone'] %>" name="yelp_phone", class='business' />
-    <input type="hidden" value="<%= @business['location']['display_address'] %>" name="yelp_address", class='business' />
-    <input type="hidden" value="<%= @business['name'] %>" name="yelp_name", class='business' />
-  <% end %>
+   <% end %>
 </div>

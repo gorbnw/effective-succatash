@@ -2,6 +2,7 @@
 // All this logic will automatically be available in application.js.
 
 $(document).ready(() => {
+  $('.hidden-check').hide();
 
   let tag_counts = $(".yelp_id")[0].innerText;
   tag_counts = JSON.parse(tag_counts);
@@ -48,24 +49,20 @@ $(document).ready(() => {
       }
     }
 
-    const tagsList = $(e.target).find('li[name="clicked"]')
-    let tagsValues = []
+    const checkBoxes = $(e.target).find('.hidden-check:checked');
+    console.log
 
-    const getTags = () => {
-      for(var i = 0; i < tagsList.length; i++){
-        tagsValues.push(tagsList[i].value);
-      };
-      return tagsValues
+    let tags = {};
+    for(var i = 0; i < checkBoxes.length; i++){
+      tags[checkBoxes[i].value] = checkBoxes[i].value;
     }
-
-    getTags()
+    console.log(tags);
     const url = $(e.target).attr('action')
-    const positive = $(e.target).find('input[name="testimonial[positive]"]:checked').val()
-    const tags = tagsValues
-    const description = $(e.target).find('textarea').val()
-    const business = $(e.target).find('.business').val()
-    const data = { testimonial: { positive: positive,
-                                  tags: tags,
+    const positive = $(e.target).find('input[name="testimonial[positive]"]:checked').val();
+    const description = $(e.target).find('textarea').val();
+    const business = $(e.target).find('.business').val();
+    const data = { tags,
+                   testimonial: { positive: positive,
                                   anonymous: setAnonymous(),
                                   description: description,
                                   yelp_id: business} }
@@ -73,13 +70,15 @@ $(document).ready(() => {
     $.ajax({
       method: "POST",
       url,
-      data
+      data,
     }).done((response) => {
       $('.errors').empty();
       $('.no-testimonials').remove();
       $('.testimonial-list').prepend(response);
       $('.new_testimonial')[0].reset();
       $('.form-button').removeAttr('data-disable-with');
+      $('.clicked').removeClass('clicked');
+
     }).fail((response) => {
       $('.errors').html(response.responseText);
     }).always(() => {

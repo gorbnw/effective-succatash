@@ -4,14 +4,10 @@ $(document).ready(() => {
   $('.form-button').removeAttr('data-disable-with');
 
   $(document).on('submit', '.vote-form', (e) => {
-
     e.preventDefault();
     // may not be event delegated - keep an eye out
-
-
     const url = $(e.target).closest('.vote-form').attr('action')
     const token = $(e.target).closest('.vote-form').find('input[name="authenticity_token"]').val();
-
     const data = $(e.target).closest('.vote-form').find('.testimonial-id').val();
 
     const request = $.ajax({
@@ -24,35 +20,23 @@ $(document).ready(() => {
       $(e.target).closest('.testimonial').find('.vote-error').text(response['responseText']);
     });
   }) // End Ajax of vote count button.
+  //
+  // $('.form-button').on('click', (e) => {
+  //   e.preventDefault;
+  // })
 
-  $('.form-button').on('click', (e) => {
-    e.preventDefault;
-
-  })
-
-  $('div.testimonial-form .tag').on('click', (e) => {
-    e.preventDefault;
-    if($('.tags-list').find('li[name="clicked"]').length < 5) {
-      if($(e.delegateTarget).closest('li').attr('name') === 'tags') {
-        $(e.delegateTarget).attr('name', 'clicked')
-        $(e.delegateTarget).find('input').css('color', '#FCFCFC')
-        $(e.delegateTarget).css('border-color', '#FCFCFC')
-        $(e.delegateTarget).find('input').css('background-color', '#3a4e7a')
-        $(e.delegateTarget).css('background-color', '#3a4e7a')
+  $('div.testimonial-form .label-tag').on('click', (e) => {
+    if($('input[type=checkbox]:checked').length <= 5) {
+      $('.tags-errors').empty();
+      if($(e.target).closest('input').prop('checked') === false ){
+        $(e.target).closest('label').removeClass("clicked");
       } else {
-        $(e.delegateTarget).attr('name', 'tags')
-        $(e.delegateTarget).find('input').css('color', 'black')
-        $(e.delegateTarget).css('border-color', 'black')
-        $(e.delegateTarget).find('input').css('background-color', '#FCFCFC')
-        $(e.delegateTarget).css('background-color', '#FCFCFC')
+        $(e.target).closest('label').addClass("clicked");
       }
       } else{
-        $(e.delegateTarget).attr('name', 'tags')
-        $(e.delegateTarget).find('input').css('color', 'black')
-        $(e.delegateTarget).css('border-color', 'black')
-        $(e.delegateTarget).find('input').css('background-color', '#FCFCFC')
-        $(e.delegateTarget).css('background-color', '#FCFCFC')
-        $('.tags-errors').html("Limit five tags per testimonial")
+        e.preventDefault();
+        $(e.target).closest('label').removeClass("clicked");
+        $('.tags-errors').html("Limit five tags per testimonial");
     }
   })
 
