@@ -68,9 +68,9 @@ a:hover {
 
 .logo-nav {
   position: absolute;
-  width: 100px;
-  top: 5vh;
-  left: 15%;
+  width: 50px;
+  top: 15px;
+  left: 15px;
 }
 
 
@@ -226,11 +226,6 @@ td.doodad-no-data{
     /*Nav Bar Styles*/
 
 
-    .logo-nav {
-      width: 60px;
-      left: 10%;
-    }
-
     #nav-bar ul {
       right: 5%;
     }
@@ -335,7 +330,8 @@ td.doodad-no-data{
     }
 
     .charts {
-      display: block;
+      /*display: block;*/
+      display: none;
       margin: 0 auto;
       width: 100%;
       border: 1px solid red;
@@ -443,6 +439,10 @@ td.doodad-no-data{
     .testimonial-form {
       max-width: 80%;
       margin-bottom: 100px;
+    }
+
+    .no-chart-testimonials {
+      width: 50%;
     }
 
     .submit-button input {
