@@ -23,12 +23,12 @@ http://feelfreeio.herokuapp.com
 ## What's it do?
 A ruby on rails app that allows users to leave testimonials on businesses explaining whether or not the business made them feel 'safe' or 'unsafe'. Users can add tags to supplement their testimonials and each business recieves an overall safety rating with a visual breakdown of tags associated with testimonials.
 
-###Care to see a few examples?
-####To see sample visuals and safety ratings with auto-generated testimonials:
+### Care to see a few examples?
+#### To see sample visuals and safety ratings with auto-generated testimonials:
 * Search: beer
 * Location: Seattle, WA
 
-####To see sample testimonials:
+#### To see sample testimonials:
 * Search: Amber
 * Location: Seattle, WA
 
