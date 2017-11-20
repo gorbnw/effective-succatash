@@ -1,4 +1,4 @@
-# SafeWays
+# FeelFree
 
 [![CircleCI](https://circleci.com/gh/libby-glo/effective-succatash.svg?style=svg)](https://circleci.com/gh/libby-glo/effective-succatash)
 
